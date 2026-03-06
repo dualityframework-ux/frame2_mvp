@@ -1,0 +1,204 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  # ── Job 1: Test matrix across Python versions ───────────────────────────────
+  test:
+    name: Tests (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-liberation fontconfig
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest pytest-cov pytest-xdist
+
+      - name: Run tests with coverage
+        run: |
+          pytest tests/ \
+            --cov=intelligence \
+            --cov=adapters \
+            --cov=config \
+            --cov=content_engine \
+            --cov=memory \
+            --cov=models \
+            --cov=agents \
+            --cov-report=term-missing \
+            --cov-report=xml:coverage.xml \
+            --cov-fail-under=70 \
+            -v
+
+      - name: Upload coverage to Codecov
+        if: matrix.python-version == '3.11'
+        uses: codecov/codecov-action@v4
+        with:
+          file: ./coverage.xml
+          flags: unittests
+          name: frame2-redsox
+          fail_ci_if_error: false
+
+  # ── Job 2: Lint & format check ──────────────────────────────────────────────
+  lint:
+    name: Lint & Style
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install lint tools
+        run: |
+          pip install flake8 flake8-bugbear
+
+      - name: Run flake8
+        run: |
+          flake8 . \
+            --max-line-length=110 \
+            --exclude=.venv,venv,__pycache__,.git,app/pages \
+            --extend-ignore=E203,W503,E501 \
+            --count \
+            --statistics
+
+  # ── Job 3: Syntax check all Python files ────────────────────────────────────
+  syntax:
+    name: Syntax Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Check syntax of all Python files
+        run: |
+          echo "Checking syntax..."
+          find . -name "*.py" \
+            -not -path "./.venv/*" \
+            -not -path "./venv/*" \
+            -not -path "./__pycache__/*" \
+            | xargs python -m py_compile
+          echo "All files passed syntax check."
+
+  # ── Job 4: Data integrity check ─────────────────────────────────────────────
+  data-integrity:
+    name: Data Integrity
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          pip install pandas
+
+      - name: Run data integrity tests only
+        run: |
+          pip install pytest
+          pytest tests/test_data_integrity.py -v
+
+  # ── Job 5: HTML generator smoke test ────────────────────────────────────────
+  html-smoke:
+    name: HTML Generator Smoke Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install pandas
+
+      - name: Generate mobile timeline HTML
+        run: |
+          python generate_mobile_timeline.py /tmp/mobile_test.html
+          ls -lh /tmp/mobile_test.html
+
+      - name: Validate HTML output
+        run: |
+          python - << 'EOF'
+          with open('/tmp/mobile_test.html', 'r') as f:
+              html = f.read()
+          checks = [
+              ('DOCTYPE', '<!DOCTYPE html>'),
+              ('viewport', 'name="viewport"'),
+              ('Chart.js', 'chart.js'),
+              ('SEASONS data', 'const SEASONS'),
+              ('MACRO_ERAS', 'const MACRO_ERAS'),
+              ('season grid', 'seasonGrid'),
+              ('era table', 'eraTable'),
+              ('player search', 'playerSearch'),
+              ('58 seasons tag', '58'),
+              ('closing tag', '</html>'),
+          ]
+          failed = [(name, tok) for name, tok in checks if tok not in html]
+          if failed:
+              print(f'FAILED checks: {[n for n,_ in failed]}')
+              raise SystemExit(1)
+          print(f'All {len(checks)} HTML checks passed. File: {len(html):,} bytes')
+          EOF
+
+      - name: Generate web timeline HTML
+        run: |
+          python generate_web_timeline.py /tmp/web_test.html
+          ls -lh /tmp/web_test.html
+
+  # ── Job 6: Deploy to Streamlit Cloud (on push to main only) ─────────────────
+  deploy-notify:
+    name: Deploy Notification
+    runs-on: ubuntu-latest
+    needs: [test, lint, syntax, data-integrity, html-smoke]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+
+    steps:
+      - name: Deployment ready notification
+        run: |
+          echo "============================================"
+          echo "  All checks passed on main branch."
+          echo "  Streamlit Cloud will auto-deploy from:"
+          echo "  github.com/${{ github.repository }}"
+          echo "  Entry point: app/app.py"
+          echo "============================================"

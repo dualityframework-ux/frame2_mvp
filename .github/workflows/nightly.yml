@@ -1,0 +1,89 @@
+name: Nightly Data Audit
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # 06:00 UTC every day
+  workflow_dispatch:        # allow manual trigger
+
+jobs:
+  audit:
+    name: Full Data & Regression Audit
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt pytest pytest-cov
+
+      - name: Run full test suite
+        run: |
+          pytest tests/ -v \
+            --cov=intelligence --cov=adapters --cov=config --cov=content_engine \
+            --cov=memory --cov=models --cov=agents \
+            --cov-report=term-missing \
+            --cov-fail-under=75
+
+      - name: Run data completeness audit
+        run: |
+          python - << 'EOF'
+          import sys, os
+          sys.path.insert(0, os.path.abspath('.'))
+          from adapters.redsox_history_loader import load_redsox_history
+          df = load_redsox_history('storage/parquet/redsox_history.csv')
+
+          issues = []
+          if len(df) != 58:
+              issues.append(f"Row count: expected 58, got {len(df)}")
+          if df['season'].min() != 1967:
+              issues.append(f"First season: expected 1967, got {df['season'].min()}")
+          if df['season'].max() != 2024:
+              issues.append(f"Last season: expected 2024, got {df['season'].max()}")
+
+          ws_count = df['playoff_result'].str.lower().str.strip().eq('world series').sum()
+          if ws_count != 7:
+              issues.append(f"WS appearances: expected 7, got {ws_count}")
+
+          nulls = df[['wins','losses','run_diff','team_ops','team_era']].isna().sum()
+          for col, n in nulls.items():
+              if n > 0:
+                  issues.append(f"Null values in {col}: {n}")
+
+          if issues:
+              print("DATA AUDIT FAILED:")
+              for i in issues:
+                  print(f"  - {i}")
+              sys.exit(1)
+          else:
+              print(f"Data audit passed: {len(df)} rows, {len(df.columns)} columns, 7 WS appearances confirmed.")
+          EOF
+
+      - name: Generate HTML artifacts (regression check)
+        run: |
+          python generate_mobile_timeline.py /tmp/nightly_mobile.html
+          python generate_web_timeline.py /tmp/nightly_web.html
+          echo "Mobile: $(wc -c < /tmp/nightly_mobile.html) bytes"
+          echo "Web:    $(wc -c < /tmp/nightly_web.html) bytes"
+
+          # Size sanity check — both should be > 50KB
+          python - << 'EOF'
+          import os
+          for name, path in [('mobile', '/tmp/nightly_mobile.html'), ('web', '/tmp/nightly_web.html')]:
+              size = os.path.getsize(path)
+              if size < 50_000:
+                  print(f"FAIL: {name} HTML too small ({size} bytes, expected > 50KB)")
+                  raise SystemExit(1)
+          print("HTML size checks passed.")
+          EOF
+
+      - name: Report summary
+        if: always()
+        run: |
+          echo "Nightly audit complete: $(date -u)"

@@ -1,0 +1,40 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "-v",
+    "--tb=short",
+    "--strict-markers",
+    "--color=yes",
+]
+markers = [
+    "slow: marks tests as slow (deselect with '-m not slow')",
+    "integration: marks integration tests requiring full dataset",
+]
+
+[tool.coverage.run]
+source = ["intelligence", "adapters", "config", "content_engine", "memory", "models", "agents"]
+omit = [
+    "tests/*",
+    "app/*",
+    "*/site-packages/*",
+    "generate_*.py",
+    "export_*.py",
+    "build_*.py",
+    "config/styles.py",
+    "adapters/mlb_statsapi.py",
+]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+fail_under = 70
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "pass",
+]

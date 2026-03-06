@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated outputs (large files — generate on demand)
+*.pptx
+frame2_redsox_era_comparison.pdf
+redsox_franchise_timeline.html
+redsox_mobile_timeline.html
+
+# Logs
+*.log
