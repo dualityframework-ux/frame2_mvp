@@ -46,24 +46,6 @@ these signals help reveal the **mechanism behind outcomes**.
 
 ---
 
-## philosophy
-
-most fans watch the scoreboard.
-
-frame² tries to explain why the scoreboard moved.
-
-the engine looks for hidden signals such as:
-
-• contact quality  
-• plate discipline  
-• run expectancy swings  
-• roster construction  
-• development pipeline
-
-these signals help reveal the mechanism behind outcomes.
-
----
-
 ## features
 
 ### red sox intelligence dashboard
