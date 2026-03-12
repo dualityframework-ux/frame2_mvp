@@ -1,64 +1,32 @@
-# frame² — Red Sox MVP
+# frame² — red sox MVP
 
 frame² is a sports intelligence app.
 
 most sports sites show statistics.
+frame² explains **why the game changed.**
 
-frame² explains why the game changed.
-
----
-
-## idea
+core idea:
 
 result = process + variance
 
-frame² explains games using:
+framework:
 
 observation → mechanism → implication
-
----
 
 ## example
 
 fans see: a comeback
-
 frame² sees: the pitcher losing the strike zone
 
-implication: the edge flipped before the scoreboard changed
-
----
-
-## features
-
-- red sox season explorer
-- process vs result analysis
-- franchise timeline explorer
-- core + prospect pipeline explorer
-- live game intelligence
-- creator post generator
-
----
+![frame² example](redsox_process_vs_result.png)
 
 ## run locally
 
+git clone https://github.com/dualityframework-ux/frame2_redsox_mvp
+
 cd frame2_redsox_mvp
-python3 -m venv venv
-source venv/bin/activate
+
 pip install -r requirements.txt
-export PYTHONPATH=.
-streamlit run app/app.py
 
-open in browser:
+streamlit run app.py
 
-http://localhost:8501
-
-## red sox process vs result model
-
-visualizing when performance matches underlying process.
-
-![Red Sox Process vs Result](redsox_process_vs_result.png)---
-
-## creator
-
-ian kachadorian
-creator of frame²
