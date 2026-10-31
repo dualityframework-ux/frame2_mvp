@@ -216,10 +216,10 @@ footer{padding:28px var(--gap);text-align:center;color:var(--muted);font-size:.7
   <div class="container">
     <div class="hero-title">Boston <span class="sox">Red Sox</span></div>
     <div class="hero-title">Franchise Timeline &nbsp;<span style="color:var(--gold)">1967&ndash;2024</span></div>
-    <div class="hero-sub">58 seasons &bull; 7 macro-eras &bull; 6 World Series titles</div>
+    <div class="hero-sub">58 seasons &bull; 7 macro-eras &bull; 7 World Series trips, 4 titles</div>
     <div class="kpi-row" id="heroKpis">
       <div class="kpi"><div class="kpi-val">58</div><div class="kpi-lbl">Seasons</div></div>
-      <div class="kpi"><div class="kpi-val">6</div><div class="kpi-lbl">WS Titles</div></div>
+      <div class="kpi"><div class="kpi-val">4</div><div class="kpi-lbl">WS Titles</div></div>
       <div class="kpi"><div class="kpi-val">108</div><div class="kpi-lbl">Best Wins</div></div>
       <div class="kpi"><div class="kpi-val">+229</div><div class="kpi-lbl">Best RD</div></div>
       <div class="kpi"><div class="kpi-val">20</div><div class="kpi-lbl">Playoffs</div></div>

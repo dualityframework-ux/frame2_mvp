@@ -161,3 +161,13 @@ class TestWorldSeriesSeasons:
         """7 WS appearances total: 4 wins (2004/2007/2013/2018) + 3 losses (1967/1975/1986)."""
         ws_count = df["playoff_result"].str.lower().str.strip().eq("world series").sum()
         assert ws_count == 7, f"Expected 7 WS appearances, found {ws_count}"
+
+
+def test_ws_titles_are_a_subset_of_ws_appearances():
+    """The data marks pennant seasons as 'world series'; titles must be among them."""
+    import pandas as pd
+    from config.settings import WS_TITLE_SEASONS
+    df = pd.read_csv("storage/parquet/redsox_history.csv")
+    ws = set(df.loc[df["playoff_result"] == "world series", "season"].astype(int))
+    assert WS_TITLE_SEASONS <= ws
+    assert len(WS_TITLE_SEASONS) == 4 and len(ws) == 7

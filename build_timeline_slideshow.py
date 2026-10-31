@@ -40,6 +40,7 @@ from lxml import etree
 
 from adapters.redsox_history_loader import load_redsox_history
 from intelligence.redsox_history_engine import classify_process_vs_result
+from config.settings import WS_TITLE_SEASONS
 
 # ══════════════════════════════════════════════════════════════════════════════
 # PALETTE & CONSTANTS
@@ -160,7 +161,7 @@ def franchise_timeline_chart(df):
     ax.axhline(81, color="#c8102e", linestyle="--", linewidth=1.2, alpha=0.7, label=".500 (81 W)")
 
     ws = df[df["playoff_result"]=="world series"]
-    ax.scatter(ws["season"], ws["wins"], s=140, color="#e4b84d", zorder=5, marker="*", label="World Series Win")
+    ax.scatter(ws["season"], ws["wins"], s=140, color="#e4b84d", zorder=5, marker="*", label="World Series appearance")
 
     # Era boundary lines
     for boundary in [1977, 1987, 1997, 2007, 2014, 2020]:
@@ -180,7 +181,7 @@ def franchise_timeline_chart(df):
     legend_patches = [mpatches.Patch(color=hex_to_rgb_f(clr), label=era.split("(")[0].strip())
                       for era, (_, clr) in MACRO_ERAS.items()]
     legend_patches += [Line2D([0],[0], marker="*", color="w", markerfacecolor="#e4b84d",
-                               markersize=10, label="World Series Win")]
+                               markersize=10, label="World Series appearance")]
     ax.legend(handles=legend_patches, fontsize=7.5, loc="upper left", ncol=2, frameon=True)
     fig.tight_layout(pad=1.2)
     return fig_bytes(fig)
@@ -214,7 +215,7 @@ def scatter_chart(df):
                       for era, (_, clr) in MACRO_ERAS.items()]
     legend_patches += [Line2D([0],[0], marker="o", color="w", markerfacecolor="none",
                                markeredgecolor="#e4b84d", markeredgewidth=2, markersize=9,
-                               label="World Series Win")]
+                               label="World Series appearance")]
     ax.legend(handles=legend_patches, fontsize=7.5, ncol=2, loc="upper left", frameon=True)
     fig.tight_layout(pad=1.5)
     return fig_bytes(fig)
@@ -364,12 +365,12 @@ def slide_cover(prs, df):
     add_text(slide, "TIMELINE  1967 – 2024",
              Inches(0.5), Inches(1.55), Inches(12), Inches(0.85),
              font_size=38, bold=True, color=GOLD, align=PP_ALIGN.CENTER)
-    add_text(slide, "Seven Eras · 58 Seasons · 6 World Series Championships",
+    add_text(slide, "Seven Eras · 58 Seasons · 7 World Series Trips, 4 Championships",
              Inches(0.5), Inches(2.62), Inches(12), Inches(0.55),
              font_size=16, bold=False, color=MGRAY, align=PP_ALIGN.CENTER)
 
     # KPI row
-    ws   = int((df["playoff_result"]=="world series").sum())
+    ws   = int(df["season"].isin(WS_TITLE_SEASONS).sum())
     best = int(df["wins"].max())
     best_yr = int(df.loc[df["wins"].idxmax(),"season"])
     playoff = int(df["playoff_result"].isin(["world series","lost alcs","lost alds","al east tie-break loss"]).sum())
@@ -399,7 +400,7 @@ def slide_story_in_numbers(prs, df):
 
     stats = [
         ("58",   "Total Seasons"),
-        ("6",    "World Series Titles"),
+        (str(int(df["season"].isin(WS_TITLE_SEASONS).sum())), "World Series Titles"),
         ("108",  "Most Wins (2018)"),
         ("+229", "Best Run Diff (2018)"),
         ("20",   "Playoff Appearances"),
@@ -423,7 +424,7 @@ def slide_story_in_numbers(prs, df):
     # World Series winners list
     add_rect(slide, Inches(0.18), Inches(4.62), SW-Inches(0.36), Inches(0.38), NAVY)
     add_text(slide, "  CHAMPIONSHIP YEARS:  " + "  ·  ".join(str(y) for y in sorted(
-        df[df["playoff_result"]=="world series"]["season"].tolist())),
+        df[df["season"].isin(WS_TITLE_SEASONS)]["season"].tolist())),
              Inches(0.22), Inches(4.64), SW-Inches(0.4), Inches(0.34),
              font_size=11, bold=True, color=GOLD, align=PP_ALIGN.LEFT)
 
@@ -508,7 +509,7 @@ def slide_era_deepdive(prs, df, era_name, yrs, color_hex):
     ws_val = "★"*ws_n if ws_n else "—"
     add_text(slide, ws_val, Inches(11.95), Inches(1.28), Inches(1.0), Inches(0.65),
              font_size=22 if ws_n else 18, bold=True, color=GOLD, align=PP_ALIGN.CENTER)
-    add_text(slide, "WS Titles", Inches(11.95), Inches(1.88), Inches(1.0), Inches(0.35),
+    add_text(slide, "WS Trips", Inches(11.95), Inches(1.88), Inches(1.0), Inches(0.35),
              font_size=8.5, color=DGRAY, align=PP_ALIGN.CENTER)
 
     # Era wins bar chart (left side, most of width)
@@ -544,7 +545,7 @@ def slide_era_deepdive(prs, df, era_name, yrs, color_hex):
         if row["playoff_result"] == "world series":
             bg = rgb(255, 248, 220)   # gold tint
         add_rect(slide, Inches(0.3), ty, Inches(sum(col_widths)), row_h, bg)
-        result_str = str(row["playoff_result"]).replace("world series","WS WIN").replace(
+        result_str = str(row["playoff_result"]).replace("world series","WS").replace(
             "lost alcs","ALCS").replace("lost alds","ALDS").replace(
             "al east tie-break loss","TBL").replace("missed playoffs","—")
         cells = [str(int(row["season"])), str(int(row["wins"])), str(int(row["losses"])),
@@ -552,7 +553,7 @@ def slide_era_deepdive(prs, df, era_name, yrs, color_hex):
                  f"{row['team_ops']:.3f}", f"{row['team_era']:.2f}", str(row["manager"])]
         for val, lx, cw in zip(cells, tx_starts, col_widths):
             text_color = NAVY
-            if row["playoff_result"] == "world series" and val == "WS WIN":
+            if row["playoff_result"] == "world series" and val == "WS":
                 text_color = RED
             add_text(slide, val, lx+Pt(2), ty+Pt(2), Inches(cw)-Pt(4), row_h-Pt(4),
                      font_size=7.5, color=text_color, align=PP_ALIGN.CENTER)

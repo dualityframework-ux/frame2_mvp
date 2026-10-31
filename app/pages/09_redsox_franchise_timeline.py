@@ -51,7 +51,7 @@ MACRO_ERA_COLORS = [
 
 # ── playoff result display names ─────────────────────────────────────────
 RESULT_DISPLAY = {
-    "world series":           "🏆 world series win",
+    "world series":           "🏆 world series",
     "lost alcs":              "🔴 lost alcs",
     "lost alds":              "🔵 lost alds",
     "al east tie-break loss": "⚪ al east tiebreak loss",
@@ -109,7 +109,7 @@ with st.sidebar:
     if pl_col1.button("all", key="pl_all", use_container_width=True):
         st.session_state["tl_results"] = ALL_RESULTS_DISP
     if pl_col2.button("ws only", key="pl_ws", use_container_width=True):
-        st.session_state["tl_results"] = ["🏆 world series win"]
+        st.session_state["tl_results"] = ["🏆 world series"]
 
     if "tl_results" not in st.session_state:
         st.session_state["tl_results"] = ALL_RESULTS_DISP
@@ -346,7 +346,7 @@ fig.update_layout(
 # ── colour legend ─────────────────────────────────────────────────────────
 legend_html = """
 <div class="tl-legend">
-  <span class="tl-dot" style="background:#c8102e;"></span> world series win &nbsp;
+  <span class="tl-dot" style="background:#c8102e;"></span> world series &nbsp;
   <span class="tl-dot" style="background:#e4b84d;"></span> alcs &nbsp;
   <span class="tl-dot" style="background:#7eb8f7;"></span> alds / tiebreak &nbsp;
   <span class="tl-dot" style="background:#4a4a5a;"></span> missed playoffs
@@ -556,7 +556,7 @@ if len(selected_macro_eras) == 1:
         m1, m2, m3 = st.columns(3)
         m1.metric("avg wins",    f"{avg_wins:.1f}")
         m2.metric("avg run diff", f"{avg_rd:+.1f}")
-        m3.metric("ws titles",   int(ws_count))
+        m3.metric("ws appearances", int(ws_count))
 
 # ══════════════════════════════════════════════════════════════════════════
 # SLIDESHOW EXPORT

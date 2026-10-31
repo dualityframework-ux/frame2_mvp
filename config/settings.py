@@ -10,3 +10,6 @@ class Settings:
     request_timeout_s: float = 10.0
 
 SETTINGS = Settings()
+
+# Data marks every pennant season as "world series"; these are the ones the Red Sox won.
+WS_TITLE_SEASONS = frozenset({2004, 2007, 2013, 2018})

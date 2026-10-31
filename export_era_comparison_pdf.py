@@ -314,7 +314,7 @@ def chart_scatter(full_df, era_df):
     legend_patches.append(
         Line2D([0],[0], marker='o', color='w', markerfacecolor='none',
                markeredgecolor=GOLD, markeredgewidth=2, markersize=9,
-               label="World Series Win")
+               label="World Series appearance")
     )
     ax.legend(handles=legend_patches, fontsize=6.5, loc="upper left",
               frameon=True, ncol=2)
@@ -361,7 +361,7 @@ def chart_wins_timeline(full_df, era_df):
 
     ws_seasons = full_df[full_df["playoff_result"] == "world series"]
     ax.scatter(ws_seasons["season"], ws_seasons["wins"],
-               s=120, color=GOLD, zorder=5, marker="*", label="World Series Win")
+               s=120, color=GOLD, zorder=5, marker="*", label="World Series appearance")
     ax.axhline(81, color=RED_SOX_RED, linestyle="--", linewidth=1, alpha=0.6)
 
     # era boundary lines
@@ -386,7 +386,7 @@ def chart_wins_timeline(full_df, era_df):
     fig.tight_layout(pad=1.5)
     return fig_to_image_bytes(fig)
 
-# ── CHART 8: WS Titles & Playoff Rate ─────────────────────────────────────
+# ── CHART 8: WS Appearances & Playoff Rate ─────────────────────────────────────
 def chart_titles_and_playoff(era_df):
     fig, axes = plt.subplots(1, 2, figsize=(9, 3.5), facecolor=WHITE)
     names  = era_df["short"].tolist()
@@ -403,7 +403,7 @@ def chart_titles_and_playoff(era_df):
                     color=GOLD)
     ax.set_xticks(x); ax.set_xticklabels(names, fontsize=6.5, rotation=20, ha="right")
     ax.set_yticks([0,1,2])
-    set_axis_style(ax, "World Series Titles by Era", ylabel="Titles")
+    set_axis_style(ax, "World Series Appearances by Era", ylabel="Appearances")
 
     ax = axes[1]
     bars = ax.bar(x, era_df["playoff_rate"], color=colors_list, width=0.6,
@@ -515,7 +515,7 @@ def build_pdf(output_path):
         [Paragraph("", title_style)],
         [Paragraph("⚾  RED SOX FRANCHISE", title_style)],
         [Paragraph("ERA COMPARISON REPORT", title_style)],
-        [Paragraph("1967 – 2024  ·  Seven Eras  ·  58 Seasons  ·  6 World Series Titles", subtitle_style)],
+        [Paragraph("1967 – 2024  ·  Seven Eras  ·  58 Seasons  ·  7 World Series Appearances, 4 Titles", subtitle_style)],
         [Paragraph("", body_style)],
         [Paragraph("A statistical deep-dive into every major era of Red Sox baseball,", body_style)],
         [Paragraph("from the Impossible Dream of 1967 to the rebuilding present.", body_style)],
@@ -543,7 +543,7 @@ def build_pdf(output_path):
 
     kpi_data = [[
         Paragraph(f'<font color="{GOLD}" size="22"><b>{total_seasons}</b></font><br/><font size="8" color="#cccccc">Total Seasons</font>', body_style),
-        Paragraph(f'<font color="{GOLD}" size="22"><b>{total_ws}</b></font><br/><font size="8" color="#cccccc">World Series Titles</font>', body_style),
+        Paragraph(f'<font color="{GOLD}" size="22"><b>{total_ws}</b></font><br/><font size="8" color="#cccccc">World Series Appearances</font>', body_style),
         Paragraph(f'<font color="{GOLD}" size="13"><b>{best_era}</b></font><br/><font size="8" color="#cccccc">Most Wins Era</font>', body_style),
         Paragraph(f'<font color="{GOLD}" size="13"><b>{best_rd}</b></font><br/><font size="8" color="#cccccc">Best Run Diff Era</font>', body_style),
     ]]
@@ -735,7 +735,7 @@ def build_pdf(output_path):
     story.append(HRFlowable(width=PW, thickness=2, color=colors.HexColor(RED_SOX_RED), spaceAfter=8))
     story.append(Paragraph(
         "Every season plotted by wins (y-axis) and run differential (x-axis). "
-        "Gold stars mark World Series wins. Seasons in the top-right quadrant "
+        "Gold stars mark World Series appearances. Seasons in the top-right quadrant "
         "(high wins, high run diff) are genuine process-backed contenders. "
         "Top-left quadrant seasons won more games than their run diff warranted — "
         "potential overperformers.",
@@ -751,7 +751,7 @@ def build_pdf(output_path):
     timeline_img = chart_wins_timeline(full_df, era_df)
     story.append(RLImage(timeline_img, width=PW, height=2.6*inch))
     story.append(Paragraph(
-        "Era boundaries marked with dotted vertical lines. Gold stars = World Series wins. "
+        "Era boundaries marked with dotted vertical lines. Gold stars = World Series appearances. "
         "Coloured lines represent each macro-era; grey background line shows all 58 seasons.",
         caption_style
     ))
@@ -850,7 +850,7 @@ def build_pdf(output_path):
     story.append(full_table)
     story.append(Spacer(1, 0.15*inch))
     story.append(Paragraph(
-        "🏆 WS = World Series win  ·  🔴 ALCS = lost ALCS  ·  🔵 ALDS = lost ALDS  "
+        "🏆 WS = World Series appearance  ·  🔴 ALCS = lost ALCS  ·  🔵 ALDS = lost ALDS  "
         "·  ⚡ TBL = AL East tie-break loss  ·  — = missed playoffs  ·  Gold rows = championships",
         caption_style
     ))
