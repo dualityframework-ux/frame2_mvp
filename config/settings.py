@@ -7,5 +7,6 @@ class Settings:
     data_dir: str = "data"
     timezone: str = "America/New_York"
     lowercase_posts: bool = True
+    request_timeout_s: float = 10.0
 
 SETTINGS = Settings()

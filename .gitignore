@@ -5,7 +5,9 @@ __pycache__/
 .streamlit/secrets.toml
 .env
 .idea/
-.vscode/# Python
+.vscode/
+
+# Python
 __pycache__/
 *.py[cod]
 *.pyo
@@ -32,3 +34,5 @@ redsox_mobile_timeline.html
 
 # Logs
 *.log
+.coverage
+*.save

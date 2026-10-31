@@ -3,7 +3,8 @@
 ![python](https://img.shields.io/badge/python-3.10+-blue)
 ![streamlit](https://img.shields.io/badge/framework-streamlit-red)
 ![analytics](https://img.shields.io/badge/domain-sports%20analytics-green)
-![license](https://img.shields.io/badge/license-MIT-lightgrey)
+[![license](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
+[![CI](https://github.com/dualityframework-ux/frame2_mvp/actions/workflows/ci.yml/badge.svg)](https://github.com/dualityframework-ux/frame2_mvp/actions/workflows/ci.yml)
 
 frame² is a lightweight sports analytics and content engine built to explain games through **process vs result**.
 
@@ -107,15 +108,21 @@ planned upgrades for frame²:
 
 ## project structure
 
+```
 frame2_mvp/
-
-├── app.py                # streamlit dashboard  
-├── engine.py             # edge detection + analysis logic  
-├── data.py               # example game/team inputs  
-├── posts.py              # insight → post generator  
-├── images/               # README screenshots  
-├── scripts/              # utilities + helpers  
+├── app/
+│   ├── app.py            # streamlit entry point
+│   └── pages/            # dashboard pages (explorer, timeline, post generator, live game)
+├── intelligence/         # signal / noise and process-vs-result logic
+├── content_engine/       # insight → post generator
+├── adapters/             # data loaders (history csv, mlb stats api)
+├── agents/               # orchestrator that ties the engines together
+├── config/               # settings, styles, utils
+├── storage/parquet/      # red sox season data (1967–2024)
+├── images/               # readme screenshots
+├── tests/                # pytest suite
 └── requirements.txt      # python dependencies
+```
 
 ---
 
@@ -126,4 +133,18 @@ git clone https://github.com/dualityframework-ux/frame2_mvp.git
 cd frame2_mvp
 
 pip install -r requirements.txt
-streamlit run app.py
+PYTHONPATH=. streamlit run app/app.py
+```
+
+## tests
+
+```bash
+pip install pytest
+PYTHONPATH=. pytest -q
+```
+
+214 tests cover the adapters, settings, data integrity, the history and signal engines, the orchestrator and the post generator. github actions runs them on every push.
+
+## license
+
+mit — see [LICENSE](LICENSE).
