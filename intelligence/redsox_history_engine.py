@@ -28,6 +28,41 @@ def classify_process_vs_result(row: pd.Series) -> Tuple[str, str]:
     return ("balanced", "the result and process were relatively aligned")
 
 
+RUNS_PER_WIN = 10.0  # rule of thumb: about 10 runs of differential are worth one win
+
+
+def win_pace_162(row: pd.Series) -> float:
+    """Actual wins scaled to a 162-game season, so shortened seasons compare fairly."""
+    games = float(row["wins"]) + float(row["losses"])
+    return float(row["wins"]) * 162.0 / games if games else 0.0
+
+
+def expected_wins_162(row: pd.Series) -> float:
+    """Wins the run differential is worth over 162 games: 81 + scaled run diff / 10.
+
+    The dataset has run differential but not runs scored and allowed separately, so this uses
+    the linear runs-per-win rule instead of the full Pythagorean formula.
+    """
+    games = float(row["wins"]) + float(row["losses"])
+    if not games:
+        return 81.0
+    return 81.0 + float(row["run_diff"]) * (162.0 / games) / RUNS_PER_WIN
+
+
+def luck_wins_162(row: pd.Series) -> float:
+    """Win pace minus expected wins. Positive means the record outran the process."""
+    return win_pace_162(row) - expected_wins_162(row)
+
+
+def add_expected_wins(df: pd.DataFrame) -> pd.DataFrame:
+    """Return a copy with win_pace_162, expected_wins_162 and luck_wins_162 columns."""
+    out = df.copy()
+    out["win_pace_162"] = out.apply(win_pace_162, axis=1)
+    out["expected_wins_162"] = out.apply(expected_wins_162, axis=1)
+    out["luck_wins_162"] = out["win_pace_162"] - out["expected_wins_162"]
+    return out
+
+
 def build_plain_summary(row: pd.Series, tag: str) -> str:
     """One plain-English sentence that any fan can read."""
     wins = int(row["wins"])

@@ -22,6 +22,7 @@ from intelligence.redsox_history_engine import (
     get_history_df,
     build_process_vs_result_table,
     classify_process_vs_result,
+    add_expected_wins,
 )
 from config.styles import APP_CSS
 
@@ -175,3 +176,22 @@ detail = df[df["tag"] == sel_detail_tag][
     ["season", "wins", "losses", "run_diff", "playoff_result", "manager", "explanation"]
 ].sort_values("season")
 st.dataframe(detail, use_container_width=True, hide_index=True)
+
+# ── Luck: record vs. run-differential expectation, per 162 games ─────────────
+st.markdown("---")
+st.markdown("### luck: record vs. expected wins")
+st.caption(
+    "expected wins = 81 + run differential ÷ 10, scaled to 162 games so shortened seasons "
+    "(1981, 1994, 1995, 2020) compare fairly. luck = win pace − expected wins."
+)
+luck = add_expected_wins(df)[
+    ["season", "wins", "losses", "run_diff", "win_pace_162", "expected_wins_162", "luck_wins_162", "playoff_result"]
+].round(1)
+lc1, lc2 = st.columns(2)
+with lc1:
+    st.markdown("**luckiest seasons**")
+    st.dataframe(luck.nlargest(5, "luck_wins_162"), use_container_width=True, hide_index=True)
+with lc2:
+    st.markdown("**unluckiest seasons**")
+    st.dataframe(luck.nsmallest(5, "luck_wins_162"), use_container_width=True, hide_index=True)
+
