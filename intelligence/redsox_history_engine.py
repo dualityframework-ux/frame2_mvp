@@ -2,6 +2,7 @@ from __future__ import annotations
 from typing import Dict, Tuple
 import pandas as pd
 from adapters.redsox_history_loader import load_redsox_history
+from config.settings import WS_TITLE_SEASONS
 
 
 def get_history_df(csv_path: str = "storage/parquet/redsox_history.csv") -> pd.DataFrame:
@@ -34,7 +35,7 @@ def build_plain_summary(row: pd.Series, tag: str) -> str:
     result = str(row.get("playoff_result", "")).lower()
 
     if tag == "signal":
-        if "world series" in result and "lost" not in result:
+        if int(row.get("season", 0)) in WS_TITLE_SEASONS:
             return "This team was as good as it looked — the process earned the title."
         if run_diff >= 180:
             return "One of the most dominant Red Sox teams in history, top to bottom."
