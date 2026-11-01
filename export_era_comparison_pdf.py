@@ -243,7 +243,7 @@ def normalize_col(series, invert=False):
     return 100 - norm if invert else norm
 
 def chart_radar(era_df):
-    categories = ["Win %", "Run Diff", "OPS", "ERA (inv)", "FIP (inv)"]
+    categories = ["Avg wins", "Run Diff", "OPS", "ERA (inv)"]
     N = len(categories)
     angles = [n / float(N) * 2 * math.pi for n in range(N)]
     angles += angles[:1]
@@ -253,14 +253,13 @@ def chart_radar(era_df):
     era_df["rd_norm"]      = normalize_col(era_df["avg_rd"])
     era_df["ops_norm"]     = normalize_col(era_df["avg_ops"])
     era_df["era_norm"]     = normalize_col(era_df["avg_era"], invert=True)
-    era_df["fip_norm"]     = normalize_col(era_df["avg_fip"], invert=True)
 
     fig, ax = plt.subplots(figsize=(6, 6), subplot_kw=dict(polar=True), facecolor=WHITE)
     ax.set_facecolor(LIGHT_GRAY)
 
     for _, row in era_df.iterrows():
         vals = [row["win_pct_norm"], row["rd_norm"], row["ops_norm"],
-                row["era_norm"], row["fip_norm"]]
+                row["era_norm"]]
         vals += vals[:1]
         c = hex_to_rgb(row["color"])
         ax.plot(angles, vals, color=c, linewidth=2, linestyle="solid")
@@ -537,6 +536,8 @@ def build_pdf(output_path):
     story.append(cover_table)
     story.append(Spacer(1, 0.4*inch))
 
+    story.append(Paragraph("FIP* is unverified and excluded from radar comparisons. ERA follows the documented MLB source snapshots; narratives remain curated interpretations.", body_style))
+
     # KPI row on cover
     total_ws = era_df["ws_titles"].sum()
     total_seasons = era_df["n"].sum()
@@ -545,7 +546,7 @@ def build_pdf(output_path):
 
     kpi_data = [[
         Paragraph(f'<font color="{GOLD}" size="22"><b>{total_seasons}</b></font><br/><font size="8" color="#cccccc">Total Seasons</font>', body_style),
-        Paragraph(f'<font color="{GOLD}" size="22"><b>{total_ws}</b></font><br/><font size="8" color="#cccccc">World Series Appearances</font>', body_style),
+        Paragraph(f'<font color="{GOLD}" size="22"><b>{total_ws}</b></font><br/><font size="8" color="#cccccc">World Series Titles</font>', body_style),
         Paragraph(f'<font color="{GOLD}" size="13"><b>{best_era}</b></font><br/><font size="8" color="#cccccc">Most Wins Era</font>', body_style),
         Paragraph(f'<font color="{GOLD}" size="13"><b>{best_rd}</b></font><br/><font size="8" color="#cccccc">Best Run Diff Era</font>', body_style),
     ]]
@@ -576,7 +577,7 @@ def build_pdf(output_path):
 
     # Table header
     hdr = ["Era", "Seasons", "Avg W", "Avg L", "Avg RD", "Avg OPS",
-           "Avg ERA", "Avg FIP", "WS 🏆", "Playoff %"]
+           "Avg ERA", "FIP*", "WS 🏆", "Playoff %"]
     tbl_data = [[Paragraph(h, table_header_style) for h in hdr]]
     for _, row in era_df.iterrows():
         tbl_data.append([
@@ -680,7 +681,7 @@ def build_pdf(output_path):
 
     # OBP / SLG / FIP comparison table
     story.append(Paragraph("Detailed Offensive & Pitching Metrics", section_style))
-    detail_hdr = ["Era", "Avg OBP", "Avg SLG", "Avg OPS", "Avg ERA", "Avg FIP"]
+    detail_hdr = ["Era", "Avg OBP", "Avg SLG", "Avg OPS", "Avg ERA", "FIP*"]
     detail_data = [[Paragraph(h, table_header_style) for h in detail_hdr]]
     for _, row in era_df.iterrows():
         detail_data.append([
@@ -714,7 +715,7 @@ def build_pdf(output_path):
     story.append(HRFlowable(width=PW, thickness=2, color=colors.HexColor(RED_SOX_RED), spaceAfter=8))
     story.append(Paragraph(
         "Each axis is normalised 0–100 relative to the best and worst era for that dimension. "
-        "ERA and FIP are inverted so that a larger area always represents a better performance. "
+        "ERA is inverted. Unverified FIP is excluded from the radar. "
         "A perfectly round web at 100 would be the ideal franchise era.",
         body_style
     ))
@@ -802,7 +803,7 @@ def build_pdf(output_path):
     story.append(Paragraph("Full Season Reference Table — All 58 Seasons", section_style))
     story.append(HRFlowable(width=PW, thickness=2, color=colors.HexColor(RED_SOX_RED), spaceAfter=8))
 
-    full_hdr = ["Year", "W", "L", "RD", "Result", "OPS", "ERA", "FIP", "Manager", "Players"]
+    full_hdr = ["Year", "W", "L", "RD", "Result", "OPS", "ERA", "FIP*", "Manager", "Players"]
     full_tbl = [[Paragraph(h, table_header_style) for h in full_hdr]]
     for _, row in full_df.sort_values("season").iterrows():
         players = str(row.get("key_players",""))

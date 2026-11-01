@@ -228,7 +228,7 @@ def normalize_col(series, invert=False):
     return 100-n if invert else n
 
 def radar_chart(era_df):
-    categories = ["Win %", "Run Diff", "OPS", "ERA inv", "FIP inv"]
+    categories = ["Avg wins", "Run Diff", "OPS", "ERA inv"]
     N = len(categories)
     angles = [n/float(N)*2*math.pi for n in range(N)]
     angles += angles[:1]
@@ -238,12 +238,11 @@ def radar_chart(era_df):
     era_df["rd_n"]  = normalize_col(era_df["avg_rd"])
     era_df["ops_n"] = normalize_col(era_df["avg_ops"])
     era_df["era_n"] = normalize_col(era_df["avg_era"], invert=True)
-    era_df["fip_n"] = normalize_col(era_df["avg_fip"], invert=True)
 
     fig, ax = plt.subplots(figsize=(7, 7), subplot_kw=dict(polar=True), facecolor="white")
     ax.set_facecolor("#f8f8f8")
     for _, row in era_df.iterrows():
-        vals = [row["win_n"], row["rd_n"], row["ops_n"], row["era_n"], row["fip_n"]]
+        vals = [row["win_n"], row["rd_n"], row["ops_n"], row["era_n"]]
         vals += vals[:1]
         c = hex_to_rgb_f(row["color"])
         ax.plot(angles, vals, color=c, linewidth=2.2)
@@ -678,7 +677,7 @@ def slide_wins_timeline(prs, df):
 def slide_era_radar(prs, df):
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     add_rect(slide, 0, 0, SW, SH, WHITE)
-    navy_header(slide, "Era Profile Radar", "Normalised 0–100 · higher = better on every axis")
+    navy_header(slide, "Era Profile Radar", "Normalised 0–100 · higher = better · unverified FIP excluded")
 
     # Build era_df
     era_records = []
@@ -794,7 +793,7 @@ def slide_current_state(prs, df):
     points = [
         ("Rafael Devers", "Franchise cornerstone — elite bat, needs contract security"),
         ("Jarren Duran",  "2023–24 breakout — the process engine of the current roster"),
-        ("Brayan Bello",  "Ace candidate — FIP better than ERA in 2024"),
+        ("Brayan Bello",  "On the 2024 roster; FIP remains unverified"),
         ("Tanner Houck",  "Frontline starter emerging — key to 2025 rotation"),
         ("Farm system",   "Ranked mid-tier — international pipeline developing"),
         ("2025 outlook",  "81 W baseline · needs rotation depth and bullpen upgrades"),

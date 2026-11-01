@@ -122,7 +122,9 @@ with st.expander("dig deeper"):
     s4, s5, s6 = st.columns(3)
     s4.metric("team obp", row["team_obp"])
     s5.metric("team slg", row["team_slg"])
-    s6.metric("team fip", row["team_fip"])
+    s6.metric("team fip (unverified)", row["team_fip"])
+
+st.caption("ERA follows MLB source snapshots. FIP and narrative interpretations remain unverified.")
 
 # ── post builder ───────────────────────────────────────
 st.markdown('<div class="section-label">build a post</div>', unsafe_allow_html=True)

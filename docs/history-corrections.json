@@ -1,0 +1,147 @@
+{
+  "reviewed_at": "2026-11-01T03:11:16.294128+00:00",
+  "baseline_commit": "79bd9ec6aa97cafc70767f4c100b9d62465556f2",
+  "policy": "Use MLB Stats API regular-season responses for the seven audited numeric fields. Do not infer FIP or causal narratives.",
+  "changes": [
+    {
+      "season": 1967,
+      "field": "team_era",
+      "before": "3.36",
+      "after": "3.37",
+      "reason": "Use the selected MLB regular-season pitching response as the metric source.",
+      "source": {
+        "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1967&stats=season&group=hitting%2Cpitching",
+        "retrieved_at": "2026-11-01T02:48:30.262787+00:00",
+        "sha256": "b76b53a1510637310014388f8b2ec254df2dfa2bf3bc7a1bcd0ef4b9c08e2e91"
+      }
+    },
+    {
+      "season": 1971,
+      "field": "team_era",
+      "before": "3.8",
+      "after": "3.81",
+      "reason": "Use the selected MLB regular-season pitching response as the metric source.",
+      "source": {
+        "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1971&stats=season&group=hitting%2Cpitching",
+        "retrieved_at": "2026-11-01T02:48:30.701465+00:00",
+        "sha256": "945c0479890de33459f37f88244a02b61e6525d415e704ef0e6b2394d8abdc47"
+      }
+    },
+    {
+      "season": 1975,
+      "field": "team_era",
+      "before": "3.98",
+      "after": "3.99",
+      "reason": "Use the selected MLB regular-season pitching response as the metric source.",
+      "source": {
+        "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1975&stats=season&group=hitting%2Cpitching",
+        "retrieved_at": "2026-11-01T02:48:31.132054+00:00",
+        "sha256": "931d5c8f80627e6c46436f65d3b507942944dea9087d7c1e4a99a9a88807835b"
+      }
+    },
+    {
+      "season": 1977,
+      "field": "team_era",
+      "before": "4.11",
+      "after": "4.12",
+      "reason": "Use the selected MLB regular-season pitching response as the metric source.",
+      "source": {
+        "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1977&stats=season&group=hitting%2Cpitching",
+        "retrieved_at": "2026-11-01T02:48:31.314988+00:00",
+        "sha256": "66b0e0c3f71523239da28afc68d18501bb21cdd26c9368d9360d99c260cf1459"
+      }
+    },
+    {
+      "season": 1979,
+      "field": "team_era",
+      "before": "4.03",
+      "after": "4.02",
+      "reason": "Use the selected MLB regular-season pitching response as the metric source.",
+      "source": {
+        "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1979&stats=season&group=hitting%2Cpitching",
+        "retrieved_at": "2026-11-01T02:48:31.505885+00:00",
+        "sha256": "41d173f80c7dce0f83f94d0239f718bcff3a2596775476e5d8db480fa8a996ae"
+      }
+    },
+    {
+      "season": 1982,
+      "field": "team_era",
+      "before": "4.03",
+      "after": "4.04",
+      "reason": "Use the selected MLB regular-season pitching response as the metric source.",
+      "source": {
+        "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1982&stats=season&group=hitting%2Cpitching",
+        "retrieved_at": "2026-11-01T02:48:31.834173+00:00",
+        "sha256": "62357261b7bd2714a12cdb9b582cbe12a4ed7aed807086a061e4ba083d6bdc75"
+      }
+    },
+    {
+      "season": 1993,
+      "field": "team_era",
+      "before": "3.77",
+      "after": "3.78",
+      "reason": "Use the selected MLB regular-season pitching response as the metric source.",
+      "source": {
+        "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1993&stats=season&group=hitting%2Cpitching",
+        "retrieved_at": "2026-11-01T02:48:32.907612+00:00",
+        "sha256": "145ac2dba93a1a19064844edff850cdea0f4e955c2d114778aa78b4ff8bf7bc0"
+      }
+    },
+    {
+      "season": 1993,
+      "field": "key_players",
+      "before": "Clemens, Boggs, Greenwell, Vaughn",
+      "after": "Clemens, Greenwell, Vaughn",
+      "reason": "Remove an entry absent from the selected full-season player roster; manager fields are unchanged.",
+      "source": {
+        "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1993&rosterType=fullSeason",
+        "retrieved_at": "2026-11-01T02:48:33.008470+00:00",
+        "sha256": "4508b08b8541634a2560a89de2b1015a6520f7b11c49a0987e0d8c7a7cf6c434"
+      }
+    },
+    {
+      "season": 2012,
+      "field": "key_players",
+      "before": "Lester, Ortiz, Pedroia, Gonzalez, Valentine",
+      "after": "Lester, Ortiz, Pedroia, Gonzalez",
+      "reason": "Remove an entry absent from the selected full-season player roster; manager fields are unchanged.",
+      "source": {
+        "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2012&rosterType=fullSeason",
+        "retrieved_at": "2026-11-01T02:48:35.081580+00:00",
+        "sha256": "e74d9bbec8c716addd47925efdbb38ff46e845fae19ddf860559aee6355ca8a6"
+      }
+    },
+    {
+      "season": 2022,
+      "field": "key_players",
+      "before": "Devers, Bogaerts, Verdugo, Schwarber, Pivetta, Sale",
+      "after": "Devers, Bogaerts, Verdugo, Pivetta, Sale",
+      "reason": "Remove an entry absent from the selected full-season player roster; manager fields are unchanged.",
+      "source": {
+        "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2022&rosterType=fullSeason",
+        "retrieved_at": "2026-11-01T02:48:35.958579+00:00",
+        "sha256": "880d6efd4e51c1e648733b6718c6953a51f1667d86e3a634d9d1d4d818c12db7"
+      }
+    },
+    {
+      "season": 2024,
+      "field": "key_players",
+      "before": "Devers, Duran, Bregman, Houck, Whitlock, Bello",
+      "after": "Devers, Duran, Houck, Whitlock, Bello",
+      "reason": "Remove an entry absent from the selected full-season player roster; manager fields are unchanged.",
+      "source": {
+        "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2024&rosterType=fullSeason",
+        "retrieved_at": "2026-11-01T02:48:36.183228+00:00",
+        "sha256": "44f413b64185ac037d2ad4319dd61c76d4cf3af2cffabd5dc39c30e919945732"
+      }
+    }
+  ],
+  "unverified_fields": [
+    "team_fip",
+    "manager",
+    "postseason results",
+    "era labels",
+    "relative player importance",
+    "causal narratives"
+  ]
+}

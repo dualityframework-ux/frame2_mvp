@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-01T02:53:12.951309+00:00",
+  "generated_at": "2026-11-01T03:11:16.660926+00:00",
   "dataset": "storage/parquet/redsox_history.csv",
   "method": "Exact numeric comparison at the precision stored in the CSV; no inferred FIP and no automatic edits.",
   "summary": {
     "seasons": 58,
-    "match": 399,
-    "mismatch": 7,
+    "match": 406,
+    "mismatch": 0,
     "unavailable": 58,
-    "contributor_seasons_needing_review": 4
+    "contributor_seasons_needing_review": 0
   },
   "seasons": [
     {
@@ -51,9 +51,9 @@
           "status": "match"
         },
         "team_era": {
-          "dataset": "3.36",
+          "dataset": "3.37",
           "source": "3.37",
-          "status": "mismatch"
+          "status": "match"
         },
         "run_diff": {
           "dataset": "108",
@@ -303,9 +303,9 @@
           "status": "match"
         },
         "team_era": {
-          "dataset": "3.8",
+          "dataset": "3.81",
           "source": "3.81",
-          "status": "mismatch"
+          "status": "match"
         },
         "run_diff": {
           "dataset": "24",
@@ -555,9 +555,9 @@
           "status": "match"
         },
         "team_era": {
-          "dataset": "3.98",
+          "dataset": "3.99",
           "source": "3.99",
-          "status": "mismatch"
+          "status": "match"
         },
         "run_diff": {
           "dataset": "87",
@@ -681,9 +681,9 @@
           "status": "match"
         },
         "team_era": {
-          "dataset": "4.11",
+          "dataset": "4.12",
           "source": "4.12",
-          "status": "mismatch"
+          "status": "match"
         },
         "run_diff": {
           "dataset": "147",
@@ -807,9 +807,9 @@
           "status": "match"
         },
         "team_era": {
-          "dataset": "4.03",
+          "dataset": "4.02",
           "source": "4.02",
-          "status": "mismatch"
+          "status": "match"
         },
         "run_diff": {
           "dataset": "130",
@@ -996,9 +996,9 @@
           "status": "match"
         },
         "team_era": {
-          "dataset": "4.03",
+          "dataset": "4.04",
           "source": "4.04",
-          "status": "mismatch"
+          "status": "match"
         },
         "run_diff": {
           "dataset": "40",
@@ -1689,9 +1689,9 @@
           "status": "match"
         },
         "team_era": {
-          "dataset": "3.77",
+          "dataset": "3.78",
           "source": "3.78",
-          "status": "mismatch"
+          "status": "match"
         },
         "run_diff": {
           "dataset": "-12",
@@ -1705,10 +1705,8 @@
         }
       },
       "contributor_roster_check": {
-        "status": "needs_review",
-        "names_not_found": [
-          "Boggs"
-        ],
+        "status": "names_present",
+        "names_not_found": [],
         "limitation": "Surname presence checks roster membership only, not relative contribution."
       },
       "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
@@ -2904,10 +2902,8 @@
         }
       },
       "contributor_roster_check": {
-        "status": "needs_review",
-        "names_not_found": [
-          "Valentine"
-        ],
+        "status": "names_present",
+        "names_not_found": [],
         "limitation": "Surname presence checks roster membership only, not relative contribution."
       },
       "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
@@ -3536,10 +3532,8 @@
         }
       },
       "contributor_roster_check": {
-        "status": "needs_review",
-        "names_not_found": [
-          "Schwarber"
-        ],
+        "status": "names_present",
+        "names_not_found": [],
         "limitation": "Surname presence checks roster membership only, not relative contribution."
       },
       "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
@@ -3664,10 +3658,8 @@
         }
       },
       "contributor_roster_check": {
-        "status": "needs_review",
-        "names_not_found": [
-          "Bregman"
-        ],
+        "status": "names_present",
+        "names_not_found": [],
         "limitation": "Surname presence checks roster membership only, not relative contribution."
       },
       "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
