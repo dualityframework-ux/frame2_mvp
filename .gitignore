@@ -36,3 +36,6 @@ redsox_mobile_timeline.html
 *.log
 .coverage
 *.save
+
+# Downloaded public source snapshots; audit reports are reviewed separately.
+storage/source_cache/
