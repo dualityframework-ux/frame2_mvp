@@ -37,6 +37,8 @@ def make_row(**kwargs):
         mechanism_summary="a balanced team without a clear edge",
         key_players="Player A, Player B",
     )
+    if "wins" in kwargs and "losses" not in kwargs:
+        defaults["losses"] = 162 - kwargs["wins"]  # keep a full 162-game season
     defaults.update(kwargs)
     return pd.Series(defaults)
 
@@ -49,49 +51,54 @@ def full_df():
 # ── classify_process_vs_result ─────────────────────────────────────────────────
 
 class TestClassifyProcessVsResult:
-    def test_signal_high_rd_high_wins(self):
-        tag, _ = classify_process_vs_result(make_row(wins=98, run_diff=181))
+    """Tags compare the 162-game win pace with expected wins (81 + run diff / 10, scaled)."""
+
+    def row(self, wins, run_diff, games=162):
+        return make_row(wins=wins, losses=games - wins, run_diff=run_diff)
+
+    def test_signal_elite_record_matching_process(self):
+        tag, _ = classify_process_vs_result(self.row(98, 181))  # 2004: expected 99.1
         assert tag == "signal"
 
-    def test_underperformed_high_rd_low_wins(self):
-        tag, _ = classify_process_vs_result(make_row(wins=85, run_diff=100))
-        assert tag == "underperformed process"
+    def test_underperformed_when_process_was_worth_more(self):
+        tag, why = classify_process_vs_result(self.row(81, 80))  # 1985: expected 89.0
+        assert tag == "underperformed process" and "8.0" in why
 
-    def test_overperformed_low_rd_high_wins(self):
-        tag, _ = classify_process_vs_result(make_row(wins=93, run_diff=10))
+    def test_overperformed_when_record_outran_process(self):
+        tag, _ = classify_process_vs_result(self.row(87, 7))  # 1969: expected 81.7
         assert tag == "overperformed process"
 
     def test_balanced_default(self):
-        tag, _ = classify_process_vs_result(make_row(wins=85, run_diff=40))
+        tag, _ = classify_process_vs_result(self.row(85, 40))
         assert tag == "balanced"
 
     def test_returns_explanation_string(self):
-        _, explanation = classify_process_vs_result(make_row(wins=85, run_diff=40))
+        _, explanation = classify_process_vs_result(self.row(85, 40))
         assert isinstance(explanation, str) and len(explanation) > 5
 
-    def test_boundary_signal_rd_150_wins_95(self):
-        tag, _ = classify_process_vs_result(make_row(wins=95, run_diff=150))
-        assert tag == "signal"
+    def test_band_edges(self):
+        # expected 81 + 0 = 81; a pace exactly 4 above is overperformed, just under is not
+        assert classify_process_vs_result(self.row(85, 0))[0] == "overperformed process"
+        assert classify_process_vs_result(self.row(77, 0))[0] == "underperformed process"
+        assert classify_process_vs_result(self.row(84, 0))[0] == "balanced"
 
-    def test_boundary_underperformed_rd_75_wins_89(self):
-        tag, _ = classify_process_vs_result(make_row(wins=89, run_diff=75))
-        assert tag == "underperformed process"
+    def test_signal_needs_a_95_win_pace(self):
+        assert classify_process_vs_result(self.row(95, 140))[0] == "signal"   # expected 95.0
+        assert classify_process_vs_result(self.row(94, 130))[0] == "balanced"  # expected 94.0
 
-    def test_boundary_overperformed_rd_24_wins_92(self):
-        tag, _ = classify_process_vs_result(make_row(wins=92, run_diff=24))
-        assert tag == "overperformed process"
+    def test_shortened_season_is_scaled(self):
+        # 1995: 86-58 is a 96.8-win pace against 91.5 expected; raw-win rules called it underperformed
+        assert classify_process_vs_result(self.row(86, 93, games=144))[0] == "overperformed process"
 
-    @pytest.mark.parametrize("wins,rd,expected_tag", [
-        (108, 229, "signal"),
-        (97, 197, "signal"),
-        (70, 20, "balanced"),
-        (69, -72, "balanced"),
-        (86, 93, "underperformed process"),
-        (93, 15, "overperformed process"),
+    @pytest.mark.parametrize("wins,rd,games,expected_tag", [
+        (97, 197, 162, "signal"),                  # 2013
+        (93, 194, 162, "underperformed process"),  # 2002: a 100-win process that missed the playoffs
+        (69, -72, 162, "underperformed process"),  # 2012
+        (24, -59, 60, "balanced"),                 # 2020, 60 games
+        (95, 87, 160, "overperformed process"),    # 1975
     ])
-    def test_parametrized_known_seasons(self, wins, rd, expected_tag):
-        tag, _ = classify_process_vs_result(make_row(wins=wins, run_diff=rd))
-        assert tag == expected_tag
+    def test_known_seasons(self, wins, rd, games, expected_tag):
+        assert classify_process_vs_result(self.row(wins, rd, games))[0] == expected_tag
 
 
 # ── build_plain_summary ────────────────────────────────────────────────────────

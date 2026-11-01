@@ -13,3 +13,6 @@ SETTINGS = Settings()
 
 # Data marks every pennant season as "world series"; these are the ones the Red Sox won.
 WS_TITLE_SEASONS = frozenset({2004, 2007, 2013, 2018})
+
+# A season is over- or underperformed when its 162-game win pace is this many wins from expected.
+LUCK_BAND = 4.0

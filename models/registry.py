@@ -27,7 +27,7 @@ _REGISTRY: Dict[str, Dict[str, Any]] = {
         "display_name": "Process vs Result Classifier",
         "description": (
             "Classifies each season as signal, underperformed process, "
-            "overperformed process, or balanced using wins and run differential."
+            "overperformed process, or balanced by comparing 162-game win pace with expected wins from run differential."
         ),
         "version": "1.0",
         "thresholds": {

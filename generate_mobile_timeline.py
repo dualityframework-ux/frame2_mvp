@@ -15,6 +15,18 @@ MACRO_ERAS = [
     {"name": "Rebuild & Now", "start": 2020, "end": 2024, "color": "#8e44ad", "emoji": "N", "avg_w": 70.6, "avg_rd": -6, "ws": 0, "pct": 20},
 ]
 
+# Tags come from the analysis engine, so the timeline and the app always agree on what "signal" means.
+try:
+    import os as _os
+    sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+    import pandas as _pd
+    from intelligence.redsox_history_engine import classify_process_vs_result as _classify
+    _SHORT = {"signal": "signal", "balanced": "balanced", "overperformed process": "overperformed", "underperformed process": "underperformed"}
+    for _s in SEASONS:
+        _s["tag"] = _SHORT[_classify(_pd.Series(_s))[0]]
+except ImportError:  # pandas missing: keep the stored tags
+    pass
+
 DATA_JSON = json.dumps(SEASONS)
 ERAS_JSON = json.dumps(MACRO_ERAS)
 

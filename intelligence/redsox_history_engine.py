@@ -2,7 +2,7 @@ from __future__ import annotations
 from typing import Dict, Tuple
 import pandas as pd
 from adapters.redsox_history_loader import load_redsox_history
-from config.settings import WS_TITLE_SEASONS
+from config.settings import LUCK_BAND, WS_TITLE_SEASONS
 
 
 def get_history_df(csv_path: str = "storage/parquet/redsox_history.csv") -> pd.DataFrame:
@@ -17,14 +17,21 @@ def get_season_row(df: pd.DataFrame, season: int) -> pd.Series:
 
 
 def classify_process_vs_result(row: pd.Series) -> Tuple[str, str]:
-    wins = float(row["wins"])
-    run_diff = float(row["run_diff"])
-    if run_diff >= 150 and wins >= 95:
+    """Tag a season by how its record compares with the wins its run differential was worth.
+
+    Both are scaled to 162 games, so shortened seasons are judged fairly:
+      overperformed  - win pace at least LUCK_BAND wins above expected
+      underperformed - win pace at least LUCK_BAND wins below expected
+      signal         - a 95+ win pace that matches its run differential
+      balanced       - everything else
+    """
+    luck = luck_wins_162(row)
+    if luck >= LUCK_BAND:
+        return ("overperformed process", f"the record outran the run differential by {luck:.1f} wins per 162")
+    if luck <= -LUCK_BAND:
+        return ("underperformed process", f"the run differential was worth {-luck:.1f} more wins per 162 than the record")
+    if win_pace_162(row) >= 95:
         return ("signal", "elite underlying quality matched elite results")
-    if run_diff >= 75 and wins < 90:
-        return ("underperformed process", "the process looked stronger than the record")
-    if run_diff < 25 and wins >= 92:
-        return ("overperformed process", "the record outran the underlying profile")
     return ("balanced", "the result and process were relatively aligned")
 
 
