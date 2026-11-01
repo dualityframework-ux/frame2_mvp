@@ -677,7 +677,7 @@ def slide_wins_timeline(prs, df):
 def slide_era_radar(prs, df):
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     add_rect(slide, 0, 0, SW, SH, WHITE)
-    navy_header(slide, "Era Profile Radar", "Normalised 0–100 · higher = better · unverified FIP excluded")
+    navy_header(slide, "Era Profile Radar", "Normalised 0–100 · higher = better · FIP excluded")
 
     # Build era_df
     era_records = []

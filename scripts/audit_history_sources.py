@@ -90,7 +90,7 @@ def audit_row(row, stats_snapshot=None, roster_snapshot=None):
     scored = groups.get('hitting', {}).get('runs')
     allowed = groups.get('pitching', {}).get('runs')
     checks['run_diff'] = _check(row.get('run_diff'), float(scored)-float(allowed) if scored is not None and allowed is not None else None)
-    # MLB's fetched basic season response does not expose a sourced FIP value.
+    # MLB's season response has no FIP field; scripts/compute_fip.py computes it from MLB counts.
     checks['team_fip'] = _check(row.get('team_fip'), groups.get('pitching', {}).get('fip'))
     roster = (roster_snapshot or {}).get('data', {}).get('roster')
     if not isinstance(roster, list) or not roster:

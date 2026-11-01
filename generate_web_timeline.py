@@ -494,7 +494,7 @@ function renderCard(){
         <div class="meta-row"><span class="meta-lbl">Team OBP</span><span class="meta-val">${s.team_obp.toFixed(3)}</span></div>
         <div class="meta-row"><span class="meta-lbl">Team SLG</span><span class="meta-val">${s.team_slg.toFixed(3)}</span></div>
         <div class="meta-row"><span class="meta-lbl">Team ERA</span><span class="meta-val">${s.team_era.toFixed(2)}</span></div>
-        <div class="meta-row"><span class="meta-lbl">FIP (unverified)</span><span class="meta-val">${s.team_fip.toFixed(2)}</span></div>
+        <div class="meta-row"><span class="meta-lbl">FIP (computed)</span><span class="meta-val">${s.team_fip.toFixed(2)}</span></div>
       </div>
       <div class="meta-section">
         <h3>Process Analysis</h3>
@@ -699,7 +699,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         '<section id="hero">\n'
         '  <h1>Red Sox Franchise <em>Timeline</em></h1>\n'
         '  <p>58 seasons \u00b7 7 eras \u00b7 7 World Series trips, 4 titles \u00b7 1967\u20132024</p>\n'
-        '  <p>ERA follows MLB source snapshots. FIP and narrative interpretations remain unverified.</p>\n'
+        '  <p>ERA follows MLB source snapshots, and FIP is computed from MLB counts. Narrative interpretations remain unverified.</p>\n'
         '  <div class="hero-kpis">\n'
         '    <div class="hero-kpi"><div class="val">58</div><div class="lbl">Seasons</div></div>\n'
         '    <div class="hero-kpi"><div class="val">4</div><div class="lbl">WS Titles</div></div>\n'

@@ -102,4 +102,4 @@ the only differing shared file. The canonical repository also held seven image
 files; the secondary repository had no unique source or data files. Preserve the
 secondary Git history and publish the canonical fixes before its legacy notice.
 
-Reviewed corrections now follow MLB regular-season metric responses: see [history-corrections.json](history-corrections.json) for seven ERA changes and four contributor-list removals. FIP remains unverified and is excluded from comparative radar charts.
+Reviewed corrections now follow MLB regular-season metric responses: see [history-corrections.json](history-corrections.json) for seven ERA changes and four contributor-list removals. Team FIP is computed from MLB counts ([fip-computed.json](fip-computed.json)) and stays out of comparative radar charts.

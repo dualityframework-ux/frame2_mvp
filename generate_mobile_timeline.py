@@ -235,7 +235,7 @@ footer{padding:28px var(--gap);text-align:center;color:var(--muted);font-size:.7
   <div class="container">
     <div class="hero-title">Boston <span class="sox">Red Sox</span></div>
     <div class="hero-title">Franchise Timeline &nbsp;<span style="color:var(--gold)">1967&ndash;2024</span></div>
-    <p class="hero-sub">ERA follows MLB source snapshots. FIP and narrative interpretations remain unverified.</p>
+    <p class="hero-sub">ERA follows MLB source snapshots, and FIP is computed from MLB counts. Narrative interpretations remain unverified.</p>
     <div class="hero-sub">58 seasons &bull; 7 macro-eras &bull; 7 World Series trips, 4 titles</div>
     <div class="kpi-row" id="heroKpis">
       <div class="kpi"><div class="kpi-val">58</div><div class="kpi-lbl">Seasons</div></div>
@@ -621,7 +621,7 @@ function showSeason(s){
       <div class="sc-stat"><div class="sc-stat-val">${s.team_obp}</div><div class="sc-stat-lbl">OBP</div></div>
       <div class="sc-stat"><div class="sc-stat-val">${s.team_slg}</div><div class="sc-stat-lbl">SLG</div></div>
       <div class="sc-stat"><div class="sc-stat-val">${s.team_era}</div><div class="sc-stat-lbl">ERA</div></div>
-      <div class="sc-stat"><div class="sc-stat-val">${s.team_fip}</div><div class="sc-stat-lbl">FIP (unverified)</div></div>
+      <div class="sc-stat"><div class="sc-stat-val">${s.team_fip}</div><div class="sc-stat-lbl">FIP (computed)</div></div>
     </div>
     <div class="sc-tag ${s.tag}">${s.tag.charAt(0).toUpperCase()+s.tag.slice(1)}</div>
     <div class="sc-quote">${s.mechanism_summary}</div>

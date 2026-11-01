@@ -23,10 +23,11 @@ for the dataset schema, process-tag rules, exports, hosting and comparison recor
 
 ## Data verification
 
-The [MLB source audit](docs/DATA_AUDIT.md) checks all 58 seasons without changing
-the CSV: 399 of 406 numeric values match, seven ERA values differ by 0.01, and four
-contributor lists need review. FIP and narrative claims remain unverified. Review
-those limits before interpreting the advanced comparisons.
+The [MLB source audit](docs/DATA_AUDIT.md) checks all 58 seasons against MLB's
+season responses: after seven reviewed ERA corrections, all 406 compared values match,
+and four contributor names were removed. Team FIP is computed from MLB counts with the
+standard formula. Narrative claims remain unverified. Review those limits before
+interpreting the advanced comparisons.
 
 ## demo
 
@@ -175,4 +176,4 @@ The test suite includes offline Statcast fixtures and actual HTML, PDF, and PPTX
 export generation. Network ingestion is mocked in tests.
 
 
-Historical metric sourcing and limitations: [data audit](docs/DATA_AUDIT.md). The reviewed CSV corrects seven ERA values and removes four unsupported contributor names. FIP remains unverified and is excluded from comparative radar charts.
+Historical metric sourcing and limitations: [data audit](docs/DATA_AUDIT.md). The reviewed CSV corrects seven ERA values, removes four unsupported contributor names, and replaces unsourced FIP with values computed from MLB counts (`scripts/compute_fip.py`). FIP stays out of comparative radar charts.
