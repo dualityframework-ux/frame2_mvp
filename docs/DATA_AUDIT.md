@@ -41,8 +41,26 @@ relative contribution, and an absent name is a review finding, not an automatic
 edit. The 2012 row also lists Valentine in its manager field; manager context
 should not be confused with player-roster membership.
 
-The fetched basic pitching responses do not supply FIP. All 58 `team_fip` values
-remain unverified; no FIP estimate was invented to fill that gap. Outputs label FIP as unverified, and comparative radar charts exclude it. Managers,
+## FIP
+
+MLB's season responses have no FIP field, so [`scripts/compute_fip.py`](../scripts/compute_fip.py)
+computes it from MLB's own counts with the standard formula:
+
+- FIP = (13×HR + 3×(BB + HBP) − 2×K) ÷ IP + C
+- C = league ERA − (13×lgHR + 3×(lgBB + lgHBP) − 2×lgK) ÷ lgIP, from every MLB team's
+  regular-season pitching totals for that season
+
+Innings come from outs ÷ 3, and walks include intentional walks. All 58 seasons were computed.
+The earlier `team_fip` values had no recorded source: only 10 of 58 were within 0.05 of the
+computed value, and the largest difference was 0.42. The CSV now holds the computed values.
+Every input count, league constant, source URL, retrieval time and response hash is in
+[fip-computed.json](fip-computed.json). Published FIP on other sites may differ slightly
+in the constant or in how intentional walks are handled; these values were not compared
+with them. Outputs label FIP as computed, and comparative radar charts still leave it out.
+
+## Not audited
+
+Managers,
 postseason results, era labels, contributor importance and narrative/causal
 interpretations require separate sources. The World Series title list was not
 a new finding of this audit.
@@ -60,6 +78,13 @@ To audit a subset or rerun from downloaded snapshots:
 ```bash
 python scripts/audit_history_sources.py --years 2022 2024 --fetch --output /tmp/recent-audit.json
 python scripts/audit_history_sources.py --output /tmp/cached-audit.json
+```
+
+To recompute FIP (needs the team snapshots above; `--fetch` adds one league request per season, `--apply` writes the CSV):
+
+```bash
+python scripts/compute_fip.py --fetch --output docs/fip-computed.json
+python scripts/compute_fip.py --apply --output docs/fip-computed.json
 ```
 
 Raw snapshots are cached under git-ignored `storage/source_cache/`. Without

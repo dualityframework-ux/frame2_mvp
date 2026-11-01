@@ -1,0 +1,2159 @@
+{
+  "generated_at": "2026-11-01T05:38:17.631436+00:00",
+  "method": "FIP = (13*HR + 3*(BB+HBP) - 2*K)/IP + C; C = lgERA - (13*lgHR + 3*(lgBB+lgHBP) - 2*lgK)/lgIP, all from MLB Stats API regular-season pitching counts; IP = outs/3; BB includes intentional walks.",
+  "summary": {
+    "seasons": 58,
+    "computed": 58,
+    "unavailable": 0,
+    "previous_values_within_0.05": 10,
+    "largest_difference": 0.42
+  },
+  "seasons": [
+    {
+      "season": 1967,
+      "dataset_fip": "3.26",
+      "computed_fip": 3.5,
+      "status": "computed",
+      "computed_fip_unrounded": 3.5003631423053925,
+      "league_constant": 2.542391465740751,
+      "team_counts": {
+        "homeRuns": 142.0,
+        "baseOnBalls": 477.0,
+        "hitByPitch": 47.0,
+        "strikeOuts": 1010.0,
+        "outs": 4378.0,
+        "earnedRuns": 546.0
+      },
+      "league_counts": {
+        "homeRuns": 2299.0,
+        "baseOnBalls": 9665.0,
+        "hitByPitch": 751.0,
+        "strikeOuts": 19413.0,
+        "outs": 87553.0,
+        "earnedRuns": 10723.0
+      },
+      "league_teams": 20,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1967&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:30.262787+00:00",
+          "sha256": "b76b53a1510637310014388f8b2ec254df2dfa2bf3bc7a1bcd0ef4b9c08e2e91"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1967&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:41.277921+00:00",
+          "sha256": "0108d3f3c15efc2009ba754580a2c8afa564b2ee0a7e25b823055a18d1cd9930"
+        }
+      }
+    },
+    {
+      "season": 1968,
+      "dataset_fip": "3.23",
+      "computed_fip": 3.21,
+      "status": "computed",
+      "computed_fip_unrounded": 3.20695208724739,
+      "league_constant": 2.329274132859,
+      "team_counts": {
+        "homeRuns": 115.0,
+        "baseOnBalls": 523.0,
+        "hitByPitch": 50.0,
+        "strikeOuts": 972.0,
+        "outs": 4341.0,
+        "earnedRuns": 536.0
+      },
+      "league_counts": {
+        "homeRuns": 1995.0,
+        "baseOnBalls": 9156.0,
+        "hitByPitch": 778.0,
+        "strikeOuts": 19143.0,
+        "outs": 87702.0,
+        "earnedRuns": 9505.0
+      },
+      "league_teams": 20,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1968&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:30.255409+00:00",
+          "sha256": "2bf158ec79c7f31590ee3df3c0b39f4527bd2d0b914ab82ca880e18044d5a5fa"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1968&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:41.629581+00:00",
+          "sha256": "e29af2a41702e0e79237469ee64e093d199eda15498f5e4c944851c83f11f3a0"
+        }
+      }
+    },
+    {
+      "season": 1969,
+      "dataset_fip": "3.82",
+      "computed_fip": 4.1,
+      "status": "computed",
+      "computed_fip_unrounded": 4.103235700786526,
+      "league_constant": 2.505053882604708,
+      "team_counts": {
+        "homeRuns": 155.0,
+        "baseOnBalls": 685.0,
+        "hitByPitch": 48.0,
+        "strikeOuts": 935.0,
+        "outs": 4400.0,
+        "earnedRuns": 639.0
+      },
+      "league_counts": {
+        "homeRuns": 3119.0,
+        "baseOnBalls": 13429.0,
+        "hitByPitch": 882.0,
+        "strikeOuts": 22473.0,
+        "outs": 104672.0,
+        "earnedRuns": 13993.0
+      },
+      "league_teams": 24,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1969&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:30.475759+00:00",
+          "sha256": "b51ed9dcd7b3a570e9a924f26a56866ebe3203d647888f7438c05c2f6ea7e4c1"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1969&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:41.924052+00:00",
+          "sha256": "5dfcff62e361c43e6ed7f33915b5062c91a88a007e56c3c3b03f9d4f713f0f3d"
+        }
+      }
+    },
+    {
+      "season": 1970,
+      "dataset_fip": "3.77",
+      "computed_fip": 3.97,
+      "status": "computed",
+      "computed_fip_unrounded": 3.972651136009741,
+      "league_constant": 2.634093864749082,
+      "team_counts": {
+        "homeRuns": 156.0,
+        "baseOnBalls": 594.0,
+        "hitByPitch": 44.0,
+        "strikeOuts": 1003.0,
+        "outs": 4339.0,
+        "earnedRuns": 622.0
+      },
+      "league_counts": {
+        "homeRuns": 3429.0,
+        "baseOnBalls": 13727.0,
+        "hitByPitch": 825.0,
+        "strikeOuts": 22374.0,
+        "outs": 104576.0,
+        "earnedRuns": 15034.0
+      },
+      "league_teams": 24,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1970&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:30.473637+00:00",
+          "sha256": "6683699abe52433ea7e7fee4ef49ed8fd069566e83b8d9f7e7ef4e2c6e82cf53"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1970&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:42.349075+00:00",
+          "sha256": "8a9b939ccbb595b8d4fde090a88511fc9a57a783b4bb1ed466806d3256121dd5"
+        }
+      }
+    },
+    {
+      "season": 1971,
+      "dataset_fip": "3.7",
+      "computed_fip": 3.66,
+      "status": "computed",
+      "computed_fip_unrounded": 3.6636573848585234,
+      "league_constant": 2.446055167256306,
+      "team_counts": {
+        "homeRuns": 136.0,
+        "baseOnBalls": 535.0,
+        "hitByPitch": 42.0,
+        "strikeOuts": 871.0,
+        "outs": 4329.0,
+        "earnedRuns": 611.0
+      },
+      "league_counts": {
+        "homeRuns": 2863.0,
+        "baseOnBalls": 12536.0,
+        "hitByPitch": 821.0,
+        "strikeOuts": 20956.0,
+        "outs": 104301.0,
+        "earnedRuns": 13380.0
+      },
+      "league_teams": 24,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1971&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:30.701465+00:00",
+          "sha256": "945c0479890de33459f37f88244a02b61e6525d415e704ef0e6b2394d8abdc47"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1971&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:42.669078+00:00",
+          "sha256": "afb482450886db71b4723b367032da2ae6509bb2a9d2020b21296256196ce010"
+        }
+      }
+    },
+    {
+      "season": 1972,
+      "dataset_fip": "3.37",
+      "computed_fip": 3.21,
+      "status": "computed",
+      "computed_fip_unrounded": 3.211168715840188,
+      "league_constant": 2.393907385078375,
+      "team_counts": {
+        "homeRuns": 101.0,
+        "baseOnBalls": 512.0,
+        "hitByPitch": 39.0,
+        "strikeOuts": 918.0,
+        "outs": 4148.0,
+        "earnedRuns": 533.0
+      },
+      "league_counts": {
+        "homeRuns": 2534.0,
+        "baseOnBalls": 11727.0,
+        "hitByPitch": 751.0,
+        "strikeOuts": 20718.0,
+        "outs": 100351.0,
+        "earnedRuns": 12113.0
+      },
+      "league_teams": 24,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1972&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:30.718521+00:00",
+          "sha256": "9dd5b80fa6d0749b3435c0d71f6b3569eb7d0b5c2c63924daf454d7074105a6f"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1972&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:43.090559+00:00",
+          "sha256": "520c94e2f0a1089ab1b1e52c7c95faea810c75fe2abef917caa2c0453bdf1862"
+        }
+      }
+    },
+    {
+      "season": 1973,
+      "dataset_fip": "3.55",
+      "computed_fip": 3.97,
+      "status": "computed",
+      "computed_fip_unrounded": 3.966982722193287,
+      "league_constant": 2.556892465308307,
+      "team_counts": {
+        "homeRuns": 158.0,
+        "baseOnBalls": 499.0,
+        "hitByPitch": 32.0,
+        "strikeOuts": 808.0,
+        "outs": 4321.0,
+        "earnedRuns": 584.0
+      },
+      "league_counts": {
+        "homeRuns": 3102.0,
+        "baseOnBalls": 13100.0,
+        "hitByPitch": 755.0,
+        "strikeOuts": 20358.0,
+        "outs": 104636.0,
+        "earnedRuns": 14484.0
+      },
+      "league_teams": 24,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1973&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:30.917476+00:00",
+          "sha256": "696af71260ff00f815e13da1a869f98bbaf599a3d77aa3e8a6c13bdc492165fb"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1973&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:43.435751+00:00",
+          "sha256": "de7a9a1cd63fcb15a5dbe5f746775037a831b66af1682e7470b474d578263aa8"
+        }
+      }
+    },
+    {
+      "season": 1974,
+      "dataset_fip": "3.62",
+      "computed_fip": 3.68,
+      "status": "computed",
+      "computed_fip_unrounded": 3.6778283990810747,
+      "league_constant": 2.568116992759499,
+      "team_counts": {
+        "homeRuns": 126.0,
+        "baseOnBalls": 463.0,
+        "hitByPitch": 30.0,
+        "strikeOuts": 751.0,
+        "outs": 4366.0,
+        "earnedRuns": 601.0
+      },
+      "league_counts": {
+        "homeRuns": 2649.0,
+        "baseOnBalls": 12963.0,
+        "hitByPitch": 774.0,
+        "strikeOuts": 19494.0,
+        "outs": 104827.0,
+        "earnedRuns": 14044.0
+      },
+      "league_teams": 24,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1974&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:30.959991+00:00",
+          "sha256": "37ef63c4191af2608549a9e85cbd54e46c82460e60a2497e65268e9830ee5de2"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1974&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:43.763275+00:00",
+          "sha256": "672d7cd35de801fdb1ce2c193d0199b29b60ec455fefe24e0a06e7434c2ac323"
+        }
+      }
+    },
+    {
+      "season": 1975,
+      "dataset_fip": "3.88",
+      "computed_fip": 3.95,
+      "status": "computed",
+      "computed_fip_unrounded": 3.9505940915314692,
+      "league_constant": 2.5758841147333253,
+      "team_counts": {
+        "homeRuns": 145.0,
+        "baseOnBalls": 490.0,
+        "hitByPitch": 20.0,
+        "strikeOuts": 720.0,
+        "outs": 4310.0,
+        "earnedRuns": 637.0
+      },
+      "league_counts": {
+        "homeRuns": 2698.0,
+        "baseOnBalls": 13402.0,
+        "hitByPitch": 761.0,
+        "strikeOuts": 19280.0,
+        "outs": 104172.0,
+        "earnedRuns": 14272.0
+      },
+      "league_teams": 24,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1975&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:31.132054+00:00",
+          "sha256": "931d5c8f80627e6c46436f65d3b507942944dea9087d7c1e4a99a9a88807835b"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1975&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:44.050058+00:00",
+          "sha256": "98a202cefe9e8d9003bc6968a403c49734b102af979386f457a152320ac8b5b4"
+        }
+      }
+    },
+    {
+      "season": 1976,
+      "dataset_fip": "3.42",
+      "computed_fip": 3.59,
+      "status": "computed",
+      "computed_fip_unrounded": 3.58511634474906,
+      "league_constant": 2.6290120923485114,
+      "team_counts": {
+        "homeRuns": 109.0,
+        "baseOnBalls": 409.0,
+        "hitByPitch": 32.0,
+        "strikeOuts": 673.0,
+        "outs": 4374.0,
+        "earnedRuns": 571.0
+      },
+      "league_counts": {
+        "homeRuns": 2235.0,
+        "baseOnBalls": 12390.0,
+        "hitByPitch": 684.0,
+        "strikeOuts": 18745.0,
+        "outs": 104777.0,
+        "earnedRuns": 13623.0
+      },
+      "league_teams": 24,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1976&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:31.193911+00:00",
+          "sha256": "1e418ca3f6b09088fb6f72cefbe53de45dab22e7ab915d81d3541c908af59b27"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1976&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:44.439515+00:00",
+          "sha256": "7bababd5a10c20b9fa2f0837fe012f1a07abb9b39805724283ead3368a2b8d21"
+        }
+      }
+    },
+    {
+      "season": 1977,
+      "dataset_fip": "4.01",
+      "computed_fip": 3.95,
+      "status": "computed",
+      "computed_fip_unrounded": 3.9516545455989442,
+      "league_constant": 2.7282651898566472,
+      "team_counts": {
+        "homeRuns": 158.0,
+        "baseOnBalls": 378.0,
+        "hitByPitch": 25.0,
+        "strikeOuts": 758.0,
+        "outs": 4284.0,
+        "earnedRuns": 654.0
+      },
+      "league_counts": {
+        "homeRuns": 3644.0,
+        "baseOnBalls": 13757.0,
+        "hitByPitch": 791.0,
+        "strikeOuts": 21722.0,
+        "outs": 113217.0,
+        "earnedRuns": 16726.0
+      },
+      "league_teams": 26,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1977&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:31.314988+00:00",
+          "sha256": "66b0e0c3f71523239da28afc68d18501bb21cdd26c9368d9360d99c260cf1459"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1977&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:44.885926+00:00",
+          "sha256": "8ca9385f78df4d89ebd8086f52382bd90ba532f01d7a2ec036084e52e7e4e4dd"
+        }
+      }
+    },
+    {
+      "season": 1978,
+      "dataset_fip": "3.44",
+      "computed_fip": 3.84,
+      "status": "computed",
+      "computed_fip_unrounded": 3.841611360374028,
+      "league_constant": 2.574522179749311,
+      "team_counts": {
+        "homeRuns": 137.0,
+        "baseOnBalls": 464.0,
+        "hitByPitch": 35.0,
+        "strikeOuts": 706.0,
+        "outs": 4418.0,
+        "earnedRuns": 580.0
+      },
+      "league_counts": {
+        "homeRuns": 2956.0,
+        "baseOnBalls": 13566.0,
+        "hitByPitch": 772.0,
+        "strikeOuts": 20058.0,
+        "outs": 112490.0,
+        "earnedRuns": 15318.0
+      },
+      "league_teams": 26,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1978&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:31.405260+00:00",
+          "sha256": "1b1e12b9bea674e98f5f2088029fd8f38296ed08280f598a319e88f2662f9436"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1978&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:45.178613+00:00",
+          "sha256": "d4b3c0332ca07a8166de52fb4c230cba809dba63e6d0c53b936f47e375d67940"
+        }
+      }
+    },
+    {
+      "season": 1979,
+      "dataset_fip": "3.93",
+      "computed_fip": 3.96,
+      "status": "computed",
+      "computed_fip_unrounded": 3.956112420509628,
+      "league_constant": 2.721599146173345,
+      "team_counts": {
+        "homeRuns": 133.0,
+        "baseOnBalls": 463.0,
+        "hitByPitch": 37.0,
+        "strikeOuts": 731.0,
+        "outs": 4294.0,
+        "earnedRuns": 640.0
+      },
+      "league_counts": {
+        "homeRuns": 3433.0,
+        "baseOnBalls": 13601.0,
+        "hitByPitch": 754.0,
+        "strikeOuts": 20035.0,
+        "outs": 112435.0,
+        "earnedRuns": 16625.0
+      },
+      "league_teams": 26,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1979&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:31.505885+00:00",
+          "sha256": "41d173f80c7dce0f83f94d0239f718bcff3a2596775476e5d8db480fa8a996ae"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1979&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:45.550289+00:00",
+          "sha256": "2e2eb4c24762470815f3d3ac9cd0a3dcc5663dac8da539a3ce4b59eb4c59a968"
+        }
+      }
+    },
+    {
+      "season": 1980,
+      "dataset_fip": "4.28",
+      "computed_fip": 4.01,
+      "status": "computed",
+      "computed_fip_unrounded": 4.006792855217064,
+      "league_constant": 2.743379349204113,
+      "team_counts": {
+        "homeRuns": 129.0,
+        "baseOnBalls": 481.0,
+        "hitByPitch": 31.0,
+        "strikeOuts": 696.0,
+        "outs": 4324.0,
+        "earnedRuns": 701.0
+      },
+      "league_counts": {
+        "homeRuns": 3087.0,
+        "baseOnBalls": 13190.0,
+        "hitByPitch": 657.0,
+        "strikeOuts": 20212.0,
+        "outs": 113584.0,
+        "earnedRuns": 16124.0
+      },
+      "league_teams": 26,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1980&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:31.629254+00:00",
+          "sha256": "a8e23bdfaff5c1bb3dbfe6907f271d4ec6f4252a6544a90587d8fe7e9f0f4b71"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1980&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:45.875128+00:00",
+          "sha256": "92a13a604ff768905787cc317933259fe092b5973d282b91b1969d80959c2a9a"
+        }
+      }
+    },
+    {
+      "season": 1981,
+      "dataset_fip": "3.71",
+      "computed_fip": 3.86,
+      "status": "computed",
+      "computed_fip_unrounded": 3.8566122064984927,
+      "league_constant": 2.596652719665272,
+      "team_counts": {
+        "homeRuns": 90.0,
+        "baseOnBalls": 354.0,
+        "hitByPitch": 28.0,
+        "strikeOuts": 536.0,
+        "outs": 2962.0,
+        "earnedRuns": 418.0
+      },
+      "league_counts": {
+        "homeRuns": 1781.0,
+        "baseOnBalls": 8868.0,
+        "hitByPitch": 464.0,
+        "strikeOuts": 13237.0,
+        "outs": 75285.0,
+        "earnedRuns": 9982.0
+      },
+      "league_teams": 26,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1981&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:31.677915+00:00",
+          "sha256": "c77c3db52bbfca0774101e016dabe00ae2aa8f11beeeec5e67407584f2f234d1"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1981&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:46.174090+00:00",
+          "sha256": "36cec87a67b549af4f4dbcf3a7b03e2e9cfaf6dac78fe612753ed1d5b45180f3"
+        }
+      }
+    },
+    {
+      "season": 1982,
+      "dataset_fip": "3.93",
+      "computed_fip": 4.03,
+      "status": "computed",
+      "computed_fip_unrounded": 4.030819350699379,
+      "league_constant": 2.708038896466757,
+      "team_counts": {
+        "homeRuns": 155.0,
+        "baseOnBalls": 478.0,
+        "hitByPitch": 35.0,
+        "strikeOuts": 816.0,
+        "outs": 4359.0,
+        "earnedRuns": 652.0
+      },
+      "league_counts": {
+        "homeRuns": 3379.0,
+        "baseOnBalls": 13302.0,
+        "hitByPitch": 677.0,
+        "strikeOuts": 21221.0,
+        "outs": 113635.0,
+        "earnedRuns": 16222.0
+      },
+      "league_teams": 26,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1982&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:31.834173+00:00",
+          "sha256": "62357261b7bd2714a12cdb9b582cbe12a4ed7aed807086a061e4ba083d6bdc75"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1982&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:46.604235+00:00",
+          "sha256": "c13ba9549858ea12378c78b6782e9edb7f113addc7665c5f79eaf87ebf5fdce4"
+        }
+      }
+    },
+    {
+      "season": 1983,
+      "dataset_fip": "4.24",
+      "computed_fip": 4.19,
+      "status": "computed",
+      "computed_fip_unrounded": 4.187924359110751,
+      "league_constant": 2.7415081341741296,
+      "team_counts": {
+        "homeRuns": 158.0,
+        "baseOnBalls": 493.0,
+        "hitByPitch": 31.0,
+        "strikeOuts": 767.0,
+        "outs": 4339.0,
+        "earnedRuns": 697.0
+      },
+      "league_counts": {
+        "homeRuns": 3301.0,
+        "baseOnBalls": 13518.0,
+        "hitByPitch": 717.0,
+        "strikeOuts": 21716.0,
+        "outs": 113226.0,
+        "earnedRuns": 16184.0
+      },
+      "league_teams": 26,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1983&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:31.870115+00:00",
+          "sha256": "7b95dc0a0558720b4e9596524956c4194fd0169166ee3541cc4780a0a39580fd"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1983&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:46.972786+00:00",
+          "sha256": "eff3189bf89da122ca6032597382fc0f9ef610f33d6df233fd82c933b73de499"
+        }
+      }
+    },
+    {
+      "season": 1984,
+      "dataset_fip": "4.08",
+      "computed_fip": 3.89,
+      "status": "computed",
+      "computed_fip_unrounded": 3.885723734530017,
+      "league_constant": 2.7622840674010294,
+      "team_counts": {
+        "homeRuns": 141.0,
+        "baseOnBalls": 517.0,
+        "hitByPitch": 30.0,
+        "strikeOuts": 927.0,
+        "outs": 4326.0,
+        "earnedRuns": 669.0
+      },
+      "league_counts": {
+        "homeRuns": 3258.0,
+        "baseOnBalls": 13320.0,
+        "hitByPitch": 668.0,
+        "strikeOuts": 22500.0,
+        "outs": 113114.0,
+        "earnedRuns": 15941.0
+      },
+      "league_teams": 26,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1984&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:32.044987+00:00",
+          "sha256": "2281b71c0452bf9076430674934c78f3f3cc6947fa19a38f8e2e66509317c9df"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1984&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:47.308271+00:00",
+          "sha256": "a712296bd8c8a73fa78e56f25d8d3d0be46f2d1d34f768ee8cd64b80cdc8db96"
+        }
+      }
+    },
+    {
+      "season": 1985,
+      "dataset_fip": "3.96",
+      "computed_fip": 3.76,
+      "status": "computed",
+      "computed_fip_unrounded": 3.7644095910299926,
+      "league_constant": 2.677046452343861,
+      "team_counts": {
+        "homeRuns": 130.0,
+        "baseOnBalls": 540.0,
+        "hitByPitch": 35.0,
+        "strikeOuts": 913.0,
+        "outs": 4384.0,
+        "earnedRuns": 659.0
+      },
+      "league_counts": {
+        "homeRuns": 3602.0,
+        "baseOnBalls": 13838.0,
+        "hitByPitch": 699.0,
+        "strikeOuts": 22451.0,
+        "outs": 112976.0,
+        "earnedRuns": 16261.0
+      },
+      "league_teams": 26,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1985&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:32.062026+00:00",
+          "sha256": "5f51ee77269e2138cac9f5a686d02b82dd5918490a7844dae593052af05da969"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1985&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:47.592998+00:00",
+          "sha256": "d89547978a15653b8f963a1ecfb9fbdce4d69607722106eda27cea3a7f507732"
+        }
+      }
+    },
+    {
+      "season": 1986,
+      "dataset_fip": "3.83",
+      "computed_fip": 3.88,
+      "status": "computed",
+      "computed_fip_unrounded": 3.8838560533571256,
+      "league_constant": 2.761216743494687,
+      "team_counts": {
+        "homeRuns": 167.0,
+        "baseOnBalls": 474.0,
+        "hitByPitch": 26.0,
+        "strikeOuts": 1033.0,
+        "outs": 4289.0,
+        "earnedRuns": 625.0
+      },
+      "league_counts": {
+        "homeRuns": 3813.0,
+        "baseOnBalls": 14227.0,
+        "hitByPitch": 812.0,
+        "strikeOuts": 24706.0,
+        "outs": 113023.0,
+        "earnedRuns": 16589.0
+      },
+      "league_teams": 26,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1986&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:32.254552+00:00",
+          "sha256": "61db4078b773bb6434aea5c6bb5f566059c7836bf9eda86545af2ed7d12299c4"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1986&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:47.903965+00:00",
+          "sha256": "5e12c6cef66f5f8ba3e300b32dcf3c81826471716e8321d88e6808ae7399f930"
+        }
+      }
+    },
+    {
+      "season": 1987,
+      "dataset_fip": "4.67",
+      "computed_fip": 4.28,
+      "status": "computed",
+      "computed_fip_unrounded": 4.283845058885662,
+      "league_constant": 2.859053972534687,
+      "team_counts": {
+        "homeRuns": 190.0,
+        "baseOnBalls": 517.0,
+        "hitByPitch": 31.0,
+        "strikeOuts": 1034.0,
+        "outs": 4308.0,
+        "earnedRuns": 761.0
+      },
+      "league_counts": {
+        "homeRuns": 4458.0,
+        "baseOnBalls": 14389.0,
+        "hitByPitch": 842.0,
+        "strikeOuts": 25100.0,
+        "outs": 112724.0,
+        "earnedRuns": 17875.0
+      },
+      "league_teams": 26,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1987&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:32.274472+00:00",
+          "sha256": "07e1c77ee11adcdfd23bc3832ab0a7587cea9a2afdcd729be3c4a9b4e5747c0e"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1987&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:48.233934+00:00",
+          "sha256": "2a187cdb9b22c46cda39d10cbbda18e3b84f4a55cc6aa84aeedbd27326d1a337"
+        }
+      }
+    },
+    {
+      "season": 1988,
+      "dataset_fip": "3.87",
+      "computed_fip": 3.66,
+      "status": "computed",
+      "computed_fip_unrounded": 3.6572421684461958,
+      "league_constant": 2.7605373308673222,
+      "team_counts": {
+        "homeRuns": 143.0,
+        "baseOnBalls": 493.0,
+        "hitByPitch": 37.0,
+        "strikeOuts": 1085.0,
+        "outs": 4279.0,
+        "earnedRuns": 629.0
+      },
+      "league_counts": {
+        "homeRuns": 3180.0,
+        "baseOnBalls": 12984.0,
+        "hitByPitch": 918.0,
+        "strikeOuts": 23355.0,
+        "outs": 113003.0,
+        "earnedRuns": 15591.0
+      },
+      "league_teams": 26,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1988&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:32.475391+00:00",
+          "sha256": "d6ea40842c8f935f65f7735234037b7a2a7f48c2a63ef23c064652d151b75dac"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1988&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:48.504916+00:00",
+          "sha256": "b2de5349e71e90f403df2c869c36b57b589505e7a4f226a04fc75095ccb6d199"
+        }
+      }
+    },
+    {
+      "season": 1989,
+      "dataset_fip": "3.91",
+      "computed_fip": 3.68,
+      "status": "computed",
+      "computed_fip_unrounded": 3.6751038306345154,
+      "league_constant": 2.7547660082195415,
+      "team_counts": {
+        "homeRuns": 131.0,
+        "baseOnBalls": 548.0,
+        "hitByPitch": 35.0,
+        "strikeOuts": 1054.0,
+        "outs": 4381.0,
+        "earnedRuns": 650.0
+      },
+      "league_counts": {
+        "homeRuns": 3083.0,
+        "baseOnBalls": 13528.0,
+        "hitByPitch": 801.0,
+        "strikeOuts": 23650.0,
+        "outs": 113145.0,
+        "earnedRuns": 15518.0
+      },
+      "league_teams": 26,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1989&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:32.497399+00:00",
+          "sha256": "dd245315f73f950bb3cea44c7f1424274e58d51aefd9360efebee8d358494934"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1989&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:48.901045+00:00",
+          "sha256": "17589fd5f946fd72b6f0115f005b8958fe86ab105a10292e4453af5c207985d4"
+        }
+      }
+    },
+    {
+      "season": 1990,
+      "dataset_fip": "3.62",
+      "computed_fip": 3.42,
+      "status": "computed",
+      "computed_fip_unrounded": 3.4196457040585413,
+      "league_constant": 2.7996734433095813,
+      "team_counts": {
+        "homeRuns": 92.0,
+        "baseOnBalls": 519.0,
+        "hitByPitch": 45.0,
+        "strikeOuts": 997.0,
+        "outs": 4326.0,
+        "earnedRuns": 596.0
+      },
+      "league_counts": {
+        "homeRuns": 3317.0,
+        "baseOnBalls": 13852.0,
+        "hitByPitch": 861.0,
+        "strikeOuts": 23853.0,
+        "outs": 112691.0,
+        "earnedRuns": 16080.0
+      },
+      "league_teams": 26,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1990&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:32.660694+00:00",
+          "sha256": "7828c5ee9ae4d1cb9654e738209b0cab890f9a5bc6d181f24b250afcc6c2b4ad"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1990&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:49.158393+00:00",
+          "sha256": "58aadd9535d1ba0d39cc742ba05fdc60585139f0a132ca5ddbb5e3276e0de3ee"
+        }
+      }
+    },
+    {
+      "season": 1991,
+      "dataset_fip": "3.91",
+      "computed_fip": 3.96,
+      "status": "computed",
+      "computed_fip_unrounded": 3.957887006333551,
+      "league_constant": 2.849297054955917,
+      "team_counts": {
+        "homeRuns": 147.0,
+        "baseOnBalls": 530.0,
+        "hitByPitch": 31.0,
+        "strikeOuts": 999.0,
+        "outs": 4319.0,
+        "earnedRuns": 642.0
+      },
+      "league_counts": {
+        "homeRuns": 3383.0,
+        "baseOnBalls": 13984.0,
+        "hitByPitch": 905.0,
+        "strikeOuts": 24390.0,
+        "outs": 113309.0,
+        "earnedRuns": 16387.0
+      },
+      "league_teams": 26,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1991&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:32.716398+00:00",
+          "sha256": "9d99fa9c0bceee2e929d2979cdae401f899076ac0e500aff8ee956748eae6b3b"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1991&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:49.539165+00:00",
+          "sha256": "b97e8dcde2a9e9215390c2b8edc853d69d14ae60a993a718f986e2d5716b38b2"
+        }
+      }
+    },
+    {
+      "season": 1992,
+      "dataset_fip": "3.48",
+      "computed_fip": 3.63,
+      "status": "computed",
+      "computed_fip_unrounded": 3.6263567909176633,
+      "league_constant": 2.775229317378777,
+      "team_counts": {
+        "homeRuns": 107.0,
+        "baseOnBalls": 535.0,
+        "hitByPitch": 41.0,
+        "strikeOuts": 943.0,
+        "outs": 4346.0,
+        "earnedRuns": 577.0
+      },
+      "league_counts": {
+        "homeRuns": 3038.0,
+        "baseOnBalls": 13682.0,
+        "hitByPitch": 980.0,
+        "strikeOuts": 23538.0,
+        "outs": 113489.0,
+        "earnedRuns": 15710.0
+      },
+      "league_teams": 26,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1992&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:32.848516+00:00",
+          "sha256": "c5b53d56aeb973023a5c66d7df95636890f66fe58ea820ee09a1ea4dab9efbf5"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1992&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:49.788086+00:00",
+          "sha256": "f60419178ad2f2c65cfed29f936f0eb6fe01a2593315af793071371538871c68"
+        }
+      }
+    },
+    {
+      "season": 1993,
+      "dataset_fip": "3.67",
+      "computed_fip": 3.98,
+      "status": "computed",
+      "computed_fip_unrounded": 3.98134045737321,
+      "league_constant": 2.978127237267633,
+      "team_counts": {
+        "homeRuns": 127.0,
+        "baseOnBalls": 552.0,
+        "hitByPitch": 48.0,
+        "strikeOuts": 997.0,
+        "outs": 4357.0,
+        "earnedRuns": 610.0
+      },
+      "league_counts": {
+        "homeRuns": 4030.0,
+        "baseOnBalls": 15110.0,
+        "hitByPitch": 1200.0,
+        "strikeOuts": 26310.0,
+        "outs": 121521.0,
+        "earnedRuns": 18815.0
+      },
+      "league_teams": 28,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1993&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:32.907612+00:00",
+          "sha256": "145ac2dba93a1a19064844edff850cdea0f4e955c2d114778aa78b4ff8bf7bc0"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1993&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:51.227001+00:00",
+          "sha256": "95d02e6604530dbec4f7eb05379a54e8306021778060611fabe524cadc053dbc"
+        }
+      }
+    },
+    {
+      "season": 1994,
+      "dataset_fip": "4.83",
+      "computed_fip": 4.63,
+      "status": "computed",
+      "computed_fip_unrounded": 4.6256464638192325,
+      "league_constant": 3.124674961228559,
+      "team_counts": {
+        "homeRuns": 120.0,
+        "baseOnBalls": 450.0,
+        "hitByPitch": 31.0,
+        "strikeOuts": 729.0,
+        "outs": 3088.0,
+        "earnedRuns": 564.0
+      },
+      "league_counts": {
+        "homeRuns": 3306.0,
+        "baseOnBalls": 11131.0,
+        "hitByPitch": 876.0,
+        "strikeOuts": 19766.0,
+        "outs": 85759.0,
+        "earnedRuns": 14310.0
+      },
+      "league_teams": 28,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1994&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:33.018627+00:00",
+          "sha256": "d54052da45a8d6ada531a95a69a94de0f9683efe8d1f03f319473369d9485b3f"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1994&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:51.488162+00:00",
+          "sha256": "aefd0cd53ee3ab401a01486a947276d097250c7f793f3efdcc6fe3001abf2258"
+        }
+      }
+    },
+    {
+      "season": 1995,
+      "dataset_fip": "4.29",
+      "computed_fip": 4.21,
+      "status": "computed",
+      "computed_fip_unrounded": 4.212551824886388,
+      "league_constant": 3.097801953818828,
+      "team_counts": {
+        "homeRuns": 127.0,
+        "baseOnBalls": 476.0,
+        "hitByPitch": 46.0,
+        "strikeOuts": 888.0,
+        "outs": 3878.0,
+        "earnedRuns": 631.0
+      },
+      "league_counts": {
+        "homeRuns": 4081.0,
+        "baseOnBalls": 14240.0,
+        "hitByPitch": 1219.0,
+        "strikeOuts": 25425.0,
+        "outs": 108096.0,
+        "earnedRuns": 17800.0
+      },
+      "league_teams": 28,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1995&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:33.102675+00:00",
+          "sha256": "4e9ae49ab7cdd2850ec624ecf5ada1eaffcae67f32d42d4521b474859b3b871e"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1995&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:51.822624+00:00",
+          "sha256": "98c34818483b71c6eb2888dab22430d5aa008beef97bf2fb7dc6e470a2d837f2"
+        }
+      }
+    },
+    {
+      "season": 1996,
+      "dataset_fip": "4.88",
+      "computed_fip": 4.8,
+      "status": "computed",
+      "computed_fip_unrounded": 4.80256295113966,
+      "league_constant": 3.1626452556664093,
+      "team_counts": {
+        "homeRuns": 185.0,
+        "baseOnBalls": 722.0,
+        "hitByPitch": 50.0,
+        "strikeOuts": 1165.0,
+        "outs": 4374.0,
+        "earnedRuns": 807.0
+      },
+      "league_counts": {
+        "homeRuns": 4962.0,
+        "baseOnBalls": 16093.0,
+        "hitByPitch": 1404.0,
+        "strikeOuts": 29308.0,
+        "outs": 121682.0,
+        "earnedRuns": 20740.0
+      },
+      "league_teams": 28,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1996&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:33.224182+00:00",
+          "sha256": "00cbdd818cced6b1f18532a01a6db1ece12543749790590eb4f3a837631d980b"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1996&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:52.255178+00:00",
+          "sha256": "75dcbe590a62be426d93bc8f452439ea3a8944b9b32f150fda9ab47e37359401"
+        }
+      }
+    },
+    {
+      "season": 1997,
+      "dataset_fip": "4.75",
+      "computed_fip": 4.49,
+      "status": "computed",
+      "computed_fip_unrounded": 4.486596174748407,
+      "league_constant": 3.104736243634745,
+      "team_counts": {
+        "homeRuns": 149.0,
+        "baseOnBalls": 611.0,
+        "hitByPitch": 70.0,
+        "strikeOuts": 987.0,
+        "outs": 4355.0,
+        "earnedRuns": 782.0
+      },
+      "league_counts": {
+        "homeRuns": 4640.0,
+        "baseOnBalls": 15666.0,
+        "hitByPitch": 1449.0,
+        "strikeOuts": 29937.0,
+        "outs": 121362.0,
+        "earnedRuns": 19710.0
+      },
+      "league_teams": 28,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1997&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:33.405955+00:00",
+          "sha256": "54fbb253dd59737722dcb5be0125ba9db9fba7d719b53ba5dda434030a71dc52"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1997&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:53.492384+00:00",
+          "sha256": "dac34f983bb6e49b4863d24c4159f83455a5edfade0629faaae05ba9149e4b3a"
+        }
+      }
+    },
+    {
+      "season": 1998,
+      "dataset_fip": "4.08",
+      "computed_fip": 4.39,
+      "status": "computed",
+      "computed_fip_unrounded": 4.390635816788065,
+      "league_constant": 3.1336720284872297,
+      "team_counts": {
+        "homeRuns": 168.0,
+        "baseOnBalls": 504.0,
+        "hitByPitch": 53.0,
+        "strikeOuts": 1025.0,
+        "outs": 4308.0,
+        "earnedRuns": 667.0
+      },
+      "league_counts": {
+        "homeRuns": 5064.0,
+        "baseOnBalls": 16447.0,
+        "hitByPitch": 1587.0,
+        "strikeOuts": 31893.0,
+        "outs": 130304.0,
+        "earnedRuns": 21362.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1998&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:33.488841+00:00",
+          "sha256": "34f6a62c99b846d5d53b543631ce583b453246526f2641951de64d9c07b1de7e"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1998&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:53.728856+00:00",
+          "sha256": "03e5c5948c2f92782d9bc4d01d866d0f327bd49e9253699a58e210dee51d97be"
+        }
+      }
+    },
+    {
+      "season": 1999,
+      "dataset_fip": "3.9",
+      "computed_fip": 4.09,
+      "status": "computed",
+      "computed_fip_unrounded": 4.090540682321497,
+      "league_constant": 3.1230232809293854,
+      "team_counts": {
+        "homeRuns": 160.0,
+        "baseOnBalls": 469.0,
+        "hitByPitch": 55.0,
+        "strikeOuts": 1131.0,
+        "outs": 4310.0,
+        "earnedRuns": 638.0
+      },
+      "league_counts": {
+        "homeRuns": 5528.0,
+        "baseOnBalls": 17891.0,
+        "hitByPitch": 1579.0,
+        "strikeOuts": 31119.0,
+        "outs": 129634.0,
+        "earnedRuns": 22554.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1999&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:33.703334+00:00",
+          "sha256": "f7375af7418fce9a72e0718dd688f42d4586d2ea20e20ebbcb68672dd1232f4b"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=1999&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:53.966852+00:00",
+          "sha256": "c455c74b295e3ea6dbdcf9f80f01e0a0d7cea3769c35baa90ef101ba83715ca4"
+        }
+      }
+    },
+    {
+      "season": 2000,
+      "dataset_fip": "4.13",
+      "computed_fip": 4.28,
+      "status": "computed",
+      "computed_fip_unrounded": 4.280351774632042,
+      "league_constant": 3.1272999159812844,
+      "team_counts": {
+        "homeRuns": 173.0,
+        "baseOnBalls": 498.0,
+        "hitByPitch": 58.0,
+        "strikeOuts": 1121.0,
+        "outs": 4358.0,
+        "earnedRuns": 683.0
+      },
+      "league_counts": {
+        "homeRuns": 5693.0,
+        "baseOnBalls": 18237.0,
+        "hitByPitch": 1573.0,
+        "strikeOuts": 31356.0,
+        "outs": 129733.0,
+        "earnedRuns": 22885.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2000&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:33.787661+00:00",
+          "sha256": "202c97677a8d8f59fbcfb075023f2896f3856709015236ba3a9e21bf520069a7"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2000&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:54.232068+00:00",
+          "sha256": "1fe0f3996fbd91514199ae065ba8b329d39db38792b78ae18d0e20f4b99d3e8b"
+        }
+      }
+    },
+    {
+      "season": 2001,
+      "dataset_fip": "4.05",
+      "computed_fip": 3.93,
+      "status": "computed",
+      "computed_fip_unrounded": 3.934266058121537,
+      "league_constant": 3.0426914724861778,
+      "team_counts": {
+        "homeRuns": 146.0,
+        "baseOnBalls": 544.0,
+        "hitByPitch": 93.0,
+        "strikeOuts": 1259.0,
+        "outs": 4344.0,
+        "earnedRuns": 667.0
+      },
+      "league_counts": {
+        "homeRuns": 5458.0,
+        "baseOnBalls": 15806.0,
+        "hitByPitch": 1890.0,
+        "strikeOuts": 32404.0,
+        "outs": 129862.0,
+        "earnedRuns": 21216.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2001&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:33.892249+00:00",
+          "sha256": "cd9e10d3c02a485a85b30dd028476a8e8817d6ed8677dc1c2883b6e025dfc657"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2001&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:54.716112+00:00",
+          "sha256": "8987df08ed22ab248422a34b7828af64b39183951dbe45dc781707d465374c84"
+        }
+      }
+    },
+    {
+      "season": 2002,
+      "dataset_fip": "3.65",
+      "computed_fip": 3.73,
+      "status": "computed",
+      "computed_fip_unrounded": 3.733702288367023,
+      "league_constant": 2.9550024266796093,
+      "team_counts": {
+        "homeRuns": 146.0,
+        "baseOnBalls": 430.0,
+        "hitByPitch": 84.0,
+        "strikeOuts": 1157.0,
+        "outs": 4338.0,
+        "earnedRuns": 603.0
+      },
+      "league_counts": {
+        "homeRuns": 5059.0,
+        "baseOnBalls": 16246.0,
+        "hitByPitch": 1746.0,
+        "strikeOuts": 31394.0,
+        "outs": 129807.0,
+        "earnedRuns": 20535.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2002&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:33.978684+00:00",
+          "sha256": "a74f0f5f5c73275d7a61aff45b15cdeee66fe50bced6a70b7483ded55c99b3cc"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2002&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:54.951232+00:00",
+          "sha256": "831d6606419d96f287766c59e8a834da74b12102b5146c81dc543519e2064def"
+        }
+      }
+    },
+    {
+      "season": 2003,
+      "dataset_fip": "4.38",
+      "computed_fip": 3.98,
+      "status": "computed",
+      "computed_fip_unrounded": 3.9798111520233665,
+      "league_constant": 3.0246450163838583,
+      "team_counts": {
+        "homeRuns": 153.0,
+        "baseOnBalls": 488.0,
+        "hitByPitch": 76.0,
+        "strikeOuts": 1141.0,
+        "outs": 4394.0,
+        "earnedRuns": 729.0
+      },
+      "league_counts": {
+        "homeRuns": 5207.0,
+        "baseOnBalls": 15889.0,
+        "hitByPitch": 1849.0,
+        "strikeOuts": 30801.0,
+        "outs": 130006.0,
+        "earnedRuns": 21153.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2003&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:34.091792+00:00",
+          "sha256": "1917b567363a408e3c9d360888fe01f42557dcb6181bbbd2e2d643323f79c5aa"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2003&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:55.218158+00:00",
+          "sha256": "3ab8666ffbf175432483f69d8f84a23863eb0f57b53b392c5aac1451639b1923"
+        }
+      }
+    },
+    {
+      "season": 2004,
+      "dataset_fip": "4.08",
+      "computed_fip": 4.02,
+      "status": "computed",
+      "computed_fip_unrounded": 4.0185544555490935,
+      "league_constant": 3.040143798681845,
+      "team_counts": {
+        "homeRuns": 159.0,
+        "baseOnBalls": 447.0,
+        "hitByPitch": 92.0,
+        "strikeOuts": 1132.0,
+        "outs": 4354.0,
+        "earnedRuns": 674.0
+      },
+      "league_counts": {
+        "homeRuns": 5451.0,
+        "baseOnBalls": 16222.0,
+        "hitByPitch": 1850.0,
+        "strikeOuts": 31828.0,
+        "outs": 130182.0,
+        "earnedRuns": 21483.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2004&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:34.174505+00:00",
+          "sha256": "0193e734a1d21e984c41b54a006528edd6199288562268ad3f20aa24128c1c5c"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2004&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:55.480793+00:00",
+          "sha256": "f17a479219bfd8fc00eb6ecb10c8bc1fb7d6f145ccb98068a2fa009034eaa4a0"
+        }
+      }
+    },
+    {
+      "season": 2005,
+      "dataset_fip": "4.64",
+      "computed_fip": 4.27,
+      "status": "computed",
+      "computed_fip_unrounded": 4.269944331087283,
+      "league_constant": 3.0096224276583117,
+      "team_counts": {
+        "homeRuns": 164.0,
+        "baseOnBalls": 440.0,
+        "hitByPitch": 89.0,
+        "strikeOuts": 959.0,
+        "outs": 4287.0,
+        "earnedRuns": 752.0
+      },
+      "league_counts": {
+        "homeRuns": 5017.0,
+        "baseOnBalls": 15207.0,
+        "hitByPitch": 1797.0,
+        "strikeOuts": 30644.0,
+        "outs": 129697.0,
+        "earnedRuns": 20562.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2005&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:34.295217+00:00",
+          "sha256": "262878916355545259d34b54fb434bcb4e8158bc851f2d52120fc3beb5110b43"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2005&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:55.902762+00:00",
+          "sha256": "e601cd31ec5f3ba460a67b7ab4d6c0d69e1e0b4a033589892830ab418d432825"
+        }
+      }
+    },
+    {
+      "season": 2006,
+      "dataset_fip": "4.73",
+      "computed_fip": 4.49,
+      "status": "computed",
+      "computed_fip_unrounded": 4.488008634722226,
+      "league_constant": 3.1392574783855007,
+      "team_counts": {
+        "homeRuns": 181.0,
+        "baseOnBalls": 509.0,
+        "hitByPitch": 68.0,
+        "strikeOuts": 1070.0,
+        "outs": 4324.0,
+        "earnedRuns": 773.0
+      },
+      "league_counts": {
+        "homeRuns": 5386.0,
+        "baseOnBalls": 15847.0,
+        "hitByPitch": 1817.0,
+        "strikeOuts": 31655.0,
+        "outs": 129774.0,
+        "earnedRuns": 21722.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2006&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:34.367836+00:00",
+          "sha256": "c8c11e8f4b6b6698d458eae2a41680f58abe9f050dc319bbd7a66685370b4cb9"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2006&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:56.166974+00:00",
+          "sha256": "cc2ebe06e3e27459242bf2a071c0b7b0f78d763d27e0fad9cc7c397c6ae69bb8"
+        }
+      }
+    },
+    {
+      "season": 2007,
+      "dataset_fip": "3.77",
+      "computed_fip": 4.13,
+      "status": "computed",
+      "computed_fip_unrounded": 4.129942497657892,
+      "league_constant": 3.228413303960023,
+      "team_counts": {
+        "homeRuns": 151.0,
+        "baseOnBalls": 482.0,
+        "hitByPitch": 62.0,
+        "strikeOuts": 1149.0,
+        "outs": 4316.0,
+        "earnedRuns": 618.0
+      },
+      "league_counts": {
+        "homeRuns": 4957.0,
+        "baseOnBalls": 16079.0,
+        "hitByPitch": 1755.0,
+        "strikeOuts": 32189.0,
+        "outs": 130277.0,
+        "earnedRuns": 21529.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2007&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:34.503921+00:00",
+          "sha256": "82536f764ae11cafd691d5c84707e46df6f213b8f3c56e9d19e0137d3f67e029"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2007&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:56.409081+00:00",
+          "sha256": "0c45778f616092313400d5ad2a0ba3254b0db394aff65d5b824c87c98fa2b48a"
+        }
+      }
+    },
+    {
+      "season": 2008,
+      "dataset_fip": "3.91",
+      "computed_fip": 4.08,
+      "status": "computed",
+      "computed_fip_unrounded": 4.08407467441825,
+      "league_constant": 3.123715144572664,
+      "team_counts": {
+        "homeRuns": 147.0,
+        "baseOnBalls": 548.0,
+        "hitByPitch": 68.0,
+        "strikeOuts": 1185.0,
+        "outs": 4339.0,
+        "earnedRuns": 645.0
+      },
+      "league_counts": {
+        "homeRuns": 4878.0,
+        "baseOnBalls": 16337.0,
+        "hitByPitch": 1672.0,
+        "strikeOuts": 32884.0,
+        "outs": 130073.0,
+        "earnedRuns": 20790.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2008&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:34.597493+00:00",
+          "sha256": "4c0243e139e422bb5cb341f902cf7a016698bd7787cdc34985b7b4ef833b3f98"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2008&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:56.589089+00:00",
+          "sha256": "99c7c3cf757ebf13b2da16d27063fd31a34e9c9b525c48a937fc1eed1d2cf3f7"
+        }
+      }
+    },
+    {
+      "season": 2009,
+      "dataset_fip": "4.25",
+      "computed_fip": 4.13,
+      "status": "computed",
+      "computed_fip_unrounded": 4.134664008469171,
+      "league_constant": 3.0871002033647628,
+      "team_counts": {
+        "homeRuns": 167.0,
+        "baseOnBalls": 530.0,
+        "hitByPitch": 68.0,
+        "strikeOuts": 1230.0,
+        "outs": 4310.0,
+        "earnedRuns": 695.0
+      },
+      "league_counts": {
+        "homeRuns": 5042.0,
+        "baseOnBalls": 16620.0,
+        "hitByPitch": 1590.0,
+        "strikeOuts": 33591.0,
+        "outs": 129816.0,
+        "earnedRuns": 20731.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2009&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:34.720353+00:00",
+          "sha256": "3a678dd579bc3906a1e01f47b15cb55a1334106929439a0b4627b42b74141c63"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2009&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:56.783550+00:00",
+          "sha256": "1a54280c912042024135ba8e58c185a1027d0c99f60250d50f0784eb5a462894"
+        }
+      }
+    },
+    {
+      "season": 2010,
+      "dataset_fip": "4.1",
+      "computed_fip": 4.07,
+      "status": "computed",
+      "computed_fip_unrounded": 4.074582636497457,
+      "league_constant": 3.071607808122171,
+      "team_counts": {
+        "homeRuns": 152.0,
+        "baseOnBalls": 580.0,
+        "hitByPitch": 53.0,
+        "strikeOuts": 1207.0,
+        "outs": 4370.0,
+        "earnedRuns": 679.0
+      },
+      "league_counts": {
+        "homeRuns": 4613.0,
+        "baseOnBalls": 15778.0,
+        "hitByPitch": 1549.0,
+        "strikeOuts": 34306.0,
+        "outs": 129916.0,
+        "earnedRuns": 19595.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2010&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:34.817948+00:00",
+          "sha256": "e493f3993fc0bb04a85586b4fd6a2720ecac813ca2e98639a03da0f95142a47a"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2010&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:57.387502+00:00",
+          "sha256": "3a9d7068808c4477366d196a2d89a06720e4870447754ea83535ff50e5fefe4e"
+        }
+      }
+    },
+    {
+      "season": 2011,
+      "dataset_fip": "4.1",
+      "computed_fip": 4.04,
+      "status": "computed",
+      "computed_fip_unrounded": 4.041937255411809,
+      "league_constant": 3.0181495152471243,
+      "team_counts": {
+        "homeRuns": 156.0,
+        "baseOnBalls": 540.0,
+        "hitByPitch": 90.0,
+        "strikeOuts": 1213.0,
+        "outs": 4372.0,
+        "earnedRuns": 680.0
+      },
+      "league_counts": {
+        "homeRuns": 4552.0,
+        "baseOnBalls": 15018.0,
+        "hitByPitch": 1554.0,
+        "strikeOuts": 34488.0,
+        "outs": 130582.0,
+        "earnedRuns": 19032.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2011&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:34.898803+00:00",
+          "sha256": "b09534a76cbb69bed9f65b684b42598687e23856a490b5423a6d3a10d8ce5a60"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2011&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:57.573679+00:00",
+          "sha256": "a64e5893c0cbd8b7c7dc894acc9589c61c3f7bf2be895fdc1d5829916bb75c07"
+        }
+      }
+    },
+    {
+      "season": 2012,
+      "dataset_fip": "4.6",
+      "computed_fip": 4.41,
+      "status": "computed",
+      "computed_fip_unrounded": 4.405136476423362,
+      "league_constant": 3.0863561576430425,
+      "team_counts": {
+        "homeRuns": 190.0,
+        "baseOnBalls": 529.0,
+        "hitByPitch": 66.0,
+        "strikeOuts": 1176.0,
+        "outs": 4329.0,
+        "earnedRuns": 754.0
+      },
+      "league_counts": {
+        "homeRuns": 4934.0,
+        "baseOnBalls": 14709.0,
+        "hitByPitch": 1494.0,
+        "strikeOuts": 36426.0,
+        "outs": 130066.0,
+        "earnedRuns": 19301.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2012&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:34.979197+00:00",
+          "sha256": "51bc87c64f582d8affe1de15a56c09167f7683983e3357baf117d973edd2fe91"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2012&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:57.762049+00:00",
+          "sha256": "a158cb2205236e2b59b98ee458a0b2aa5908980c3f7d6144484ade6f33d71dcd"
+        }
+      }
+    },
+    {
+      "season": 2013,
+      "dataset_fip": "3.69",
+      "computed_fip": 3.84,
+      "status": "computed",
+      "computed_fip_unrounded": 3.8365096097047386,
+      "league_constant": 3.0435247403787415,
+      "team_counts": {
+        "homeRuns": 156.0,
+        "baseOnBalls": 524.0,
+        "hitByPitch": 47.0,
+        "strikeOuts": 1294.0,
+        "outs": 4362.0,
+        "earnedRuns": 613.0
+      },
+      "league_counts": {
+        "homeRuns": 4661.0,
+        "baseOnBalls": 14640.0,
+        "hitByPitch": 1536.0,
+        "strikeOuts": 36710.0,
+        "outs": 130960.0,
+        "earnedRuns": 18729.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2013&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:35.097776+00:00",
+          "sha256": "9dd31115f4794c95965c0c96391fafa2d0822e58460e4d7444ea0b26c4b8701b"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2013&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:57.938735+00:00",
+          "sha256": "4e8ac4601fa6ab8e67ad8d7ac02d9fb1c3d66f7116d30dc4a0e4382f0a0ed9e1"
+        }
+      }
+    },
+    {
+      "season": 2014,
+      "dataset_fip": "3.91",
+      "computed_fip": 3.92,
+      "status": "computed",
+      "computed_fip_unrounded": 3.9212078266051624,
+      "league_constant": 3.1277122614471002,
+      "team_counts": {
+        "homeRuns": 154.0,
+        "baseOnBalls": 482.0,
+        "hitByPitch": 47.0,
+        "strikeOuts": 1213.0,
+        "outs": 4397.0,
+        "earnedRuns": 653.0
+      },
+      "league_counts": {
+        "homeRuns": 4186.0,
+        "baseOnBalls": 14020.0,
+        "hitByPitch": 1652.0,
+        "strikeOuts": 37441.0,
+        "outs": 130841.0,
+        "earnedRuns": 18107.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2014&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:35.170012+00:00",
+          "sha256": "48c37f54940d6f1855dd3123e0a262348f8481eb6376fa56879797c324ca3f79"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2014&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:58.139408+00:00",
+          "sha256": "688dec723c1c4322003b6ae15344d58c0171ce0231a8eda456b5cdbb3ae6848d"
+        }
+      }
+    },
+    {
+      "season": 2015,
+      "dataset_fip": "4.21",
+      "computed_fip": 4.16,
+      "status": "computed",
+      "computed_fip_unrounded": 4.161044092665439,
+      "league_constant": 3.1267518026769467,
+      "team_counts": {
+        "homeRuns": 178.0,
+        "baseOnBalls": 478.0,
+        "hitByPitch": 62.0,
+        "strikeOuts": 1218.0,
+        "outs": 4345.0,
+        "earnedRuns": 694.0
+      },
+      "league_counts": {
+        "homeRuns": 4909.0,
+        "baseOnBalls": 14073.0,
+        "hitByPitch": 1602.0,
+        "strikeOuts": 37446.0,
+        "outs": 130223.0,
+        "earnedRuns": 19075.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2015&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:35.289027+00:00",
+          "sha256": "ba07744180f3a7f24cdea200a0e0ca606d03e9e1e0198a14c75e3aca0e2f7057"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2015&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:58.335453+00:00",
+          "sha256": "bdd9c728ee6338511434b24361c7d3f42e931092799055163cb17673c5380cbb"
+        }
+      }
+    },
+    {
+      "season": 2016,
+      "dataset_fip": "3.9",
+      "computed_fip": 3.99,
+      "status": "computed",
+      "computed_fip_unrounded": 3.992540973768362,
+      "league_constant": 3.1388711427889686,
+      "team_counts": {
+        "homeRuns": 176.0,
+        "baseOnBalls": 490.0,
+        "hitByPitch": 65.0,
+        "strikeOuts": 1362.0,
+        "outs": 4319.0,
+        "earnedRuns": 640.0
+      },
+      "league_counts": {
+        "homeRuns": 5610.0,
+        "baseOnBalls": 15088.0,
+        "hitByPitch": 1651.0,
+        "strikeOuts": 38982.0,
+        "outs": 129919.0,
+        "earnedRuns": 20124.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2016&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:35.340753+00:00",
+          "sha256": "9e9eb41cc47cd9298b3452011c6358736e7bf4c8126033c33682c884554280d2"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2016&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:58.994585+00:00",
+          "sha256": "31045e58e7805f3400749ba4f686ef3dee22709b957f59a47756fccc42b706e9"
+        }
+      }
+    },
+    {
+      "season": 2017,
+      "dataset_fip": "3.6",
+      "computed_fip": 3.77,
+      "status": "computed",
+      "computed_fip_unrounded": 3.768768402720763,
+      "league_constant": 3.150149108814759,
+      "team_counts": {
+        "homeRuns": 195.0,
+        "baseOnBalls": 465.0,
+        "hitByPitch": 49.0,
+        "strikeOuts": 1580.0,
+        "outs": 4447.0,
+        "earnedRuns": 610.0
+      },
+      "league_counts": {
+        "homeRuns": 6105.0,
+        "baseOnBalls": 15829.0,
+        "hitByPitch": 1763.0,
+        "strikeOuts": 40104.0,
+        "outs": 129771.0,
+        "earnedRuns": 20911.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2017&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:35.506677+00:00",
+          "sha256": "c1f5439c604984a012612fdbced178d56499678f812d0517f2b11d43030b061b"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2017&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:59.179018+00:00",
+          "sha256": "bb0d48de0c46b326a6323dfd59f9b7e156fba0c69ba8138f75ef0f72dd802f9a"
+        }
+      }
+    },
+    {
+      "season": 2018,
+      "dataset_fip": "3.65",
+      "computed_fip": 3.81,
+      "status": "computed",
+      "computed_fip_unrounded": 3.81318598584029,
+      "league_constant": 3.155050702476488,
+      "team_counts": {
+        "homeRuns": 176.0,
+        "baseOnBalls": 512.0,
+        "hitByPitch": 84.0,
+        "strikeOuts": 1558.0,
+        "outs": 4376.0,
+        "earnedRuns": 608.0
+      },
+      "league_counts": {
+        "homeRuns": 5585.0,
+        "baseOnBalls": 15686.0,
+        "hitByPitch": 1922.0,
+        "strikeOuts": 41207.0,
+        "outs": 130467.0,
+        "earnedRuns": 20025.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2018&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:35.549226+00:00",
+          "sha256": "9adb69464aaabc6ea81e05c45211111a36a678a93ac67974813a2b5fd9266345"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2018&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:59.367804+00:00",
+          "sha256": "71ebc2948d6a522f4cd02192777c29b065a95b2a247e03457d69f03798f0d8da"
+        }
+      }
+    },
+    {
+      "season": 2019,
+      "dataset_fip": "4.6",
+      "computed_fip": 4.27,
+      "status": "computed",
+      "computed_fip_unrounded": 4.271478000744883,
+      "league_constant": 3.202817225761879,
+      "team_counts": {
+        "homeRuns": 215.0,
+        "baseOnBalls": 605.0,
+        "hitByPitch": 76.0,
+        "strikeOuts": 1633.0,
+        "outs": 4413.0,
+        "earnedRuns": 768.0
+      },
+      "league_counts": {
+        "homeRuns": 6776.0,
+        "baseOnBalls": 15895.0,
+        "hitByPitch": 1984.0,
+        "strikeOuts": 42823.0,
+        "outs": 130270.0,
+        "earnedRuns": 21684.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2019&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:35.702646+00:00",
+          "sha256": "e43cedcd68f5e13c1b3d65d73786a0c0b0d458dcafbbb14fdb7f4bcff7b86d1b"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2019&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:59.573024+00:00",
+          "sha256": "f02ce30d1a7f3e6d9e4b07dba03255f4d2c0f81d464511d056f776f459419a65"
+        }
+      }
+    },
+    {
+      "season": 2020,
+      "dataset_fip": "5.48",
+      "computed_fip": 5.18,
+      "status": "computed",
+      "computed_fip_unrounded": 5.184018468920016,
+      "league_constant": 3.1821100719734514,
+      "team_counts": {
+        "homeRuns": 98.0,
+        "baseOnBalls": 252.0,
+        "hitByPitch": 31.0,
+        "strikeOuts": 537.0,
+        "outs": 1572.0,
+        "earnedRuns": 325.0
+      },
+      "league_counts": {
+        "homeRuns": 2304.0,
+        "baseOnBalls": 6092.0,
+        "hitByPitch": 821.0,
+        "strikeOuts": 15586.0,
+        "outs": 46406.0,
+        "earnedRuns": 7638.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2020&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:35.774160+00:00",
+          "sha256": "977b2a37e2a88ee865b14aa84a90bdd3e167551a4195f6599a13499a4dc00109"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2020&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:37:59.759185+00:00",
+          "sha256": "af077837858a2e29f5addba58ed0dec9fbf87f01170afe8d1eef14de82c2863d"
+        }
+      }
+    },
+    {
+      "season": 2021,
+      "dataset_fip": "4.16",
+      "computed_fip": 3.94,
+      "status": "computed",
+      "computed_fip_unrounded": 3.9437561687948466,
+      "league_constant": 3.1622198756306465,
+      "team_counts": {
+        "homeRuns": 176.0,
+        "baseOnBalls": 546.0,
+        "hitByPitch": 79.0,
+        "strikeOuts": 1527.0,
+        "outs": 4257.0,
+        "earnedRuns": 671.0
+      },
+      "league_counts": {
+        "homeRuns": 5944.0,
+        "baseOnBalls": 15794.0,
+        "hitByPitch": 2112.0,
+        "strikeOuts": 42145.0,
+        "outs": 127845.0,
+        "earnedRuns": 20162.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2021&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:35.885383+00:00",
+          "sha256": "66a4f04a9611f8f81f95762ab8eb227920f17a5f393433990034ad2b4863d38e"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2021&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:38:00.005055+00:00",
+          "sha256": "a11bc5a359cd8f78cc673e0c2a344d86f225e0414c5a55cf51aa4df56c1d9935"
+        }
+      }
+    },
+    {
+      "season": 2022,
+      "dataset_fip": "4.43",
+      "computed_fip": 4.16,
+      "status": "computed",
+      "computed_fip_unrounded": 4.159272559973073,
+      "league_constant": 3.106162846486001,
+      "team_counts": {
+        "homeRuns": 185.0,
+        "baseOnBalls": 526.0,
+        "hitByPitch": 72.0,
+        "strikeOuts": 1346.0,
+        "outs": 4293.0,
+        "earnedRuns": 721.0
+      },
+      "league_counts": {
+        "homeRuns": 5215.0,
+        "baseOnBalls": 14853.0,
+        "hitByPitch": 2046.0,
+        "strikeOuts": 40812.0,
+        "outs": 129226.0,
+        "earnedRuns": 18963.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2022&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:35.954091+00:00",
+          "sha256": "4ca50923f4b8f71d335be726dd79894ec4f08447f32c366af0b4203e547c3ac3"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2022&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:38:00.249695+00:00",
+          "sha256": "a7316ad04964abad2bc1a240db78ded09fb6c62e707271ec3eeb7acae617fd35"
+        }
+      }
+    },
+    {
+      "season": 2023,
+      "dataset_fip": "4.42",
+      "computed_fip": 4.37,
+      "status": "computed",
+      "computed_fip_unrounded": 4.366674081902069,
+      "league_constant": 3.249191564419551,
+      "team_counts": {
+        "homeRuns": 208.0,
+        "baseOnBalls": 497.0,
+        "hitByPitch": 83.0,
+        "strikeOuts": 1423.0,
+        "outs": 4290.0,
+        "earnedRuns": 718.0
+      },
+      "league_counts": {
+        "homeRuns": 5868.0,
+        "baseOnBalls": 15819.0,
+        "hitByPitch": 2112.0,
+        "strikeOuts": 41843.0,
+        "outs": 129262.0,
+        "earnedRuns": 20710.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2023&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:36.090620+00:00",
+          "sha256": "ec3c32ca5dba1805335d2e489205277445f1ef5b535be4e7220b57a37503f895"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2023&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:38:00.462116+00:00",
+          "sha256": "d6a86d3dd923968f25fd6eb580f7161b2629f99d4bac2b871f2d186cceb5b6da"
+        }
+      }
+    },
+    {
+      "season": 2024,
+      "dataset_fip": "3.94",
+      "computed_fip": 4.1,
+      "status": "computed",
+      "computed_fip_unrounded": 4.097177541429258,
+      "league_constant": 3.1595914927830906,
+      "team_counts": {
+        "homeRuns": 189.0,
+        "baseOnBalls": 461.0,
+        "hitByPitch": 76.0,
+        "strikeOuts": 1353.0,
+        "outs": 4358.0,
+        "earnedRuns": 652.0
+      },
+      "league_counts": {
+        "homeRuns": 5453.0,
+        "baseOnBalls": 14929.0,
+        "hitByPitch": 2020.0,
+        "strikeOuts": 41197.0,
+        "outs": 129349.0,
+        "earnedRuns": 19508.0
+      },
+      "league_teams": 30,
+      "sources": {
+        "team": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2024&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:36.169893+00:00",
+          "sha256": "55e9cc610c7889aa0588947e44bf85e150f38abf75f29ee1000cfcf6759a5f59"
+        },
+        "league": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2024&group=pitching&stats=season&sportIds=1&gameType=R",
+          "retrieved_at": "2026-11-01T05:38:00.750680+00:00",
+          "sha256": "edac652efc44a6c75f037312d2d6ab66e54c05c71d55266ee499abbce2b2c115"
+        }
+      }
+    }
+  ]
+}

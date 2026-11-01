@@ -536,7 +536,7 @@ def build_pdf(output_path):
     story.append(cover_table)
     story.append(Spacer(1, 0.4*inch))
 
-    story.append(Paragraph("FIP* is unverified and excluded from radar comparisons. ERA follows the documented MLB source snapshots; narratives remain curated interpretations.", body_style))
+    story.append(Paragraph("FIP is computed from MLB counts and left out of radar comparisons. ERA follows the documented MLB source snapshots; narratives remain curated interpretations.", body_style))
 
     # KPI row on cover
     total_ws = era_df["ws_titles"].sum()
@@ -715,7 +715,7 @@ def build_pdf(output_path):
     story.append(HRFlowable(width=PW, thickness=2, color=colors.HexColor(RED_SOX_RED), spaceAfter=8))
     story.append(Paragraph(
         "Each axis is normalised 0–100 relative to the best and worst era for that dimension. "
-        "ERA is inverted. Unverified FIP is excluded from the radar. "
+        "ERA is inverted. FIP is left out of the radar. "
         "A perfectly round web at 100 would be the ideal franchise era.",
         body_style
     ))

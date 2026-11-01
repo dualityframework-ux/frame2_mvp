@@ -19,7 +19,7 @@ from config.styles import APP_CSS, TIMELINE_CSS, pill_class, tag_class
 st.set_page_config(page_title="franchise timeline", layout="wide")
 st.markdown(APP_CSS, unsafe_allow_html=True)
 st.markdown(TIMELINE_CSS, unsafe_allow_html=True)
-st.caption("ERA follows MLB source snapshots. FIP and narrative interpretations remain unverified.")
+st.caption("ERA follows MLB source snapshots, and FIP is computed from MLB counts. Narrative interpretations remain unverified.")
 
 # ══════════════════════════════════════════════════════════════════════════
 # DATA
@@ -466,7 +466,7 @@ with col_meta:
   <div class="stat-item"><span class="stat-label">run diff</span><span class="stat-val">{rd_disp}</span></div>
   <div class="stat-item"><span class="stat-label">team ops</span><span class="stat-val">{row['team_ops']}</span></div>
   <div class="stat-item"><span class="stat-label">team era</span><span class="stat-val">{row['team_era']}</span></div>
-  <div class="stat-item"><span class="stat-label">team fip (unverified)</span><span class="stat-val">{row['team_fip']}</span></div>
+  <div class="stat-item"><span class="stat-label">team fip (computed)</span><span class="stat-val">{row['team_fip']}</span></div>
 </div>
 """, unsafe_allow_html=True)
 

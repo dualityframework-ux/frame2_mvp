@@ -166,8 +166,8 @@ if num_cols and len(era_df) > 0:
 # ── Full era table ────────────────────────────────────────────────────────────
 st.markdown("---")
 st.markdown("### full era summary table")
-st.caption("FIP values remain unverified; narrative interpretations are curated.")
-st.dataframe(era_df.rename(columns={"avg_fip": "avg_fip (unverified)"}), use_container_width=True, hide_index=True)
+st.caption("FIP is computed from MLB counts; narrative interpretations are curated.")
+st.dataframe(era_df.rename(columns={"avg_fip": "avg_fip (computed)"}), use_container_width=True, hide_index=True)
 
 # ── Season drill-down ─────────────────────────────────────────────────────────
 st.markdown("---")
@@ -176,4 +176,4 @@ sel_era = st.selectbox("select era", era_list, key="era_board_drill")
 era_seasons = df[df["era_label"] == sel_era][
     ["season", "wins", "losses", "run_diff", "playoff_result", "manager", "team_ops", "team_era"]
 ].sort_values("season")
-st.dataframe(era_seasons.rename(columns={"team_fip": "team_fip (unverified)"}), use_container_width=True, hide_index=True)
+st.dataframe(era_seasons.rename(columns={"team_fip": "team_fip (computed)"}), use_container_width=True, hide_index=True)

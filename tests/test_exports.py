@@ -79,10 +79,10 @@ def test_mobile_data_and_era_summaries_follow_canonical_csv():
         members = [r for r in rows if era['start'] <= r['season'] <= era['end']]
         assert era['avg_w'] == round(sum(r['wins'] for r in members) / len(members), 1)
         assert era['pct'] == round(100 * sum(r['playoff_result'] != 'missed playoffs' for r in members) / len(members))
-    assert 'FIP (unverified)' in mobile.HTML
+    assert 'FIP (computed)' in mobile.HTML
 
 
-def test_unverified_fip_cannot_change_comparative_radar_charts():
+def test_fip_cannot_change_comparative_radar_charts():
     from adapters.redsox_history_loader import load_redsox_history
     from export_era_comparison_pdf import build_era_stats, chart_radar
     from build_timeline_slideshow import radar_chart
