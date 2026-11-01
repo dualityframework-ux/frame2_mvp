@@ -67,3 +67,42 @@ def test_championship_slide_only_contains_winning_seasons():
     assert {'2004', '2007', '2013', '2018'} <= texts
     assert not {'1967', '1975', '1986'} & texts
     assert 'Four Championships in This Dataset' in texts
+
+
+def test_mobile_data_and_era_summaries_follow_canonical_csv():
+    import generate_mobile_timeline as mobile
+    from adapters.redsox_history_loader import load_redsox_history
+    rows = load_redsox_history().to_dict(orient='records')
+    assert [{k: v for k, v in row.items() if k != 'tag'} for row in mobile.SEASONS] == rows
+    assert sum(era['ws'] for era in mobile.MACRO_ERAS) == 7
+    for era in mobile.MACRO_ERAS:
+        members = [r for r in rows if era['start'] <= r['season'] <= era['end']]
+        assert era['avg_w'] == round(sum(r['wins'] for r in members) / len(members), 1)
+        assert era['pct'] == round(100 * sum(r['playoff_result'] != 'missed playoffs' for r in members) / len(members))
+    assert 'FIP (unverified)' in mobile.HTML
+
+
+def test_unverified_fip_cannot_change_comparative_radar_charts():
+    from adapters.redsox_history_loader import load_redsox_history
+    from export_era_comparison_pdf import build_era_stats, chart_radar
+    from build_timeline_slideshow import radar_chart
+    stats, _ = build_era_stats(load_redsox_history())
+    altered = stats.copy()
+    altered['avg_fip'] = 999
+    for render in (chart_radar, radar_chart):
+        assert render(stats).getvalue() == render(altered).getvalue()
+
+
+def test_reviewed_corrections_have_provenance_and_match_dataset():
+    import json
+    import pandas as pd
+    corrections = json.loads((ROOT / 'docs/history-corrections.json').read_text())
+    rows = pd.read_csv(ROOT / 'storage/parquet/redsox_history.csv', dtype=str).set_index('season')
+    assert len(corrections['changes']) == 11
+    for change in corrections['changes']:
+        assert rows.loc[str(change['season']), change['field']] == str(change['after'])
+        assert change['source']['url'].startswith('https://statsapi.mlb.com/')
+        assert len(change['source']['sha256']) == 64
+    audit = json.loads((ROOT / 'docs/data-source-audit.json').read_text())
+    assert audit['summary'] == {'seasons': 58, 'match': 406, 'mismatch': 0,
+                                'unavailable': 58, 'contributor_seasons_needing_review': 0}

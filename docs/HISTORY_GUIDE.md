@@ -101,3 +101,5 @@ comparison. At those revisions, 70 shared files were identical and README.md was
 the only differing shared file. The canonical repository also held seven image
 files; the secondary repository had no unique source or data files. Preserve the
 secondary Git history and publish the canonical fixes before its legacy notice.
+
+Reviewed corrections now follow MLB regular-season metric responses: see [history-corrections.json](history-corrections.json) for seven ERA changes and four contributor-list removals. FIP remains unverified and is excluded from comparative radar charts.

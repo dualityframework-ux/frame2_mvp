@@ -173,3 +173,6 @@ mit — see [LICENSE](LICENSE).
 
 The test suite includes offline Statcast fixtures and actual HTML, PDF, and PPTX
 export generation. Network ingestion is mocked in tests.
+
+
+Historical metric sourcing and limitations: [data audit](docs/DATA_AUDIT.md). The reviewed CSV corrects seven ERA values and removes four unsupported contributor names. FIP remains unverified and is excluded from comparative radar charts.
