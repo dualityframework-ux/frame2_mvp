@@ -8,7 +8,7 @@ Slides produced
   1  The Story in Numbers — franchise KPI cards
   2  The Seven Eras — era map overview
   3  Era deep-dives × 7 (one per macro-era) — bar chart + stats table + standout season
- 10  The Six Championships — WS year cards
+ 10  Four Championships in This Dataset — WS year cards
  11  Process vs Result explained — scatter chart
  12  Wins Timeline — full 1967-2024 line/bar chart
  13  Era Radar comparison
@@ -76,7 +76,7 @@ ERA_TAGLINES = {
     "💪 Rice & Lynn":       "Power, heartbreak, and the '78 collapse",
     "🎯 Boggs & Clemens":   "Consistent talent; inconsistent October",
     "🔥 Pedro & Manny":     "The curse is reversed — finally",
-    "🏆 Francona Dynasty":  "Back-to-back titles and the franchise's peak process era",
+    "🏆 Francona Dynasty":  "Two titles and the franchise's peak process era",
     "🌟 Betts Emergence":   "2018: the greatest regular season in team history",
     "🔄 Rebuild & Now":     "Post-Betts transition — the foundation is being set",
 }
@@ -134,10 +134,10 @@ def era_wins_chart(sub_df, era_name, color_hex):
     bars = ax.bar(seasons, wins, color=c, width=0.7, zorder=3, edgecolor="white")
     ax.axhline(81, color="#c8102e", linestyle="--", linewidth=1.2, alpha=0.7, label=".500 line")
     for bar, w, s in zip(bars, wins, seasons):
-        if sub_df[sub_df["season"]==s]["playoff_result"].values[0] == "world series":
+        if int(s) in WS_TITLE_SEASONS:
             ax.text(bar.get_x()+bar.get_width()/2, w+1.2, "★",
                     ha="center", va="bottom", fontsize=13, color="#e4b84d")
-        ax.text(bar.get_x()+bar.get_width()/2, w+1.5 if sub_df[sub_df["season"]==s]["playoff_result"].values[0]!="world series" else w+3,
+        ax.text(bar.get_x()+bar.get_width()/2, w+1.5 if int(s) not in WS_TITLE_SEASONS else w+3,
                 str(w), ha="center", va="bottom", fontsize=7.5, color="#0d1b2a")
     ax.set_xticks(seasons)
     ax.set_xticklabels([str(s) for s in seasons], fontsize=8, rotation=45)
@@ -160,7 +160,7 @@ def franchise_timeline_chart(df):
         ax.bar(row["season"], row["wins"], color=c, width=0.75, zorder=3, edgecolor="white")
     ax.axhline(81, color="#c8102e", linestyle="--", linewidth=1.2, alpha=0.7, label=".500 (81 W)")
 
-    ws = df[df["playoff_result"]=="world series"]
+    ws = df[df["season"].isin(WS_TITLE_SEASONS)]
     ax.scatter(ws["season"], ws["wins"], s=140, color="#e4b84d", zorder=5, marker="*", label="World Series appearance")
 
     # Era boundary lines
@@ -198,7 +198,7 @@ def scatter_chart(df):
         c = hex_to_rgb_f(era_color_map.get(int(row["season"]), "#aaa"))
         ax.scatter(row["run_diff"], row["wins"], color=c, s=55, alpha=0.85,
                    edgecolors="white", linewidth=0.4, zorder=3)
-        if row["playoff_result"] == "world series":
+        if int(row["season"]) in WS_TITLE_SEASONS:
             ax.scatter(row["run_diff"], row["wins"], s=130, facecolors="none",
                        edgecolors="#e4b84d", linewidth=2, zorder=4)
             ax.annotate(str(int(row["season"])), (row["run_diff"], row["wins"]),
@@ -449,7 +449,7 @@ def slide_era_map(prs, df):
         sub = df[df["season"].isin(yrs)]
         if len(sub) == 0: continue
         avg_w  = sub["wins"].mean()
-        ws_n   = (sub["playoff_result"]=="world series").sum()
+        ws_n   = sub["season"].isin(WS_TITLE_SEASONS).sum()
         tagline = ERA_TAGLINES[era]
 
         # Row bg
@@ -488,10 +488,10 @@ def slide_era_deepdive(prs, df, era_name, yrs, color_hex):
     add_rect(slide, Inches(0.22), Inches(1.15), SW-Inches(0.22), Pt(3), RED)
 
     sub = df[df["season"].isin(yrs)].copy()
-    sub["tag"] = sub.apply(classify_process_vs_result, axis=1)
+    sub["tag"] = sub.apply(lambda row: classify_process_vs_result(row)[0], axis=1)
 
     # KPI boxes top-right
-    ws_n   = int((sub["playoff_result"]=="world series").sum())
+    ws_n   = int(sub["season"].isin(WS_TITLE_SEASONS).sum())
     avg_w  = sub["wins"].mean()
     best_s = int(sub.loc[sub["wins"].idxmax(),"season"])
     best_w = int(sub["wins"].max())
@@ -542,7 +542,7 @@ def slide_era_deepdive(prs, df, era_name, yrs, color_hex):
 
     for idx, (_, row) in enumerate(sub.sort_values("season").iterrows()):
         bg = LGRAY if idx%2==0 else WHITE
-        if row["playoff_result"] == "world series":
+        if int(row["season"]) in WS_TITLE_SEASONS:
             bg = rgb(255, 248, 220)   # gold tint
         add_rect(slide, Inches(0.3), ty, Inches(sum(col_widths)), row_h, bg)
         result_str = str(row["playoff_result"]).replace("world series","WS").replace(
@@ -553,7 +553,7 @@ def slide_era_deepdive(prs, df, era_name, yrs, color_hex):
                  f"{row['team_ops']:.3f}", f"{row['team_era']:.2f}", str(row["manager"])]
         for val, lx, cw in zip(cells, tx_starts, col_widths):
             text_color = NAVY
-            if row["playoff_result"] == "world series" and val == "WS":
+            if int(row["season"]) in WS_TITLE_SEASONS and val == "WS":
                 text_color = RED
             add_text(slide, val, lx+Pt(2), ty+Pt(2), Inches(cw)-Pt(4), row_h-Pt(4),
                      font_size=7.5, color=text_color, align=PP_ALIGN.CENTER)
@@ -563,12 +563,12 @@ def slide_era_deepdive(prs, df, era_name, yrs, color_hex):
 def slide_ws_championships(prs, df):
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     add_rect(slide, 0, 0, SW, SH, WHITE)
-    navy_header(slide, "The Six Championships", "Every World Series title in franchise history")
+    navy_header(slide, "Four Championships in This Dataset", "World Series titles in the 1967–2024 dataset")
 
-    ws_rows = df[df["playoff_result"]=="world series"].sort_values("season")
-    card_w = Inches(2.05)
+    ws_rows = df[df["season"].isin(WS_TITLE_SEASONS)].sort_values("season")
+    card_w = Inches(3.0)
     card_h = Inches(5.55)
-    card_x = Inches(0.18)
+    card_x = Inches(0.4)
     card_y = Inches(1.25)
 
     for _, row in ws_rows.iterrows():
@@ -728,7 +728,7 @@ def slide_key_players(prs, df):
     for era, (yrs, clr) in MACRO_ERAS.items():
         c = RGBColor(int(clr[1:3],16), int(clr[3:5],16), int(clr[5:7],16))
         sub = df[df["season"].isin(yrs)]
-        ws_count = int((sub["playoff_result"]=="world series").sum())
+        ws_count = int(sub["season"].isin(WS_TITLE_SEASONS).sum())
         ws_label = ("  ★"*ws_count) if ws_count else ""
 
         add_rect(slide, Inches(0.22), ey, Inches(2.5), Inches(0.62), c)
@@ -751,7 +751,7 @@ def slide_current_state(prs, df):
     navy_header(slide, "Current State & What's Next", "2020–2024 · The Rebuild & Now Era")
 
     sub = df[df["season"].isin(range(2020,2025))].copy()
-    sub["tag"] = sub.apply(classify_process_vs_result, axis=1)
+    sub["tag"] = sub.apply(lambda row: classify_process_vs_result(row)[0], axis=1)
 
     # Left: seasons table
     col_h = ["Year","W","L","RD","Result","OPS","ERA","Manager","Key Players"]
@@ -825,7 +825,7 @@ def slide_closing(prs):
              Inches(0.5), Inches(1.58), Inches(12.3), Inches(0.7),
              font_size=28, bold=True, color=GOLD, align=PP_ALIGN.CENTER)
 
-    add_text(slide, "6 Championships · 58 Seasons · One City's Obsession",
+    add_text(slide, "4 Championships · 58 Seasons · One City's Obsession",
              Inches(0.5), Inches(2.42), Inches(12.3), Inches(0.52),
              font_size=15, color=MGRAY, align=PP_ALIGN.CENTER, italic=True)
 
@@ -850,7 +850,7 @@ def build_slideshow(output_path):
     print("Loading data…")
     df = load_redsox_history()
     df["season"] = df["season"].astype(int)
-    df["tag"] = df.apply(classify_process_vs_result, axis=1)
+    df["tag"] = df.apply(lambda row: classify_process_vs_result(row)[0], axis=1)
 
     prs = Presentation()
     prs.slide_width  = SW

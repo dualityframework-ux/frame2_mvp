@@ -1,0 +1,18 @@
+{
+  "main_baseline": "456097b7ca7a1eae65e88a0cd8f78cf212b386ca",
+  "secondary_baseline": "ab94843e1d10961d1cf6341c1b2938b7abbbed56",
+  "identical_shared_files": 70,
+  "different_shared_files": [
+    "README.md"
+  ],
+  "only_main": [
+    "assets/frame2_explorer.png",
+    "assets/frame2_franchise_timeline.png",
+    "assets/frame2_post_generator.png",
+    "images/frame2_explorer.png",
+    "images/frame2_franchise_timeline.png",
+    "images/frame2_post_generator.png",
+    "redsox_process_vs_result.png"
+  ],
+  "only_secondary": []
+}

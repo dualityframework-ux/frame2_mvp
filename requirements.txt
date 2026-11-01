@@ -5,3 +5,10 @@ requests
 plotly
 python-dateutil
 pybaseball
+
+# PDF, presentation, and chart exports
+matplotlib
+reportlab
+python-pptx
+Pillow
+lxml

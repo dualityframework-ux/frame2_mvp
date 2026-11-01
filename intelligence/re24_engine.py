@@ -32,45 +32,4 @@ def summarize_re24_proxy(df: pd.DataFrame) -> float:
         elif event in negative_events:
             score -= 0.25
 
-    return r    return r    return r intelligence/tilt_detector.py <<'EOF'
-from __futurefrom __futurefrom __futurefrom __futurefrom __futurefrom _
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@te_good: float = 0.08
-    hard_hit_rate_good: float = 0.40
-    cha    cha    cha    cha    cha    cha    cha    cha    cha    cha    cha    cha    cha    cha    ch24_swing_good: float = 1.00
-
-
-@dataclass
-class TiltDetector:
-    thresholds: TiltThresholds = TiltThresholds()
-
-    def full_tilt_read(
-        self,
-        barrel_rate: float,
-        chase_rate: float,
-        whiff_rate: float,
-        re24_change: float,
-        hard_hit_rate:         hard_hit_           hard_hit_rate:         hard_hit_           hard_hit_rate:         hard_hit_    te        hard_hit_rate:         hard_hit_           hard_hit_rathre        hard_ht_rate_good:
-            contact_quality = "contact qu            contact_quality = "contnd            contact_qua               contact_quality = "conta"no            contact_qual        if chase_rate <= self.thresholds.chase_rate_good and whiff_rate <= sel            contact_quality = "contact qu            contact_quality =t"            contact_quality = "contact qu            contact_quality = "contnd"no            contact_qual   if re24_change >= self.thresholds.re24_swing_good or xwoba >= self.thresholds.xwoba_good:
-            run_environment = "run environment tilt"
-                              en                              en                men            environment tilt"
-
-                                 = 1 if contact_quality != "no contact quality tilt" else 0
-        score += 1 if discipline != "no discipline tilt" else 0
-        score += 1 if run_environment != "no run environment tilt" else 0
-
-        if score >= 3:
-            classification = "signal"
-        elif score == 2:
-            classification = "lean signal"
-        else:
-            classification = "variance"
-
-        summary = ", ".join(active) if active else "no clear tilt detected"
-
-        return {
-            "contact_quality": contact_quality,
-            "discipline": discipline,
-            "run_environment": run_environment,
-            "classification": classification,
-            "summary": summary,
-        }
+    return round(score, 3)

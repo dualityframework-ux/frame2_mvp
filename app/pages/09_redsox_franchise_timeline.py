@@ -565,7 +565,7 @@ st.markdown("---")
 st.markdown("### 🎞️ export as slideshow")
 st.markdown(
     "Generates a fully-designed 17-slide PPTX presentation covering every era, "
-    "all 58 seasons, 6 championship cards, radar comparison, and the current rebuild. "
+    "all 58 seasons, 4 championship cards, radar comparison, and the current rebuild. "
     "Opens in PowerPoint, Keynote, or Google Slides."
 )
 
