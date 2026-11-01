@@ -135,8 +135,8 @@ def compute_live_model(
 # -----------------------------
 # page
 # -----------------------------
-st.title("red sox live game")
-st.caption("one-glance tilt intelligence for live baseball reading")
+st.title("red sox game simulator")
+st.caption("Explore manually entered game scenarios. This page does not fetch live game data.")
 
 with st.sidebar:
     st.header("game input")

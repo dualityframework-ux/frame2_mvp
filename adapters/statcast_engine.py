@@ -38,25 +38,24 @@ def load_statcast_window(start_date: str, end_date: str, team: Optional[str] = N
 
     df = df.copy()
 
-    keep_c    keep_c    keep_c    keep_c    keep_c    keep_c    k   "away_team",
-        "player_name",
-        "pitc        "pitc        "pitc        "pits",
-        "description",
-        "laun        "laun        "laun      ",
-        "estimated_woba_using_speedangle",
-        "woba_value",
-        "bb_type",
-        "zone",
-        "plate_x",
-        "plate_z",
+    keep_cols = [
+        "game_date", "home_team", "away_team", "inning_topbot",
+        "player_name", "pitcher", "batter", "events", "description",
+        "launch_speed", "launch_angle", "estimated_woba_using_speedangle",
+        "woba_value", "bb_type", "zone", "plate_x", "plate_z",
     ]
     existing = [c for c in keep_cols if c in df.columns]
     df = df[existing]
 
-    if team and "home_team" in df.columns and "away_team" in df.columns:
-        df = df[(df["home_team"] == team) | (df["away_team"] == team)]
+    if team:
+        if not {"home_team", "away_team", "inning_topbot"}.issubset(df.columns):
+            return pd.DataFrame()
+        team = team.upper()
+        batting = ((df["away_team"] == team) & (df["inning_topbot"] == "Top")) | (
+            (df["home_team"] == team) & (df["inning_topbot"] == "Bot"))
+        df = df.loc[batting]
 
-    return df
+    return df.reset_index(drop=True)
 
 
 def enrich_statcast_metrics(df: pd.DataFrame) -> pd.DataFrame:
@@ -70,7 +69,7 @@ def enrich_statcast_metrics(df: pd.DataFrame) -> pd.DataFrame:
         out["is_barrel_proxy"] = (
             out["launch_speed"].fillna(0).ge(98) &
             out["launch_angle"].fillna(-999).between(26, 30)
-        )
+        ) if "launch_angle" in out.columns else False
     else:
         out["is_hard_hit"] = False
         out["is_barrel_proxy"] = False
@@ -124,7 +123,6 @@ def summarize_team_process(df: pd.DataFrame) -> dict[str, float]:
             "sample_size": 0,
         }
 
-    balls_in_play = max(int(df["is_barrel_proxy"].notna().sum()), 1) if "is_barrel_proxy" in df.columns else 1
     swings = max(int(df["is_swing"].sum()), 1) if "is_swing" in df.columns else 1
     outside_pitches = max(int(df["is_outside_zone"].sum()), 1) if "is_outside_zone" in df.columns else 1
 

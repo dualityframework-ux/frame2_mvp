@@ -31,6 +31,7 @@ import io
 # ── project imports ──────────────────────────────────────────────────────────
 from adapters.redsox_history_loader import load_redsox_history
 from intelligence.redsox_history_engine import classify_process_vs_result
+from config.settings import WS_TITLE_SEASONS
 
 # ══════════════════════════════════════════════════════════════════════════════
 # CONSTANTS
@@ -94,12 +95,12 @@ def build_era_stats(df):
             era_map[y] = era
     df = df.copy()
     df["macro_era"] = df["season"].map(era_map)
-    df["tag"] = df.apply(classify_process_vs_result, axis=1)
+    df["tag"] = df.apply(lambda row: classify_process_vs_result(row)[0], axis=1)
 
     stats = []
     for era in MACRO_ERAS:
         sub = df[df["macro_era"] == era]
-        ws = (sub["playoff_result"] == "world series").sum()
+        ws = sub["season"].isin(WS_TITLE_SEASONS).sum()
         playoff = sub["playoff_result"].isin(
             ["world series", "lost alcs", "lost alds", "al east tie-break loss"]
         ).sum()
@@ -121,6 +122,7 @@ def build_era_stats(df):
             "avg_era":      round(sub["team_era"].mean(), 2),
             "avg_fip":      round(sub["team_fip"].mean(), 2),
             "ws_titles":    int(ws),
+            "ws_appearances": int((sub["playoff_result"] == "world series").sum()),
             "playoff_apps": int(playoff),
             "playoff_rate": round(playoff / n * 100, 0) if n else 0,
             "best_season":  int(best) if best else "-",
@@ -292,7 +294,7 @@ def chart_scatter(full_df, era_df):
         c = hex_to_rgb(era_color_map.get(row["macro_era"], "#999"))
         ax.scatter(row["run_diff"], row["wins"], color=c, s=50, alpha=0.8,
                    edgecolors="white", linewidth=0.5, zorder=3)
-        if row["playoff_result"] == "world series":
+        if int(row["season"]) in WS_TITLE_SEASONS:
             ax.scatter(row["run_diff"], row["wins"], s=120, facecolors="none",
                        edgecolors=GOLD, linewidth=2, zorder=4)
             ax.annotate(str(int(row["season"])),
@@ -359,7 +361,7 @@ def chart_wins_timeline(full_df, era_df):
         ax.plot(sub["season"], sub["wins"], color=c, linewidth=2.2,
                 alpha=0.9, zorder=2)
 
-    ws_seasons = full_df[full_df["playoff_result"] == "world series"]
+    ws_seasons = full_df[full_df["season"].isin(WS_TITLE_SEASONS)]
     ax.scatter(ws_seasons["season"], ws_seasons["wins"],
                s=120, color=GOLD, zorder=5, marker="*", label="World Series appearance")
     ax.axhline(81, color=RED_SOX_RED, linestyle="--", linewidth=1, alpha=0.6)
@@ -766,7 +768,7 @@ def build_pdf(output_path):
     titles_img = chart_titles_and_playoff(era_df)
     story.append(RLImage(titles_img, width=PW, height=2.8*inch))
     story.append(Paragraph(
-        "The Yaz Era and Francona Dynasty share 2 titles each. "
+        "The Francona Dynasty contains 2 titles; the Yaz Era contains 2 appearances and no titles. "
         "Boggs & Clemens produced zero championships despite above-.500 winning percentages. "
         "The Francona Dynasty has the highest playoff appearance rate at 57%.",
         caption_style
@@ -806,7 +808,7 @@ def build_pdf(output_path):
         players = str(row.get("key_players",""))
         if len(players) > 35:
             players = players[:34] + "…"
-        result_str = str(row["playoff_result"]).replace("world series","🏆 WS").replace(
+        result_str = str(row["playoff_result"]).replace("world series","WS").replace(
             "lost alcs","🔴 ALCS").replace("lost alds","🔵 ALDS").replace(
             "al east tie-break loss","⚡ TBL").replace("missed playoffs","—")
         full_tbl.append([
@@ -839,7 +841,7 @@ def build_pdf(output_path):
     ]
     # Highlight WS rows
     for i, (_, row) in enumerate(full_df.sort_values("season").iterrows()):
-        if row["playoff_result"] == "world series":
+        if int(row["season"]) in WS_TITLE_SEASONS:
             full_styles.append(("BACKGROUND",(0,i+1),(-1,i+1),
                                  colors.HexColor(GOLD + "40")))
         elif i % 2 == 0:
@@ -851,7 +853,7 @@ def build_pdf(output_path):
     story.append(Spacer(1, 0.15*inch))
     story.append(Paragraph(
         "🏆 WS = World Series appearance  ·  🔴 ALCS = lost ALCS  ·  🔵 ALDS = lost ALDS  "
-        "·  ⚡ TBL = AL East tie-break loss  ·  — = missed playoffs  ·  Gold rows = championships",
+        "·  ⚡ TBL = AL East tie-break loss  ·  — = missed playoffs  ·  WS = appearance; gold rows = championships",
         caption_style
     ))
     story.append(PageBreak())
@@ -869,10 +871,10 @@ def build_pdf(output_path):
          "fueled by Manny Ramirez, David Ortiz, and one of the deepest lineups in AL history."),
         ("Pitching Dominance", "The Yaz Era (1967–76) had the best team ERA (3.66) in a pitcher-friendly "
          "period, built around Dick Williams' pitching-first philosophy and Carl Yastrzemski's leadership."),
-        ("Championship Efficiency", "The Yaz Era won 2 World Series in 10 seasons (20%) while averaging only "
-         "87 wins — proof that playoff structure and timing matter as much as regular-season dominance."),
+        ("Championship Efficiency", "The Yaz Era reached 2 World Series in 10 seasons (20%) while averaging only "
+         "87 wins. Reaching the Series and winning it are different outcomes."),
         ("The Drought Era", "Boggs & Clemens (1987–96) produced zero championships in a decade despite "
-         "Roger Clemens' peak years. Playoff losses in 1986 (ALCS) and 1988, 1990 (ALCS) defined the era."),
+         "strong individual seasons. The season table distinguishes postseason appearances from titles."),
         ("Current State", "Rebuild & Now (2020–24) is the weakest era by every metric — 70.6 avg wins, "
          "−6 run differential — but Devers, Duran, Bello, and Houck represent the foundation of what comes next."),
         ("Process vs Luck", "The Francona Dynasty and Betts Emergence eras have the highest signal density, "
