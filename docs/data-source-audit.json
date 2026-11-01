@@ -1,0 +1,3676 @@
+{
+  "generated_at": "2026-11-01T02:53:12.951309+00:00",
+  "dataset": "storage/parquet/redsox_history.csv",
+  "method": "Exact numeric comparison at the precision stored in the CSV; no inferred FIP and no automatic edits.",
+  "summary": {
+    "seasons": 58,
+    "match": 399,
+    "mismatch": 7,
+    "unavailable": 58,
+    "contributor_seasons_needing_review": 4
+  },
+  "seasons": [
+    {
+      "season": 1967,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1967&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:30.262787+00:00",
+          "sha256": "b76b53a1510637310014388f8b2ec254df2dfa2bf3bc7a1bcd0ef4b9c08e2e91"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1967&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:30.268700+00:00",
+          "sha256": "96a450340ba4921af54014f2778eed907bf1d052436717d29f0c39289ce80999"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "92",
+          "source": 92,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "70",
+          "source": 70,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.716",
+          "source": ".716",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.321",
+          "source": ".321",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.395",
+          "source": ".395",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "3.36",
+          "source": "3.37",
+          "status": "mismatch"
+        },
+        "run_diff": {
+          "dataset": "108",
+          "source": 108.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.26",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1968,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1968&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:30.255409+00:00",
+          "sha256": "2bf158ec79c7f31590ee3df3c0b39f4527bd2d0b914ab82ca880e18044d5a5fa"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1968&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:30.252598+00:00",
+          "sha256": "155203f9318df4cd27860cca3ce6b1c4a05ea268405cc28d7c91ef762b0ca9cf"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "86",
+          "source": 86,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "76",
+          "source": 76,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.665",
+          "source": ".665",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.313",
+          "source": ".313",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.352",
+          "source": ".352",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "3.33",
+          "source": "3.33",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "3",
+          "source": 3.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.23",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1969,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1969&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:30.475759+00:00",
+          "sha256": "b51ed9dcd7b3a570e9a924f26a56866ebe3203d647888f7438c05c2f6ea7e4c1"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1969&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:30.480146+00:00",
+          "sha256": "2551bc8a30ff58e32809f72c73692a5489e9f6de4c4a59056a0ef48b6248d91e"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "87",
+          "source": 87,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "75",
+          "source": 75,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.748",
+          "source": ".748",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.333",
+          "source": ".333",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.415",
+          "source": ".415",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "3.92",
+          "source": "3.92",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "7",
+          "source": 7.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.82",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1970,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1970&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:30.473637+00:00",
+          "sha256": "6683699abe52433ea7e7fee4ef49ed8fd069566e83b8d9f7e7ef4e2c6e82cf53"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1970&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:30.499337+00:00",
+          "sha256": "89511b6aa24b8cfa41984093f7e91b180a695fd2c21c0fc7f5dc510980c84e92"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "87",
+          "source": 87,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "75",
+          "source": 75,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.763",
+          "source": ".763",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.335",
+          "source": ".335",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.428",
+          "source": ".428",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "3.87",
+          "source": "3.87",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "64",
+          "source": 64.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.77",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1971,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1971&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:30.701465+00:00",
+          "sha256": "945c0479890de33459f37f88244a02b61e6525d415e704ef0e6b2394d8abdc47"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1971&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:30.693970+00:00",
+          "sha256": "78bb48856dae4c32199c30d3b1d1f4ad687b0888d7995d7ad7ba9d870f44db2d"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "85",
+          "source": 85,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "77",
+          "source": 77,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.719",
+          "source": ".719",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.322",
+          "source": ".322",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.397",
+          "source": ".397",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "3.8",
+          "source": "3.81",
+          "status": "mismatch"
+        },
+        "run_diff": {
+          "dataset": "24",
+          "source": 24.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.7",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1972,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1972&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:30.718521+00:00",
+          "sha256": "9dd5b80fa6d0749b3435c0d71f6b3569eb7d0b5c2c63924daf454d7074105a6f"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1972&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:30.722523+00:00",
+          "sha256": "18331c9ffcfa32f3d754aebeb38d83544b160bfbd37ec526441e7a95e5c5f184"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "85",
+          "source": 85,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "70",
+          "source": 70,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.694",
+          "source": ".694",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.318",
+          "source": ".318",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.376",
+          "source": ".376",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "3.47",
+          "source": "3.47",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "20",
+          "source": 20.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.37",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1973,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1973&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:30.917476+00:00",
+          "sha256": "696af71260ff00f815e13da1a869f98bbaf599a3d77aa3e8a6c13bdc492165fb"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1973&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:30.919226+00:00",
+          "sha256": "895d894516c29dfa0cee7b24f23f35ae4e54af2ab950bf367d16ea65b18e532b"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "89",
+          "source": 89,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "73",
+          "source": 73,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.739",
+          "source": ".739",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.338",
+          "source": ".338",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.401",
+          "source": ".401",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "3.65",
+          "source": "3.65",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "91",
+          "source": 91.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.55",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1974,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1974&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:30.959991+00:00",
+          "sha256": "37ef63c4191af2608549a9e85cbd54e46c82460e60a2497e65268e9830ee5de2"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1974&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:30.953074+00:00",
+          "sha256": "46d63c96758b92ac2a15c6261696f8bb81150591f8e8e8863dbe0a99a9fc1f5f"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "84",
+          "source": 84,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "78",
+          "source": 78,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.71",
+          "source": ".710",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.333",
+          "source": ".333",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.377",
+          "source": ".377",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "3.72",
+          "source": "3.72",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "35",
+          "source": 35.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.62",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1975,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1975&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:31.132054+00:00",
+          "sha256": "931d5c8f80627e6c46436f65d3b507942944dea9087d7c1e4a99a9a88807835b"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1975&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:31.185745+00:00",
+          "sha256": "54f59ea2a01ecf2b78c55437b66edddc74c4fbd80ee225da3796b9452f3910e1"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "95",
+          "source": 95,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "65",
+          "source": 65,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.761",
+          "source": ".761",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.344",
+          "source": ".344",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.417",
+          "source": ".417",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "3.98",
+          "source": "3.99",
+          "status": "mismatch"
+        },
+        "run_diff": {
+          "dataset": "87",
+          "source": 87.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.88",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1976,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1976&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:31.193911+00:00",
+          "sha256": "1e418ca3f6b09088fb6f72cefbe53de45dab22e7ab915d81d3541c908af59b27"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1976&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:31.184032+00:00",
+          "sha256": "8ff0e7db7216cc0b78f2ed9a1825fd2d6f6f76607d81749f9af59eb8dc8ffae4"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "83",
+          "source": 83,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "79",
+          "source": 79,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.726",
+          "source": ".726",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.324",
+          "source": ".324",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.402",
+          "source": ".402",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "3.52",
+          "source": "3.52",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "56",
+          "source": 56.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.42",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1977,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1977&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:31.314988+00:00",
+          "sha256": "66b0e0c3f71523239da28afc68d18501bb21cdd26c9368d9360d99c260cf1459"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1977&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:31.418842+00:00",
+          "sha256": "63e9e2ea9f8883dce4e534428311071eef922710aa59594719ea0bce645d8701"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "97",
+          "source": 97,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "64",
+          "source": 64,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.81",
+          "source": ".810",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.345",
+          "source": ".345",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.465",
+          "source": ".465",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.11",
+          "source": "4.12",
+          "status": "mismatch"
+        },
+        "run_diff": {
+          "dataset": "147",
+          "source": 147.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.01",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1978,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1978&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:31.405260+00:00",
+          "sha256": "1b1e12b9bea674e98f5f2088029fd8f38296ed08280f598a319e88f2662f9436"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1978&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:31.406911+00:00",
+          "sha256": "2853c0a67f980f4a6d57818482126fec31d4cc25f490f1c2e1f0212786b2e7fc"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "99",
+          "source": 99,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "64",
+          "source": 64,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.76",
+          "source": ".760",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.336",
+          "source": ".336",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.424",
+          "source": ".424",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "3.54",
+          "source": "3.54",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "139",
+          "source": 139.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.44",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1979,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1979&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:31.505885+00:00",
+          "sha256": "41d173f80c7dce0f83f94d0239f718bcff3a2596775476e5d8db480fa8a996ae"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1979&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:31.615143+00:00",
+          "sha256": "6721b1ae5f9b8f164bdb448c816a8855928f864eed6aa978e0a42883f266f180"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "91",
+          "source": 91,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "69",
+          "source": 69,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.8",
+          "source": ".800",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.344",
+          "source": ".344",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.456",
+          "source": ".456",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.03",
+          "source": "4.02",
+          "status": "mismatch"
+        },
+        "run_diff": {
+          "dataset": "130",
+          "source": 130.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.93",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1980,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1980&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:31.629254+00:00",
+          "sha256": "a8e23bdfaff5c1bb3dbfe6907f271d4ec6f4252a6544a90587d8fe7e9f0f4b71"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1980&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:31.638714+00:00",
+          "sha256": "947e135b93ffa943cd983921dd2e51d6a96fca189a9d08dc3c524719a7400c89"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "83",
+          "source": 83,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "77",
+          "source": 77,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.776",
+          "source": ".776",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.34",
+          "source": ".340",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.436",
+          "source": ".436",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.38",
+          "source": "4.38",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "-10",
+          "source": -10.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.28",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1981,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1981&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:31.677915+00:00",
+          "sha256": "c77c3db52bbfca0774101e016dabe00ae2aa8f11beeeec5e67407584f2f234d1"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1981&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:31.810353+00:00",
+          "sha256": "386ebd170194ee0a27fe622ac00c905a6750d103000a90b2b7d36a78dcb0b386"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "59",
+          "source": 59,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "49",
+          "source": 49,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.739",
+          "source": ".739",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.34",
+          "source": ".340",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.399",
+          "source": ".399",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "3.81",
+          "source": "3.81",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "38",
+          "source": 38.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.71",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1982,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1982&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:31.834173+00:00",
+          "sha256": "62357261b7bd2714a12cdb9b582cbe12a4ed7aed807086a061e4ba083d6bdc75"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1982&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:31.840975+00:00",
+          "sha256": "2b3e37e4862588493e8d1e571610ef0d06622080d743567f0a9911baebf08674"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "89",
+          "source": 89,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "73",
+          "source": 73,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.747",
+          "source": ".747",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.34",
+          "source": ".340",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.407",
+          "source": ".407",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.03",
+          "source": "4.04",
+          "status": "mismatch"
+        },
+        "run_diff": {
+          "dataset": "40",
+          "source": 40.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.93",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1983,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1983&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:31.870115+00:00",
+          "sha256": "7b95dc0a0558720b4e9596524956c4194fd0169166ee3541cc4780a0a39580fd"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1983&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:32.031723+00:00",
+          "sha256": "284b45a21bc9100685da260df3a884861f8a9acbffacd1197b860e7a3d53db3d"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "78",
+          "source": 78,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "84",
+          "source": 84,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.744",
+          "source": ".744",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.335",
+          "source": ".335",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.409",
+          "source": ".409",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.34",
+          "source": "4.34",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "-51",
+          "source": -51.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.24",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1984,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1984&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:32.044987+00:00",
+          "sha256": "2281b71c0452bf9076430674934c78f3f3cc6947fa19a38f8e2e66509317c9df"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1984&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:32.065435+00:00",
+          "sha256": "02441ede51325d707831030b82639a323f04317d7a845e2d5852b7ce6274efc9"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "86",
+          "source": 86,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "76",
+          "source": 76,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.782",
+          "source": ".782",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.341",
+          "source": ".341",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.441",
+          "source": ".441",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.18",
+          "source": "4.18",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "46",
+          "source": 46.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.08",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1985,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1985&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:32.062026+00:00",
+          "sha256": "5f51ee77269e2138cac9f5a686d02b82dd5918490a7844dae593052af05da969"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1985&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:32.230485+00:00",
+          "sha256": "2cedc40968986b8f839a38682b91d5f41dde6a24ca708fb9d13fbcb953b89576"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "81",
+          "source": 81,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "81",
+          "source": 81,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.776",
+          "source": ".776",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.347",
+          "source": ".347",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.429",
+          "source": ".429",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.06",
+          "source": "4.06",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "80",
+          "source": 80.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.96",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1986,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1986&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:32.254552+00:00",
+          "sha256": "61db4078b773bb6434aea5c6bb5f566059c7836bf9eda86545af2ed7d12299c4"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1986&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:32.284569+00:00",
+          "sha256": "8320aefa9b0ab732a76fccdb3593977a9fc6c5f974e5bc9fa97b7af6db3e5ff5"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "95",
+          "source": 95,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "66",
+          "source": 66,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.761",
+          "source": ".761",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.346",
+          "source": ".346",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.415",
+          "source": ".415",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "3.93",
+          "source": "3.93",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "98",
+          "source": 98.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.83",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1987,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1987&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:32.274472+00:00",
+          "sha256": "07e1c77ee11adcdfd23bc3832ab0a7587cea9a2afdcd729be3c4a9b4e5747c0e"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1987&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:32.444665+00:00",
+          "sha256": "d25197666e4e5e980393ad62bba3c29b8c41e430003ffd95f9548cb983a0ac04"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "78",
+          "source": 78,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "84",
+          "source": 84,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.782",
+          "source": ".782",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.352",
+          "source": ".352",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.43",
+          "source": ".430",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.77",
+          "source": "4.77",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "17",
+          "source": 17.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.67",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1988,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1988&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:32.475391+00:00",
+          "sha256": "d6ea40842c8f935f65f7735234037b7a2a7f48c2a63ef23c064652d151b75dac"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1988&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:32.488082+00:00",
+          "sha256": "8e68ed19dcdc8aa0644f8aa3d2d8ac57016424a37e224816eb71767b7e9f0d01"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "89",
+          "source": 89,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "73",
+          "source": 73,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.777",
+          "source": ".777",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.357",
+          "source": ".357",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.42",
+          "source": ".420",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "3.97",
+          "source": "3.97",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "124",
+          "source": 124.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.87",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1989,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1989&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:32.497399+00:00",
+          "sha256": "dd245315f73f950bb3cea44c7f1424274e58d51aefd9360efebee8d358494934"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1989&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:32.623986+00:00",
+          "sha256": "b1c6d13729006703a7d614ef5c553ed90ff1f3adc2bbdcc1ff64e7eb13cb8ab8"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "83",
+          "source": 83,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "79",
+          "source": 79,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.754",
+          "source": ".754",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.351",
+          "source": ".351",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.403",
+          "source": ".403",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.01",
+          "source": "4.01",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "39",
+          "source": 39.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.91",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1990,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1990&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:32.660694+00:00",
+          "sha256": "7828c5ee9ae4d1cb9654e738209b0cab890f9a5bc6d181f24b250afcc6c2b4ad"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1990&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:32.712286+00:00",
+          "sha256": "311ed3e76e4b614e54179b52598398f427fd4084c54b224902cec25adddca954"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "88",
+          "source": 88,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "74",
+          "source": 74,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.739",
+          "source": ".739",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.344",
+          "source": ".344",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.395",
+          "source": ".395",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "3.72",
+          "source": "3.72",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "35",
+          "source": 35.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.62",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1991,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1991&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:32.716398+00:00",
+          "sha256": "9d99fa9c0bceee2e929d2979cdae401f899076ac0e500aff8ee956748eae6b3b"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1991&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:32.822515+00:00",
+          "sha256": "aae5a7ddf944db35eb269332da1ad3d8507359440640d75f047eea4a27c962fe"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "84",
+          "source": 84,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "78",
+          "source": 78,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.741",
+          "source": ".741",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.34",
+          "source": ".340",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.401",
+          "source": ".401",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.01",
+          "source": "4.01",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "19",
+          "source": 19.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.91",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1992,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1992&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:32.848516+00:00",
+          "sha256": "c5b53d56aeb973023a5c66d7df95636890f66fe58ea820ee09a1ea4dab9efbf5"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1992&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:32.900185+00:00",
+          "sha256": "6f5d192bf3ff0d6f1c6bb258ba8abc2154406e60b12be2dc11bf73be312f72bc"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "73",
+          "source": 73,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "89",
+          "source": 89,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.668",
+          "source": ".668",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.321",
+          "source": ".321",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.347",
+          "source": ".347",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "3.58",
+          "source": "3.58",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "-70",
+          "source": -70.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.48",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1993,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1993&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:32.907612+00:00",
+          "sha256": "145ac2dba93a1a19064844edff850cdea0f4e955c2d114778aa78b4ff8bf7bc0"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1993&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:33.008470+00:00",
+          "sha256": "4508b08b8541634a2560a89de2b1015a6520f7b11c49a0987e0d8c7a7cf6c434"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "80",
+          "source": 80,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "82",
+          "source": 82,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.725",
+          "source": ".725",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.33",
+          "source": ".330",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.395",
+          "source": ".395",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "3.77",
+          "source": "3.78",
+          "status": "mismatch"
+        },
+        "run_diff": {
+          "dataset": "-12",
+          "source": -12.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.67",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "needs_review",
+        "names_not_found": [
+          "Boggs"
+        ],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1994,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1994&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:33.018627+00:00",
+          "sha256": "d54052da45a8d6ada531a95a69a94de0f9683efe8d1f03f319473369d9485b3f"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1994&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:33.135527+00:00",
+          "sha256": "8f64116462e6c91bc8fa8778991ea831c74ee1392b02266735a287d5a08f79f5"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "54",
+          "source": 54,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "61",
+          "source": 61,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.755",
+          "source": ".755",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.334",
+          "source": ".334",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.421",
+          "source": ".421",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.93",
+          "source": "4.93",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "-69",
+          "source": -69.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.83",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1995,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1995&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:33.102675+00:00",
+          "sha256": "4e9ae49ab7cdd2850ec624ecf5ada1eaffcae67f32d42d4521b474859b3b871e"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1995&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:33.228363+00:00",
+          "sha256": "2a972c345185fce8192afc1445a36f12b1495c566fc8a78ab6acea3da4ebb914"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "86",
+          "source": 86,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "58",
+          "source": 58,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.812",
+          "source": ".812",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.357",
+          "source": ".357",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.455",
+          "source": ".455",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.39",
+          "source": "4.39",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "93",
+          "source": 93.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.29",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1996,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1996&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:33.224182+00:00",
+          "sha256": "00cbdd818cced6b1f18532a01a6db1ece12543749790590eb4f3a837631d980b"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1996&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:33.406241+00:00",
+          "sha256": "4c8ac8eac80e186457c250795edfb8569bd8ac1025d1ec0f0c692a88b5a7483d"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "85",
+          "source": 85,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "77",
+          "source": 77,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.816",
+          "source": ".816",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.359",
+          "source": ".359",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.457",
+          "source": ".457",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.98",
+          "source": "4.98",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "7",
+          "source": 7.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.88",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1997,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1997&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:33.405955+00:00",
+          "sha256": "54fbb253dd59737722dcb5be0125ba9db9fba7d719b53ba5dda434030a71dc52"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1997&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:33.503159+00:00",
+          "sha256": "39c3750db855cc60afdfcfd8cde00ccde45bc1351c38d0ceb372643d1aa12d7a"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "78",
+          "source": 78,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "84",
+          "source": 84,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.815",
+          "source": ".815",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.352",
+          "source": ".352",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.463",
+          "source": ".463",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.85",
+          "source": "4.85",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "-6",
+          "source": -6.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.75",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1998,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1998&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:33.488841+00:00",
+          "sha256": "34f6a62c99b846d5d53b543631ce583b453246526f2641951de64d9c07b1de7e"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1998&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:33.706943+00:00",
+          "sha256": "c5485efd5e364e338235a9e95af2b456d428d6c2ab959fb26ba265cb71f6ff28"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "92",
+          "source": 92,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "70",
+          "source": 70,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.811",
+          "source": ".811",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.348",
+          "source": ".348",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.463",
+          "source": ".463",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.18",
+          "source": "4.18",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "147",
+          "source": 147.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.08",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 1999,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=1999&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:33.703334+00:00",
+          "sha256": "f7375af7418fce9a72e0718dd688f42d4586d2ea20e20ebbcb68672dd1232f4b"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=1999&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:33.780243+00:00",
+          "sha256": "717a387d85886922b7fbca5852c2aa7dc1b29810f065df31351b47e0b6d93d42"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "94",
+          "source": 94,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "68",
+          "source": 68,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.798",
+          "source": ".798",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.35",
+          "source": ".350",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.448",
+          "source": ".448",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.0",
+          "source": "4.00",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "118",
+          "source": 118.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.9",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2000,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2000&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:33.787661+00:00",
+          "sha256": "202c97677a8d8f59fbcfb075023f2896f3856709015236ba3a9e21bf520069a7"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2000&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:33.883365+00:00",
+          "sha256": "2df33acf19d312631c42c761e3d76a5ce1ae4cc061b8e1cbdb80b2b6e93a37c1"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "85",
+          "source": 85,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "77",
+          "source": 77,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.764",
+          "source": ".764",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.341",
+          "source": ".341",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.423",
+          "source": ".423",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.23",
+          "source": "4.23",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "47",
+          "source": 47.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.13",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2001,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2001&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:33.892249+00:00",
+          "sha256": "cd9e10d3c02a485a85b30dd028476a8e8817d6ed8677dc1c2883b6e025dfc657"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2001&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:33.963507+00:00",
+          "sha256": "2883349f489a807f3b0e4cdbf9a65dcc4fad61213081e6c7696e401ee98773a5"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "82",
+          "source": 82,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "79",
+          "source": 79,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.773",
+          "source": ".773",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.334",
+          "source": ".334",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.439",
+          "source": ".439",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.15",
+          "source": "4.15",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "27",
+          "source": 27.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.05",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2002,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2002&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:33.978684+00:00",
+          "sha256": "a74f0f5f5c73275d7a61aff45b15cdeee66fe50bced6a70b7483ded55c99b3cc"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2002&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:34.101327+00:00",
+          "sha256": "ffdaee4ae3e3a7da40c205999df119b38a1c8ac7c8de6c6abd67c1edc80d4cd4"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "93",
+          "source": 93,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "69",
+          "source": 69,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.789",
+          "source": ".789",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.345",
+          "source": ".345",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.444",
+          "source": ".444",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "3.75",
+          "source": "3.75",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "194",
+          "source": 194.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.65",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2003,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2003&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:34.091792+00:00",
+          "sha256": "1917b567363a408e3c9d360888fe01f42557dcb6181bbbd2e2d643323f79c5aa"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2003&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:34.145012+00:00",
+          "sha256": "3d76c86e777628ddab0856662371beb194d742edee1491f078ab386e126d0613"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "95",
+          "source": 95,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "67",
+          "source": 67,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.851",
+          "source": ".851",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.36",
+          "source": ".360",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.491",
+          "source": ".491",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.48",
+          "source": "4.48",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "152",
+          "source": 152.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.38",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2004,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2004&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:34.174505+00:00",
+          "sha256": "0193e734a1d21e984c41b54a006528edd6199288562268ad3f20aa24128c1c5c"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2004&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:34.282230+00:00",
+          "sha256": "34573b16c97c1119a498ad58d3fbcf6e1e174b402455db97fde3271cb71b47f5"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "98",
+          "source": 98,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "64",
+          "source": 64,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.832",
+          "source": ".832",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.36",
+          "source": ".360",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.472",
+          "source": ".472",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.18",
+          "source": "4.18",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "181",
+          "source": 181.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.08",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2005,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2005&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:34.295217+00:00",
+          "sha256": "262878916355545259d34b54fb434bcb4e8158bc851f2d52120fc3beb5110b43"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2005&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:34.316123+00:00",
+          "sha256": "d3db7424719d96ef5c17b8f29a121e7a86414a7300c621d580cf8bc9f5973805"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "95",
+          "source": 95,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "67",
+          "source": 67,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.811",
+          "source": ".811",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.357",
+          "source": ".357",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.454",
+          "source": ".454",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.74",
+          "source": "4.74",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "105",
+          "source": 105.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.64",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2006,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2006&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:34.367836+00:00",
+          "sha256": "c8c11e8f4b6b6698d458eae2a41680f58abe9f050dc319bbd7a66685370b4cb9"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2006&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:34.497082+00:00",
+          "sha256": "cdea0087576bcbd43fba1b231f3904a05de7babe14df236f2b98674dbdd9974a"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "86",
+          "source": 86,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "76",
+          "source": 76,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.786",
+          "source": ".786",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.351",
+          "source": ".351",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.435",
+          "source": ".435",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.83",
+          "source": "4.83",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "-5",
+          "source": -5.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.73",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2007,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2007&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:34.503921+00:00",
+          "sha256": "82536f764ae11cafd691d5c84707e46df6f213b8f3c56e9d19e0137d3f67e029"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2007&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:34.493977+00:00",
+          "sha256": "0b64d4fcc4d2f3daa937bd8fe1e0e46220713cf83904abdfe05e7409946b4b91"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "96",
+          "source": 96,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "66",
+          "source": 66,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.806",
+          "source": ".806",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.362",
+          "source": ".362",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.444",
+          "source": ".444",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "3.87",
+          "source": "3.87",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "210",
+          "source": 210.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.77",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2008,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2008&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:34.597493+00:00",
+          "sha256": "4c0243e139e422bb5cb341f902cf7a016698bd7787cdc34985b7b4ef833b3f98"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2008&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:34.703338+00:00",
+          "sha256": "edfaa3ca5752f4721fc95e663df1f448064bfb5c79126597c16ad61fc910e6c6"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "95",
+          "source": 95,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "67",
+          "source": 67,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.805",
+          "source": ".805",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.358",
+          "source": ".358",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.447",
+          "source": ".447",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.01",
+          "source": "4.01",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "151",
+          "source": 151.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.91",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2009,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2009&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:34.720353+00:00",
+          "sha256": "3a678dd579bc3906a1e01f47b15cb55a1334106929439a0b4627b42b74141c63"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2009&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:34.697247+00:00",
+          "sha256": "9fb14c352abfee25a67ae83c005ceed537e120f6438903212eeddd95b6885f1b"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "95",
+          "source": 95,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "67",
+          "source": 67,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.806",
+          "source": ".806",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.352",
+          "source": ".352",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.454",
+          "source": ".454",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.35",
+          "source": "4.35",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "136",
+          "source": 136.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.25",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2010,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2010&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:34.817948+00:00",
+          "sha256": "e493f3993fc0bb04a85586b4fd6a2720ecac813ca2e98639a03da0f95142a47a"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2010&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:34.890549+00:00",
+          "sha256": "4a5dcfb46a6f9a21aad8aaa817093295c1c260d000cb70bdb0cbf1fec98a225d"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "89",
+          "source": 89,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "73",
+          "source": 73,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.79",
+          "source": ".790",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.339",
+          "source": ".339",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.451",
+          "source": ".451",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.2",
+          "source": "4.20",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "74",
+          "source": 74.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.1",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2011,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2011&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:34.898803+00:00",
+          "sha256": "b09534a76cbb69bed9f65b684b42598687e23856a490b5423a6d3a10d8ce5a60"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2011&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:34.906614+00:00",
+          "sha256": "213a248d5ba27929637ff5072b18c74aa775e70a804a2ae43a6489cbb8fb6fc3"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "90",
+          "source": 90,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "72",
+          "source": 72,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.81",
+          "source": ".810",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.349",
+          "source": ".349",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.461",
+          "source": ".461",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.2",
+          "source": "4.20",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "138",
+          "source": 138.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.1",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2012,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2012&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:34.979197+00:00",
+          "sha256": "51bc87c64f582d8affe1de15a56c09167f7683983e3357baf117d973edd2fe91"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2012&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:35.081580+00:00",
+          "sha256": "e74d9bbec8c716addd47925efdbb38ff46e845fae19ddf860559aee6355ca8a6"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "69",
+          "source": 69,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "93",
+          "source": 93,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.73",
+          "source": ".730",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.315",
+          "source": ".315",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.415",
+          "source": ".415",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.7",
+          "source": "4.70",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "-72",
+          "source": -72.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.6",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "needs_review",
+        "names_not_found": [
+          "Valentine"
+        ],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2013,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2013&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:35.097776+00:00",
+          "sha256": "9dd31115f4794c95965c0c96391fafa2d0822e58460e4d7444ea0b26c4b8701b"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2013&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:35.106931+00:00",
+          "sha256": "1aadc1deb95b47c960e6c4bc30b41db7d8adf0d38447587c6037b00d7a17343e"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "97",
+          "source": 97,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "65",
+          "source": 65,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.795",
+          "source": ".795",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.349",
+          "source": ".349",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.446",
+          "source": ".446",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "3.79",
+          "source": "3.79",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "197",
+          "source": 197.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.69",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2014,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2014&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:35.170012+00:00",
+          "sha256": "48c37f54940d6f1855dd3123e0a262348f8481eb6376fa56879797c324ca3f79"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2014&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:35.252444+00:00",
+          "sha256": "6dc5e40976df9ade5c01fb87b153c150e424baacd4bd81f06b71ed6a8a1a9548"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "71",
+          "source": 71,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "91",
+          "source": 91,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.685",
+          "source": ".685",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.316",
+          "source": ".316",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.369",
+          "source": ".369",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.01",
+          "source": "4.01",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "-81",
+          "source": -81.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.91",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2015,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2015&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:35.289027+00:00",
+          "sha256": "ba07744180f3a7f24cdea200a0e0ca606d03e9e1e0198a14c75e3aca0e2f7057"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2015&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:35.289281+00:00",
+          "sha256": "445d239630ab61dfe1887545912bf2ac8c83e4b937d3115503ad9b733b194c5f"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "78",
+          "source": 78,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "84",
+          "source": 84,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.74",
+          "source": ".740",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.325",
+          "source": ".325",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.415",
+          "source": ".415",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.31",
+          "source": "4.31",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "-5",
+          "source": -5.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.21",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2016,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2016&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:35.340753+00:00",
+          "sha256": "9e9eb41cc47cd9298b3452011c6358736e7bf4c8126033c33682c884554280d2"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2016&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:35.434654+00:00",
+          "sha256": "5b34c52e49bda61e4c91defb34b76a54d07288966164577248f7d07450720757"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "93",
+          "source": 93,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "69",
+          "source": 69,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.809",
+          "source": ".809",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.348",
+          "source": ".348",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.461",
+          "source": ".461",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.0",
+          "source": "4.00",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "184",
+          "source": 184.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.9",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2017,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2017&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:35.506677+00:00",
+          "sha256": "c1f5439c604984a012612fdbced178d56499678f812d0517f2b11d43030b061b"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2017&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:35.485246+00:00",
+          "sha256": "3f51eb9f619f58af52711fd13eea657c38abaf230bd20f0384e9aec3468b63d7"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "93",
+          "source": 93,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "69",
+          "source": 69,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.736",
+          "source": ".736",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.329",
+          "source": ".329",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.407",
+          "source": ".407",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "3.7",
+          "source": "3.70",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "117",
+          "source": 117.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.6",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2018,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2018&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:35.549226+00:00",
+          "sha256": "9adb69464aaabc6ea81e05c45211111a36a678a93ac67974813a2b5fd9266345"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2018&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:35.610716+00:00",
+          "sha256": "b1e9229e294992485dd7a9ee2f6b899ac2c2e419d56499996200b8e30b4f4965"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "108",
+          "source": 108,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "54",
+          "source": 54,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.792",
+          "source": ".792",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.339",
+          "source": ".339",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.453",
+          "source": ".453",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "3.75",
+          "source": "3.75",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "229",
+          "source": 229.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.65",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2019,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2019&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:35.702646+00:00",
+          "sha256": "e43cedcd68f5e13c1b3d65d73786a0c0b0d458dcafbbb14fdb7f4bcff7b86d1b"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2019&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:35.691592+00:00",
+          "sha256": "38805e0324af9ca138890b811bcd3bc019462688cc15d52ac2eca588b01043db"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "84",
+          "source": 84,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "78",
+          "source": 78,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.806",
+          "source": ".806",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.34",
+          "source": ".340",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.466",
+          "source": ".466",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.7",
+          "source": "4.70",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "73",
+          "source": 73.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.6",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2020,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2020&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:35.774160+00:00",
+          "sha256": "977b2a37e2a88ee865b14aa84a90bdd3e167551a4195f6599a13499a4dc00109"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2020&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:35.797657+00:00",
+          "sha256": "548425ac25f2d0a80214060a9a7b07395b4ba2bc4dc2f9a17a0968fbca5c7ea5"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "24",
+          "source": 24,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "36",
+          "source": 36,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.775",
+          "source": ".775",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.33",
+          "source": ".330",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.445",
+          "source": ".445",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "5.58",
+          "source": "5.58",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "-59",
+          "source": -59.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "5.48",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2021,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2021&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:35.885383+00:00",
+          "sha256": "66a4f04a9611f8f81f95762ab8eb227920f17a5f393433990034ad2b4863d38e"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2021&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:35.862738+00:00",
+          "sha256": "5ca0aa2759fcd56528145f25dc51a003949361a69d977796429cdc026e867be3"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "92",
+          "source": 92,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "70",
+          "source": 70,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.777",
+          "source": ".777",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.328",
+          "source": ".328",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.449",
+          "source": ".449",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.26",
+          "source": "4.26",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "80",
+          "source": 80.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.16",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2022,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2022&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:35.954091+00:00",
+          "sha256": "4ca50923f4b8f71d335be726dd79894ec4f08447f32c366af0b4203e547c3ac3"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2022&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:35.958579+00:00",
+          "sha256": "880d6efd4e51c1e648733b6718c6953a51f1667d86e3a634d9d1d4d818c12db7"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "78",
+          "source": 78,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "84",
+          "source": 84,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.73",
+          "source": ".730",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.321",
+          "source": ".321",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.409",
+          "source": ".409",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.53",
+          "source": "4.53",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "-52",
+          "source": -52.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.43",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "needs_review",
+        "names_not_found": [
+          "Schwarber"
+        ],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2023,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2023&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:36.090620+00:00",
+          "sha256": "ec3c32ca5dba1805335d2e489205277445f1ef5b535be4e7220b57a37503f895"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2023&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:36.088194+00:00",
+          "sha256": "f50a0515af87b8341035b40c54f564900d2c42f9196ad3b22e66b6a2026c206a"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "78",
+          "source": 78,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "84",
+          "source": 84,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.748",
+          "source": ".748",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.324",
+          "source": ".324",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.424",
+          "source": ".424",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.52",
+          "source": "4.52",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "-4",
+          "source": -4.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "4.42",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "names_present",
+        "names_not_found": [],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    },
+    {
+      "season": 2024,
+      "sources": {
+        "stats": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/stats?season=2024&stats=season&group=hitting%2Cpitching",
+          "retrieved_at": "2026-11-01T02:48:36.169893+00:00",
+          "sha256": "55e9cc610c7889aa0588947e44bf85e150f38abf75f29ee1000cfcf6759a5f59"
+        },
+        "roster": {
+          "url": "https://statsapi.mlb.com/api/v1/teams/111/roster?season=2024&rosterType=fullSeason",
+          "retrieved_at": "2026-11-01T02:48:36.183228+00:00",
+          "sha256": "44f413b64185ac037d2ad4319dd61c76d4cf3af2cffabd5dc39c30e919945732"
+        }
+      },
+      "numeric_checks": {
+        "wins": {
+          "dataset": "81",
+          "source": 81,
+          "status": "match"
+        },
+        "losses": {
+          "dataset": "81",
+          "source": 81,
+          "status": "match"
+        },
+        "team_ops": {
+          "dataset": "0.742",
+          "source": ".742",
+          "status": "match"
+        },
+        "team_obp": {
+          "dataset": "0.319",
+          "source": ".319",
+          "status": "match"
+        },
+        "team_slg": {
+          "dataset": "0.423",
+          "source": ".423",
+          "status": "match"
+        },
+        "team_era": {
+          "dataset": "4.04",
+          "source": "4.04",
+          "status": "match"
+        },
+        "run_diff": {
+          "dataset": "4",
+          "source": 4.0,
+          "status": "match"
+        },
+        "team_fip": {
+          "dataset": "3.94",
+          "source": null,
+          "status": "unavailable"
+        }
+      },
+      "contributor_roster_check": {
+        "status": "needs_review",
+        "names_not_found": [
+          "Bregman"
+        ],
+        "limitation": "Surname presence checks roster membership only, not relative contribution."
+      },
+      "narratives": "not audited: manager, era labels and causal interpretations require separate citations"
+    }
+  ]
+}

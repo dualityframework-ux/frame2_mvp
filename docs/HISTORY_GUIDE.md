@@ -30,6 +30,13 @@ two measures; the dataset does not cover all championships in franchise history.
 The narrative fields do not yet have row-level source citations and need source
 verification before being presented as a research dataset.
 
+## Source verification
+
+See [DATA_AUDIT.md](DATA_AUDIT.md) for the 58-season read-only MLB comparison,
+source discrepancies and fields still requiring verification. The machine-readable
+report records URLs, retrieval times and response hashes. Audit findings are not
+automatically written back to the dataset.
+
 ## Process tags
 
 The engine computes `games = wins + losses`, `win_pace = wins × 162 / games`,
