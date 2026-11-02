@@ -142,13 +142,9 @@ class TestReasonStrings:
     (0.5, 0.5, 0.5, 0.5, False, 10, "signal"),      # 3 signals
     (0.5, 0.5, 0.5, 0.8, False, 10, "signal"),      # 4 signals
     (0.9, 0.9, 0.9, 0.9, False, 2, "variance"),     # small sample
-    (0.9, 0.9, 0.9, 0.9, True,  10, "variance"),    # variance flag + low quality
+    (0.9, 0.1, 0.9, 0.9, True,  10, "variance"),    # variance flag + low quality
     (0.9, 0.9, 0.9, 0.9, False, 3, "signal"),       # just enough sample
 ])
 def test_parametrized_matrix(eff, qual, vol, pres, var, n, expected):
-    # For variance_flag=True, quality shift must be < 0.2 to trigger; qual=0.9 > 0.2 so won't trigger
-    # Adjust: for the variance flag row, we need low quality shift
-    if var and qual >= 0.2:
-        pytest.skip("variance_flag only triggers when quality_shift < 0.2")
     tag, _ = classify_signal_vs_noise(eff, qual, vol, pres, var, n)
     assert tag == expected

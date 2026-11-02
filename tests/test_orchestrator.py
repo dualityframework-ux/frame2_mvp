@@ -159,11 +159,12 @@ class TestRegistry:
 # Orchestrator
 # ════════════════════════════════════════════════════════════════════════
 
-class TestOrchestrator:
-    @pytest.fixture(scope="class")
-    def orch(self):
-        return Orchestrator(csv_path=CSV)
+@pytest.fixture(scope="class")
+def orch():
+    return Orchestrator(csv_path=CSV)
 
+
+class TestOrchestrator:
     def test_repr(self, orch):
         assert "Orchestrator" in repr(orch)
 
